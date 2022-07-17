@@ -1,0 +1,255 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from '../components/NavToggleWrapper.astro';
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import HeroGray from "../layout/HeroGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import ServicesHeadline from "../components/ServicesHeadline.astro";
+import ServicesLinks from "../components/ServicesLinks.astro";
+import ServicesPitchCard from "../components/ServicesPitchCard.astro";
+import ServicesPitchCardChecked from "../components/ServicesPitchCardChecked.astro";
+import SoundLikeChecklist from "../components/PWYFSoundLikeChecklist.astro";
+import ForYouChecklist from "../components/PWYFForYouChecklist.astro";
+import EndOfChecklist from "../components/PWYFEndOfChecklist.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+let pageService = "Partner With Yourself First";
+let mainID = "pwyf";
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+
+let pageURL = "https://compatibleconnections.biz/services/pwyf.html";
+let title = "-♡- Partner With Yourself First -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "Learn more about Compatible Connections' Partner With Yourself First signature series.";
+let pageKeywords = "Compatible Connections, Bernadette Smith, Bernadette M. Smith, dating coach, life coach, coaching services, dating after divorce, online dating, partner with yourself first, compatibility, finding love after divorce";
+
+let question2 = "This Series Is For You If...";
+let question3 = "By The End Of This Series You Will...";
+let question4 = "What Can This Series Do For You?";
+let question5 = "What Makes This Series Different?";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+    <main id={mainID} class="explore_our_services">
+      <h1>{pageService}</h1>
+      <!-- #region Explore Our Services -- Title Card -->
+      <HeroGray id="explore_our_services__headline">
+      <ServicesHeadline imgSrc="/assets/images/pwyf-headline_img.png" imgAlt="A man sitting in a chair holds a glass of wine in one hand and a pink heart in the other." class="transparent">
+        <p slot="services_headline_text">We all want happiness and lasting love, especially after divorce.</p>
+        <p slot="services_headline_text">But if you want to find the perfect guy for you the second time around, you have to be willing to <span class="utility_classes__emphasis utility_classes__clean_break_on_wrap">Partner With Yourself First!</span></p>
+      </ServicesHeadline> 
+      </HeroGray>
+      <!-- #endregion -->
+      <!-- #region Explore Our Services Links (Secondary Nav) -->
+      <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5}/>
+      <!-- #endregion Explore Our Services Links (Secondary Nav) -->
+      <!-- #region Pitch Cards -->
+      <section class="explore_our_services__pitch_cards">
+         <!-- #region "Does This Sound Like You?" Pitch Card -->
+        <ServicesPitchCardChecked id="like_you" imgSrc="/assets/images/pwyf-1-sound_like_you.png" imgAlt="A woman in sunglasses sits at a table with a glass of wine.">
+          <h2 slot="pitch_card_question">
+          Does This Sound
+          <span class="utility_classes__clean_break_on_wrap">Like You?</span>
+        </h2>
+        <SoundLikeChecklist slot="checklist"/>
+        <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCardChecked>
+        <!-- #endregion "Does This Sound Like You?" Pitch Card -->
+        <!-- #region "Partner With Yourself First Is For You If ..." Pitch Card -->
+        <ServicesPitchCardChecked id="for_you" imgSrc="/assets/images/pwyf-2-is_for_you_if.png" imgAlt="A pair of hands hover over a computer screen showing the dating profiles of three different men.">
+          <h2 slot="pitch_card_question">
+            {pageService} <span class="utility_classes__clean_break_on_wrap">Is For You If...</span>
+          </h2>
+        <ForYouChecklist slot="checklist"/>
+        <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCardChecked>
+        <!-- #endregion "Partner With Yourself First Is For You If..." Pitch Card -->
+        <!-- #region "By The End of This Series You Will" Pitch Card -->
+        <ServicesPitchCardChecked id="question_3" imgSrc="/assets/images/pwyf-3-by_end_of_series.png" imgAlt="A woman and a man holding hands as they walk out of a smartphone screen surrounded by hearts.">
+          <h2 slot="pitch_card_question">
+            By The End Of This Series <span class="utility_classes__clean_break_on_wrap">You Will...</span>
+          </h2>
+          <EndOfChecklist slot="checklist" />
+          <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCardChecked>
+        <!-- #endregion "By The End Of This Series You Will" Pitch Card -->
+        <!-- #region "What Can This Series Do For You?" Pitch Card -->
+        <ServicesPitchCard id="question_4" imgSrc="/assets/images/pwyf-4-can_do_for_you.png" imgAlt="A side profile of a woman and a man looking at each other.">
+          <h2 slot="pitch_card_question">
+            What Can This Series<br>Do For You?
+          </h2>
+        <p slot="pitch_card_answer">Partner With Yourself First is not a cookie-cutter workshop or webinar.</p>
+        <p slot="pitch_card_answer">Our Series wil show you how to find and keep lasting love.</p>
+        <p slot="pitch_card_answer">It will tell you what sort of man is naturally most suited to you.</p>
+        <p slot="pitch_card_answer">It will tell you which romantic relationship qualities you have to keep long-lasting love.</p>
+        <p slot="pitch_card_answer">It will put you in front of men who create emotional chemistry with you.</p>
+        <p slot="pitch_card_answer">It will give you a list of your personalized Connecting Questions to discreely seek compatibility.</p>
+        <p slot="pitch_card_answer">It will show you how to avoid men who would only create toxic relationships. </p>
+        <p slot="pitch_card_answer">By the end of this series, you'll be a confident and conscious dater who knows how to identify and attract only compatible men. You'll leave the uncertainty and fear of choosing the wrong partner behind you. You'll experience, for the first time, what it's like to predict your romantic future accurately and confidently. </p>
+        <p slot="pitch_card_answer">We promise that, after completing this series, you'll have everything you need to feel comfortable jumping into your next long-term relationship.</p>
+        <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCard>
+        <!-- #endregion "What Can This Series Do For You?" Pitch Card -->
+        <!-- #region "How Is Partner With Yourself Delivered?" Pitch Card -->
+        <ServicesPitchCard id="question_5" imgSrc="/assets/images/pwyf-5-is_delivered-2.png" imgAlt="A pigeon is perched on top of a mailbox.  A hand is placing a pink sealed envelope in the mailbox's slot.">
+          <h2 slot="pitch_card_question">
+           What Makes This Series Different? 
+          </h2>
+          <p slot="pitch_card_answer">You have just found a way to assure yourself your next time around will be your last.</p>
+          <p slot="pitch_card_answer">Let's begin by thanking Dr. Ty Tashiro, researcher and author of <i>What Really Matters in the Quest for Enduring Love</i>, and Dr. Helen Fisher, neuroscientist and author of <i>Who Should You Love - Why Him? Why Her?</i>.</p>
+          <p slot="pitch_card_answer">
+            Their scientific data  on how to find and keep lasting love is profound, giving singles what what they need to know <em>before</em> picking a life partner.
+         </p>
+         <p slot="pitch_card_answer">
+          No other relationship/dating coach out there educates their clients in the science behind forever after. Your first step to having a successful long-term relationship is understanding what makes relationships last. We call this Partnering With Yourself First. 
+        </p>
+        <p class="utility_classes__center utility_classes__strong" slot="pitch_card_answer">
+          I am here to offer you something no other coach can...
+        </p> 
+        <p class="utility_classes__center utility_classes__strong" slot="pitch_card_answer">
+          A journey that will take you behind the science of forever after.
+        </p>
+        <p slot="pitch_card_answer">
+          What is it that you need to know about yourself to choose the right partner this time?
+        </p>
+        <p slot="pitch_card_answer">
+          What keeps romantic relationships together?  What should you be looking for in a partner?
+        </p>
+         <p slot="pitch_card_answer">
+          What questions do you need to ask the men you meet to create emotional connections that lead to intimacy and forever-lasting love?  How will you know he is "the One"?
+        </p>
+        <p slot="pitch_card_answer">
+          This is the Series that will give you your answers!
+        </p>
+          <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCard>
+        <!-- #endregion "How Is Partner With Yourself Delivered?" Pitch Card -->
+        <!-- #region "How Much Does This Cost?" Pitch Card -->
+        <ServicesPitchCard id="how_much" imgSrc="/assets/images/pwyf-6-how_much_does_it_cost.png" imgAlt="A man and a woman embrace underneath a streetlight.">
+          <h2 slot="pitch_card_question">
+            How Much Does This Cost?
+          </h2>
+          <p slot="pitch_card_answer" class="utility_classes__align-left">
+            High quality, one-on-one coaching requires a lot of training, expertise, and legwork. 
+          </p>
+          <p slot="pitch_card_answer">
+            <a href="https://coachfederation.org/research/global-coaching-study" target="_blank">One recent survey</a> by the <a href="https://coachfederation.org/" target="_blank">International Coach Federation</a>, the gold-standard accrediting body for coaches, found that top-tier coaches were charging anywhere from $375 to $607 per hour for their services! 
+          </p>
+          <p slot="pitch_card_answer">
+            <span class="utility_classes__strong">We understand that financial uncertainty is an unavoidable part of life for many divorced women</span>. We're also aware there's no shortage of shady businesses out there that prey on the fears, anxieties, and dreams of single ladies.  
+          </p>
+          <p slot="pitch_card_answer">
+            Because Compatible Connections is committed to helping all women find the love of their lives after divorce, <span class="utility_classes__strong">we've deliberately under priced our services</span>. We've built our business around the idea that any woman re-building their life after divorce should be able to afford our services. We believe in putting the needs of prospective clients, not profits, first.  
+          </p>
+          <p slot="pitch_card_answer">
+            <span class="utility_classes__strong">Our standard rate for coaching services is $125.00 per hour, which puts the total cost to enroll in our {pageService} Signature Series at $750.00</span>. If that seems like a lot of money upfront, don't worry! We offer flexible payment plans. We also offer our clients a no-questions-asked, money-back guarantee if they're not dating differently by the end of their first coaching session!
+          </p>
+          <p slot="pitch_card_answer">
+            Every divorced woman knows in her bones that choosing the wrong partner can be a costly mistake. If you're ready to date and want to do things right the second time around, we'd urge you to consider this Series a worthwhile investment in yourself. We offer divorced women something no other coaching firm out there can: a chance to learn everything you need to overcome past mistakes and find real lasting love. 
+          </p>
+          <ServicesLinks question2={question2} question3={question3} question4={question4} question5={question5} slot="services_links" />
+        </ServicesPitchCard>
+        <!-- #endregion "How Much Does This Cost?" Pitch Card -->
+        <!-- #region "I'm Interested!  What Are My Next Steps?" Pitch Card -->
+        <ServicesPitchCard id="next_steps" imgSrc="/assets/images/pwyf-7-next_steps.png" imgAlt="A woman sitting in the basket of a bike.  Her hands are above her a head.  A man is peddling.">
+          <h2 slot="pitch_card_question">
+            I'm Interested!  <span class="utility_classes__clean_break_on_wrap">What Are My Next Steps?</span>
+          </h2>
+          <p slot="pitch_card_answer" class="utility_classes__align-left">
+            Upfront we want you to know there are no rules to follow, no list of things to do to land a man in 30 days, nor is there a reason to blame yourself if “he's not that into you.”
+          </p>
+          <p slot="pitch_card_answer">
+            Helen Fisher, Ph.D., the best-selling author behind <i>Why Him? Why Her?</i>, claims “a better understanding of who you are will help you find and keep the love you want.”
+          </p>
+          <p slot="pitch_card_answer">
+            If you're a smart successful divorced woman serious about taking the time to learn how to choose men who are a good fit for you, open to discovering empowering qualities you've always had but never used to build a romantic relationship, willing to date differently using new ideas to get you into the arms of your forever after, this is an opportunity you want to take advantage of.
+          </p>
+          <p slot="pitch_card_answer">
+            We ask all our potential clients to <a href="/discovery_session">schedule a 30-minute Discovery Session</a> with Coach Bernadette so we can get acquainted, answer any questions you may have and see if this transformational series is exactly what you're looking for.  
+          </p>
+          <p slot="pitch_card_answer">
+            This time let's base the most important decision in your life on the science behind forever after. 
+          </p>
+          <p slot="pitch_card_answer">
+            To get started, <a href="/discovery_session">click here to schedule your Discovery Session</a> directly through our website.
+          </p>
+          <p slot="pitch_card_answer">
+            E-mail works too!  Reach out to us at <a href="mailto:bernadette@compatibleconnections.biz">bernadette at compatibleconnections dot biz</a>.
+          </p>
+          <p slot="pitch_card_answer">
+            You can also call us directly at <a href="tel:215-968-4694">215 - 968 - 4694.</a>
+          </p>
+          <p slot="pitch_card_answer">
+            We look forward to hearing from you and can't wait to help you answer the important important question of your life:
+          </p>
+          <p slot="pitch_card_answer">
+            "How do I find true love after divorce?"
+          </p>
+
+
+        </ServicesPitchCard>
+        <!-- #endregion "I'm Interested!  What Are My Next Steps?" Pitch Card -->
+      </section>
+      <!-- #endregion -->
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

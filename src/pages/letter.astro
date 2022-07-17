@@ -1,0 +1,158 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from "../components/NavToggleWrapper.astro";
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import HeroGray from "../layout/HeroGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/about/letter";
+let title = "-♡- A Letter From Coach Bernadette -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "A letter from Coach Bernadette, MCC to recently divorced women.";
+let pageKeywords = "Bernadette Smith, Bernadette M. Smith, compatible connections, open letter, recently divorced, divorced women, dating after divorce, finding true love, online dating";
+let mainID = "letter";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id={mainID}>
+        <h1>A Letter From Coach Bernadette</h1>
+        <HeroGray id="letter__explainer">
+          <p>I know how this feels: <a href="/bio">I've been there too!</a></p>
+          <p>
+            After my divorce, I felt scared, confused, angry, sad, and lonely. It was hard for me to even imagine what it would be like to start dating again.  
+          </p>
+          <p>
+            I worried it was too late for me to find true love. I worried all the "good ones" were already taken. And I was absolutely petrified at the thought of online dating as a 40+. 
+          </p>
+          <p>
+            As it turns out, I worried too much! That's why I wrote this short letter: to help other divorced women, just like you, understand there is hope after divorce. 
+          </p>
+        </HeroGray>
+        <section class="flexbox__basic_row" id="letter__letter">
+          <div class="flexbox__basic_column" id="letter__letter_text">
+          <h2 class="utility_classes__center">Dear Sisters,</h2>
+          <p>
+            Re-entering the dating scene after divorce is tricky, and it requires more preparation and self-awareness than merely how best to market yourself with a great computer profile. (Though such advice helps - no question about it!) 
+          </p>
+          <p>
+            If you are looking for a safe and happy landing, you need a solid understanding of the process. To move from that romantic free fall toward a loving connection, you will have to navigate an intensely emotional, uncertain, and unsettling period of time. 
+          </p>
+          <p>
+            The internal forces that will drive you during this period - your own individual fears and longings, your lifelong romantic patterns, and your acute reentry needs - are powerful, unexpected and erratic. 
+          </p>
+          <p>
+            It would help to have some meaningful self-knowledge to steer a safe course. Yet your capacity for introspection and self-awareness may well have atrophied during your marriage or motherhood, when you focused so much on taking care of other people that you lost close touch with yourself. The change of identity will creep up. It's best to be ready for it. 
+          </p>
+          <p>
+            Compatible Connections was born from my own uncertainties after my divorce. After doing an autopsy on my marriage, I realized in the end, like it or not, dating and true compatible love are less about whom you meet and more about who you are. It's a time for understanding who you are and catching up with the woman you've become. After all, you're not only going back to the game of romance, you are also returning mentally to the last time you played it.  
+          </p>
+          <p class="utility_classes__strong">
+            Everyone goes back into the game in her own way, but there are common success and failure patterns from which you can learn. 
+          </p>
+          <p>
+            There are basic dating and relationship skills in which we could all use a refresher. More important there are mistakes you can avoid, pitfalls to steer around if only you could see them coming. And, just as every satellite needs to align itself properly to assure a successful reentry, you will need to adjust your attitude to best survive the atmosphere of romance. 
+          </p>
+          <p class="utility_classes__center center utility_classes__strong">
+            It's your turn, and I want you to take it! 
+          </p>
+          <p>
+            A return to dating doesn't have to be emotional whiplash. As your personal Certified Dating and Relationship Coach, I've already done the training, founded two Signature Series based on compatibility, took them out for a test drive and found my husband on eHarmony! All you have to do is become a compatibility student open to learning what makes a loving relationship last and what you need to know before you pick your next life partner. Our two Signature Series show you how a better understanding of your compatible traits will help you find and keep the love you want. 
+          </p>
+          <p class="utility_classes__center utility_classes__strong">
+            If I can do this, so can you!
+          </p>
+          <span class="utility_classes__center letter__valediction">You Deserve True Love,</span>
+          <img class="letter__signature" src="/assets/images/svg_paths/coach_bernadette_signature.svg" alt="Coach Bernadette's cursive signature." loading="lazy" />
+          </div>
+          <aside class="flexbox__basic_column" id="letter__letter_sidebar">
+            <div>
+              <figure>
+                <img src="/assets/images/coach_bernadette-1.jpg" alt="Coach Bernadette, sitting cross-legged on a chair & smiling." loading="lazy" />
+                <figcaption class="utility_classes__center">Coach Bernadette, MCC</figcaption>
+              </figure>
+              <div class="flexbox__basic_row" id="letter__certifications">
+                <img src="/assets/images/certifications-icf.jpg" loading="lazy"/>
+                <img src="/assets/images/certifications-coach_u.jpg" loading="lazy"/>
+              </div>
+            </div>
+            <div> 
+              <ul>
+                <li>
+                  <img src="/assets/icons/heart-50.png" loading="lazy">
+                  <span><a href="/bio" target="_blank">Learn more about Coach Berandette's experiences dating after divorce.</a></span>
+                </li>
+                <li>
+                  <img src="/assets/icons/heart-50.png" loading="lazy">
+                  <span><a href="/certifications">Learn more about Coach Bernadette's certifications.</a></span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

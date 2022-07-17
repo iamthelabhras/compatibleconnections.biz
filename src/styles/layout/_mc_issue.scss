@@ -1,0 +1,938 @@
+main.mc_issue {
+  // Custom variables.
+  --mc_issue__p_width: 60%;
+  --mc_issue__icon_margin: 0;
+  --mc_issue__box_shadow: 0 0 11px rgba(33, 33, 33, 0.2),
+    2px 2px 2px var(--colors__brand_color_1);
+  //
+  @media screen and (max-width: 1045px) {
+    // Add top & bottom margin to New Glossary & Heart Beat icons text wraps beneath image on smaller screens.
+    --mc_issue__icon_margin: 1rem 0 2rem 0;
+  }
+  //
+  @media screen and (max-width: 575px) {
+    --mc_issue__p_width: 90%;
+  }
+}
+
+main.mc_issue {
+  display: flex;
+  flex-direction: column;
+  scroll-padding: 2rem;
+  //
+  .mc_issue__container {
+    // Adjustments maide to this container's width (using media queries) should cascade across all other elements within this template.
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: var(--mc_issue__box_shadow);
+    background: var(--colors__gray);
+    ///
+    @media screen and (max-width: 800px) {
+      width: 95%;
+    }
+  }
+  //
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3.125rem 0;
+    ///
+    p {
+      max-width: var(--mc_issue__p_width);
+      margin-bottom: 1.25rem;
+      // Default font-size across all sections.
+      font-size: 1.125rem;
+    }
+    ///
+    > p:first-of-type,
+    > p:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+    ///
+    > p:first-of-type {
+      text-align: center;
+      // Enlarge & darken first paragraph of each section.
+      font-size: 1.5625rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    .mc_issue__footnote_link {
+      text-align: center;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid var(--colors__black);
+      padding: 0.15rem;
+      font-size: 0.875rem;
+      background: var(--colors__white);
+      transform: scale(0.75);
+      transition: background ease-in-out 0.25s;
+      ////
+      &:hover,
+      &:focus {
+        color: var(--colors__white);
+        background: var(--colors__brand_color_1);
+      }
+    }
+    ///
+    div.mc_issue__footnotes {
+      // MCFootnotes Astro Component.
+      max-width: var(--mc_issue__p_width);
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      border: 1px dotted var(--colors__gray_dark);
+      background: var(--colors__white);
+      ////
+      h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.5625rem;
+      }
+      ////
+      ol {
+        position: relative;
+        list-style: decimal;
+      }
+      ////
+      li {
+        line-height: 1.25;
+        padding-left: 1rem;
+        font-style: italic;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  //
+  section.mc_issue__section {
+    ///
+    h2 {
+      position: relative;
+      display: inline-block;
+      width: 95%;
+      margin-bottom: 2rem;
+      border: 8px solid var(--colors__brand_color_2);
+      padding: 1.5625rem;
+      outline: 8px solid var(--colors__brand_color_1);
+      background: var(--colors__brand_color_1);
+      text-align: center;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.875rem;
+      font-weight: var(--typography__bold);
+      color: var(--colors__white);
+    }
+    /// MCIMageHBlock Astro Component
+    div.mc_issue__image_h_block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: var(--mc_issue__p_width);
+      margin: 1.5rem 0;
+      ////
+      &:nth-of-type(2n) {
+        /////
+        img {
+          // Swap ordering of img and h3 on every other div.
+          order: 2;
+          //////
+          @media screen and (max-width: 1110px) {
+            order: initial;
+          }
+        }
+        /////
+        h3 {
+          order: 1;
+          //////
+          @media screen and (max-width: 1110px) {
+            order: initial;
+          }
+        }
+      }
+      ////
+      img {
+        width: 40%;
+        height: 70%;
+        border-radius: var(--boxmodel__default_border_radius);
+        opacity: 0.8;
+        /////
+        @media screen and (max-width: 1110px) {
+          width: 100%;
+        }
+      }
+      ////
+      h3 {
+        text-align: center;
+        align-self: center;
+        width: 40%;
+        font-family: var(--typography__font_family_1);
+        font-size: 1.75rem;
+        color: var(--colors__brand_color_1);
+        /////
+        @media screen and (max-width: 1110px) {
+          width: 100%;
+        }
+      }
+      ////
+      > p:first-of-type {
+        text-align: center;
+        // Tweak top-and-bottom margins to preserve consistent layout spacing & center.
+        margin: 1.75rem auto 1.25rem auto;
+        font-size: 1.25rem;
+        font-weight: var(--typography__bold);
+        order: 3;
+      }
+      ////
+      p {
+        // Override main.issue section p max-width so text fills container.
+        max-width: 100%;
+        order: 4;
+      }
+    }
+  }
+}
+
+// MCMasthead Astro component.
+
+section#mc_issue__masthead {
+  //
+  .mc_issue__masthead_top_banner {
+    display: inline-block;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--colors__pink_meet_cute);
+    border-bottom: 5px solid var(--colors__brand_color_2);
+  }
+  //
+  .mc_issue__masthead_title {
+    width: 100%;
+    // Remove default flexbox margin.
+    margin: 0;
+    // Remove default flexbox padding.
+    padding: 0;
+    background: var(--colors__white);
+    ///
+    h1 {
+      text-align: center;
+      font-size: 6.25rem;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      // Linear gradient generated using Coolers.io's Gradient Maker.
+      // See: https://coolors.co/gradient-maker/dd137b-e52c87-ed4593-f55d9e-ff7bac-fe84b2-fd8cb8-fd93bd-fc9ac2?position=0,11,22,33,49,64,77,89,100&opacity=100,100,100,100,100,100,100,100,100&type=linear&rotation=45
+      background-image: linear-gradient(
+        45deg,
+        hsla(329, 84%, 47%, 1) 0%,
+        hsla(330, 78%, 54%, 1) 11%,
+        hsla(332, 82%, 60%, 1) 22%,
+        hsla(334, 88%, 66%, 1) 33%,
+        hsla(338, 100%, 74%, 1) 49%,
+        hsla(337, 98%, 76%, 1) 64%,
+        hsla(337, 97%, 77%, 1) 77%,
+        hsla(336, 96%, 78%, 1) 89%,
+        hsla(336, 94%, 80%, 1) 100%
+      );
+      background-image: -webkit-linear-gradient(
+        45deg,
+        hsla(329, 84%, 47%, 1) 0%,
+        hsla(330, 78%, 54%, 1) 11%,
+        hsla(332, 82%, 60%, 1) 22%,
+        hsla(334, 88%, 66%, 1) 33%,
+        hsla(338, 100%, 74%, 1) 49%,
+        hsla(337, 98%, 76%, 1) 64%,
+        hsla(337, 97%, 77%, 1) 77%,
+        hsla(336, 96%, 78%, 1) 89%,
+        hsla(336, 94%, 80%, 1) 100%
+      );
+      background-image: -moz-linear-gradient(
+        45deg,
+        hsla(329, 84%, 47%, 1) 0%,
+        hsla(330, 78%, 54%, 1) 11%,
+        hsla(332, 82%, 60%, 1) 22%,
+        hsla(334, 88%, 66%, 1) 33%,
+        hsla(338, 100%, 74%, 1) 49%,
+        hsla(337, 98%, 76%, 1) 64%,
+        hsla(337, 97%, 77%, 1) 77%,
+        hsla(336, 96%, 78%, 1) 89%,
+        hsla(336, 94%, 80%, 1) 100%
+      );
+      background-image: -ms-linear-gradient(
+        45deg,
+        hsla(329, 84%, 47%, 1) 0%,
+        hsla(330, 78%, 54%, 1) 11%,
+        hsla(332, 82%, 60%, 1) 22%,
+        hsla(334, 88%, 66%, 1) 33%,
+        hsla(338, 100%, 74%, 1) 49%,
+        hsla(337, 98%, 76%, 1) 64%,
+        hsla(337, 97%, 77%, 1) 77%,
+        hsla(336, 96%, 78%, 1) 89%,
+        hsla(336, 94%, 80%, 1) 100%
+      );
+      background-image: -o-linear-gradient(
+        45deg,
+        hsla(329, 84%, 47%, 1) 0%,
+        hsla(330, 78%, 54%, 1) 11%,
+        hsla(332, 82%, 60%, 1) 22%,
+        hsla(334, 88%, 66%, 1) 33%,
+        hsla(338, 100%, 74%, 1) 49%,
+        hsla(337, 98%, 76%, 1) 64%,
+        hsla(337, 97%, 77%, 1) 77%,
+        hsla(336, 96%, 78%, 1) 89%,
+        hsla(336, 94%, 80%, 1) 100%
+      );
+      background-size: 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: mcIssueAnimatedH1 5s infinite alternate;
+      ////
+      @keyframes mcIssueAnimatedH1 {
+        0% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+      ////
+      @media screen and (max-width: 1005px) {
+        font-size: 4.25rem;
+      }
+      ////
+      @media screen and (max-width: 728px) {
+        font-size: 3.4375rem;
+        width: 100%;
+      }
+    }
+    ///
+    .mc_issue__number {
+      text-align: right;
+      margin-right: 3.125rem;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.125rem;
+      font-weight: var(--typography__bold);
+    }
+  }
+  //
+  .mc_issue__masthead_bottom_banner {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    // Remove default flexbox margin.
+    margin: 0;
+    // Remove default flexbox padding.
+    padding: 0;
+    background-color: var(--colors__pink_meet_cute);
+    border-top: 5px solid var(--colors__brand_color_2);
+    ///
+    img {
+      width: 100px;
+      height: 100px;
+      // Pulls "dancing couple" above bottom banner.
+      margin-top: -25px;
+      margin-bottom: 0.625rem;
+      margin-right: 3.125rem;
+      margin-left: 1.125rem;
+    }
+    ///
+    span.mc_issue__mc_word {
+      margin-right: 1.5625rem;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.25rem;
+      font-weight: var(--typography__bold);
+      color: var(--colors__white);
+    }
+    ///
+    span.mc_issue__mc_definition {
+      max-width: 40ch;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.125rem;
+      color: var(--colors__white);
+      ////
+      @media screen and (max-width: 891px) {
+        // Center text on wrap and add padding to enhance legibility.
+        text-align: center;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+      }
+    }
+  }
+}
+
+// MCHighlights Astro component.
+
+section#mc_issue__highlights {
+  width: 100%;
+  padding: 1.5625rem;
+  background: var(--colors__brand_color_3);
+  //
+  a {
+    ///
+    &:link {
+      color: var(--colors__black);
+    }
+    ///
+    &:focus,
+    &:hover {
+      color: var(--colors__white);
+    }
+    ///
+    &:visited {
+      color: var(--colors__brand_color_1);
+    }
+  }
+  //
+  h2 {
+    text-align: center;
+    margin-bottom: 2.1875rem;
+    color: var(--colors__white);
+    font-family: var(--typography__font_family_1);
+    font-size: 2.1875rem;
+    font-weight: var(--typography__bold);
+  }
+  //
+  ul {
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+  }
+  //
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    ///
+    &:hover img {
+      // Remove padding to prevent layout shift on hover.
+      padding: 0px;
+      // filter to var(--colors__white).
+      filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(66deg)
+        brightness(106%) contrast(101%);
+    }
+  }
+  //
+  img {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    // Set padding to prevent layout shift on hover.
+    padding: 10px;
+    transition: padding ease-in-out 0.5s;
+    // filter to var(--colors_brand_color_1).
+    filter: invert(21%) sepia(95%) saturate(6117%) hue-rotate(319deg)
+      brightness(90%) contrast(92%);
+    ///
+    @media screen and (max-width: 582px) {
+      // Remove heart icons accompany highlights from DOM when highlight text (with icon) wraps.
+      display: none;
+    }
+  }
+  //
+  span {
+    justify-self: center;
+    align-self: center;
+    max-width: 35ch;
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: var(--typography__bold);
+  }
+}
+
+// MCMessage Astro component.
+
+section#mc_issue__message {
+  //
+  ul {
+    width: var(--mc_issue__p_width);
+    ///
+    li {
+      margin: 2rem 0;
+      width: 100%;
+      border-radius: var(--boxmodel__default_border_radius);
+      border: 1px dotted var(--colors__black);
+      padding: 1rem;
+      background: var(--colors__white);
+      ////
+      h3 {
+        text-align: center;
+        font-family: var(--typography__font_family_1);
+        font-size: 1.25rem;
+      }
+      ////
+      p {
+        // Overrides main.issue section p.
+        max-width: 100%;
+      }
+    }
+  }
+  ///
+  p#mc_issue__valediction {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: var(--typography__font_family_2);
+    font-size: 1.875rem;
+    font-weight: var(--typography__bold);
+    ////
+    @media screen and (max-width: 575px) {
+      font-size: 1.5625rem;
+    }
+  }
+  ///
+  img#mc_issue__signature {
+    min-width: 340px;
+    width: 40%;
+  }
+}
+
+// MC Section: Dating Tips
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__dating_tips {
+  //
+  h3 {
+    text-align: center;
+    width: var(--mc_issue__p_width);
+    font-family: var(--typography__font_family_1);
+    font-size: 1.5625rem;
+  }
+  //
+  img {
+    align-self: center;
+    width: 400px;
+    height: 400px;
+    margin: 1.5625rem 0;
+    border-radius: var(--boxmodel__default_border_radius);
+  }
+  p:first-of-type {
+    font-size: 1.125rem;
+  }
+}
+
+// MC Section: Book Recommendations
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__book_recommendations {
+  //
+  // MCBookRecommendation Astro Component
+  div.mc_issue__book_recommendation {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    ///
+    > div.mc_issue__book_recommendation_text {
+      order: 1;
+      width: 60ch;
+      ////
+      h3,
+      span,
+      p {
+        /// Over-ride default styling to allow component text to fill div.container--book_recommendation-text.
+        max-width: 100%;
+      }
+      ////
+      h3 {
+        // Book recommendation title.
+        text-align: center;
+        margin-bottom: -2px;
+        font-family: var(--typography__font_family_1);
+        font-weight: var(--typography__bold);
+        font-style: italic;
+        font-size: 1.375rem;
+        /////
+        + span {
+          // Book recommendation author.
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
+        }
+      }
+      ////
+      p:first-of-type {
+        // Book recommendation synopsis or teaser.
+        font-weight: var(--typography__bold);
+        font-style: italic;
+        font-size: 1.125rem;
+      }
+      ////
+      p:last-of-type {
+        // Book recommendaiton Amazon link.
+        color: var(--colors_brand_color_1);
+      }
+    }
+    ///
+    > img.mc_issue__book_recommendation_image {
+      align-self: center;
+      max-width: 208px;
+      width: 20%;
+      max-height: 351px;
+      height: 20%;
+      transform: rotate(5deg);
+    }
+    ///
+    &:nth-of-type(odd) {
+      ////
+      > div.mc_issue__book_recommendation_text {
+        order: 1;
+      }
+      ////
+      > img.mc_issue__book_recommendation_image {
+        order: 2;
+        margin-left: 2rem;
+        transform: rotate(-5deg);
+      }
+    }
+    ///
+    &:nth-of-type(even) {
+      ////
+      > div.mc_issue__book_recommendation_text {
+        order: 2;
+      }
+      ////
+      > img.mc_issue__book_recommendation_image {
+        order: 1;
+        margin-right: 2rem;
+        transform: rotate(5deg);
+      }
+    }
+    ///
+    @media screen and (max-width: 957px) {
+      ////
+      &:nth-of-type(odd),
+      &:nth-of-type(even) {
+        /////
+        > img.mc_issue__book_recommendation_image {
+          order: 1;
+          width: 140px;
+          height: 212px;
+          margin-bottom: 2rem;
+          transform: rotate(0deg);
+        }
+        /////
+        > div.mc_issue__book_recommendation_text {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+// MC Section: Book Recommendations
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__glossary {
+  // MCGlossaryWord Astro component.
+  div.mc_issue__glossary_word {
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    ///
+    @media screen and (max-width: 1045px) {
+      width: var(--mc_issue__p_width);
+    }
+  }
+  //
+  img {
+    align-self: center;
+    width: 125px;
+    height: 125px;
+    margin: var(--mc_issue__icon_margin);
+  }
+  //
+  iframe {
+    max-width: 90%;
+    ///
+    + span {
+      text-align: center;
+      margin-top: 2rem;
+      max-width: 50ch;
+      font-weight: var(--typography__bold);
+      font-style: italic;
+    }
+  }
+  //
+  .mc_issue__glossary_word_text {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 50%;
+    ///
+    @media screen and (max-width: 1433px) {
+      flex-basis: 55%;
+    }
+    ///
+    @media screen and (max-width: 1045px) {
+      flex-basis: 100%;
+      padding: 0;
+    }
+    ///
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.5625rem;
+    }
+    ///
+    p {
+      // Set max-width on individual glossary entry p elements to prvent flex container from wrapping.
+      max-width: 95%;
+      ////
+      @media screen and (max-width: 1045px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// MC Section: Dating App Spotlight
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__dating_app {
+  //
+  iframe {
+    max-width: 90%;
+    width: 450px;
+    height: 450px;
+  }
+  //
+  // MCDatingAppBreakdown Astro component.
+  div.mc_issue__dating_app_breakdown {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 60%;
+    border-radius: var(--boxmodel__default_border_radius);
+    background: var(--colors__gray_light);
+    ///
+    @media screen and (max-width: 800px) {
+      // Increase width when issue container resizes for mobile.
+      width: 80%;
+    }
+    ///
+    @media screen and (max-width: 575px) {
+      // Add back margin stripped away from generic flex containers on mobie.
+      margin: 2rem 0;
+    }
+    ///
+    img {
+      width: 150px important;
+      height: 125px;
+      border-radius: var(--boxmodel__default_border_radius);
+    }
+    ///
+    div.mc_issue__dating_app_breakdown_text {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      ////
+      h3 {
+        font-family: var(--typography__font_family_1);
+      }
+      ////
+      p {
+        max-width: 60ch;
+      }
+      ////
+      p:nth-of-type(2) {
+        font-weight: var(--typography__bold);
+      }
+    }
+  }
+}
+
+// MC Section: The Heart Beat
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__heart_beat {
+  //
+  // MCHeartBeatItem Astro component.
+  .mc_issue__heart_beat_item {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    ///
+    &::after {
+      content: "";
+      width: 85%;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+      background: rgba(232, 232, 232, 0.8);
+    }
+    ///
+    &:last-of-type::after {
+      content: none;
+    }
+    ///
+    @media screen and (max-width: 1045px) {
+      width: var(--mc_issue__p_width);
+    }
+    ///
+    div.mc_issue__heart_beat_icon_container {
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      margin: var(--mc_issue__icon_margin);
+      border-radius: 50%;
+      padding: 1rem;
+      background: rgba(232, 232, 232, 0.8);
+      box-shadow: var(--shadows__default_box_shadow);
+      transition: all ease-in-out 0.25s;
+      ////
+      &:hover,
+      &:focus {
+        border: 1px solid var(--colors__brand_color_1);
+        background: var(--colors__white);
+        transform: scale(1.05);
+      }
+      ////
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+        background-size: initial;
+        background-position: initial;
+        background-repeat: initial;
+      }
+      ////
+      img.mc_issue__heart_beat_icon {
+        flex-shrink: 0;
+        max-width: 64px;
+        width: 100%;
+        margin: 1rem;
+        // filter to var(--colors_brand_color_1).
+        filter: invert(21%) sepia(95%) saturate(6117%) hue-rotate(319deg)
+          brightness(90%) contrast(92%);
+        transition: all ease-in-out 0.5s;
+      }
+    }
+    ///
+    div.mc_issue__heart_beat_text {
+      justify-content: space-evenly;
+      align-items: center;
+      flex-basis: 50%;
+      ////
+      @media screen and (max-width: 1433px) {
+        flex-basis: 55%;
+      }
+      ////
+      @media screen and (max-width: 1045px) {
+        flex-basis: 100%;
+        padding: 0;
+      }
+      ////
+      p {
+        max-width: 100%;
+      }
+      ////
+      p:first-of-type {
+        font-weight: var(--typography__bold);
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// MC Section: Image To Inspire
+
+// Note: Unless otherwise noted in code comments, sections with ids are MCSection components with a given id passed into them via MCSection's Astro.props.
+
+section#mc_issue__image {
+  //
+  // MCImageToInspire Astro component.
+  > img {
+    align-self: center;
+    min-width: 350px;
+    max-width: 750px;
+    width: 60%;
+    margin: 1.5625rem 0 2rem 0;
+    border-radius: var(--boxmodel__default_border_radius);
+  }
+  //
+  p {
+    text-align: center;
+  }
+  //
+  div {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+    ///
+    @media screen and (max-width: 1174px) {
+      width: 100%;
+    }
+    ///
+    @media screen and (max-width: 593px) {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+    ///
+    img {
+      height: 50px;
+      width: 50px;
+      margin-right: 1rem;
+    }
+    ///
+    p {
+      align-self: center;
+    }
+  }
+}
+
+// MCThanksForReading Astro component.
+
+section#mc_issue__thanks_for_reading {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 25px;
+  background: var(--colors__brand_color_1);
+  //
+  #mc_issue__thanks_for_reading_text {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    ///
+    > p:first-of-type {
+      text-align: center;
+      // Enlarge & darken first paragraph of each section.
+      font-size: 1.5625rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    p {
+      max-width: initial;
+    }
+  }
+  //
+  img {
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    border-radius: var(--boxmodel__default_border_radius);
+    opacity: 0.9;
+  }
+}

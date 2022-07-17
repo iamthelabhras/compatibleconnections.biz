@@ -1,0 +1,64 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+import ImageAndTextBlock from "../layout/ImageAndTextBlock.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<div
+class="flexbox__basic_column"
+id="meetcute__subscribe_gifts"
+>
+<h3 class="utility_classes__center">All New Subscribers Receive...</h3>
+<ImageAndTextBlock>
+  <img
+    src="/assets/images/mc-new_subscribers_receive-8_things-catfish.png"
+    alt="A dating profile with the caption 'Cat, 21'.  The profile picture is a catfish in a pink dress and hat."
+    loading="lazy" slot="image"
+  />
+  <p slot="text">8 Things Online Dating Sites Don't Want You To Know</p>
+  <p slot="text">
+    Dating sites have a vested interest in keeping you a
+    (single) paying customer, and they do what they can to
+    stretch out your search for love.
+  </p>
+  <p slot="text">
+    These 8 tips will help you understand what men on online
+    dating sites are looking for … and how to grab their
+    attention.
+  </p> 
+</ImageAndTextBlock>
+<ImageAndTextBlock>
+  <img
+  src="/assets/images/mc-new_subscribers_receive-personal_inventory-selfie.jpg"
+  alt="A smiling woman taking a selfie."
+  loading="lazy" slot="image"
+/> 
+  <p slot="text">A Personal Inventory</p>
+  <p slot="text">
+    How well do you <span class="utility_classes__emphasis">really</span> know
+    yourself? So many of our behavioral patterns as singles are
+    automatic … and outdated. This simple, but powerful,
+    personal inventory is designed to help you better understand
+    who you are and what you're really looking for in a partner.
+  </p>
+</ImageAndTextBlock>
+</div>

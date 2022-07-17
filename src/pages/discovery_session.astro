@@ -1,0 +1,91 @@
+---
+
+//    STYLE IMPORTS
+import "../styles/all.scss";
+
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from '../components/NavToggleWrapper.astro';
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+import DiscoverySessionExplainer from "../components/DiscoverySessionExplainer.astro";
+import DiscoverySessionSchedule from "../components/DiscoverySessionSchedule.astro";
+import DiscoverySessionLetsConnect from "../components/DiscoverySessionLetsConnect.astro";
+
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+
+//    COMPONENT SCRIPTS:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+
+//    PAGE-SPECIFIC VARIABLES
+
+// Changing <header> Variables 
+// **Note**: Static header variables are stored in StaticHead.astro.
+
+let pageURL = "https://compatibleconnections.biz/work/discovery_session.html";
+let title = "-♡- Schedule A Discovery Session -♡-";
+// **Note**: pageDescription is limited to 150 characters!
+// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "Our complimentary Discovery Sessions give potential clients an opportunity to experience what it's like working with a Certified Dating Coach.";
+let pageKeywords = "dating, divorce, dating after divorce, dating after 40, dating after 60, compatibility, Bernadette Smith, Bernadette M. Smith, dating tips, partner with yourself first, seek sort and select, coaching, dating coaching, relationship coaching";
+
+
+// FULL ASTRO COMPONENT SYNTAX:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <HeadStatic></HeadStatic>
+    <!-- Import Calendly external style sheet for scheduler. -->
+    <link
+      href="https://calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id="discovery_session">
+        <h1>Schedule A Discovery Session</h1>
+        <DiscoverySessionExplainer />
+        <DiscoverySessionSchedule client:visible/>
+        <DiscoverySessionLetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

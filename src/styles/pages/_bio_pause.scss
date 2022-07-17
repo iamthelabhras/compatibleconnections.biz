@@ -1,0 +1,49 @@
+div.bio_pause {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 406px;
+  width: 60%;
+  height: 300px;
+  border-radius: var(--boxmodel__default_border_radius);
+  background: var(--colors__brand_color_1);
+  //
+  @media screen and (max-width: 1130px) {
+    min-width: initial;
+    max-width: initial;
+    width: 275px;
+    max-height: 200px;
+  }
+  //
+  img,
+  span {
+    animation: bioPause 4s steps(5, start) infinite;
+  }
+  //
+  img {
+    // Pixelated heart.
+    width: 15%;
+    margin-right: 1rem;
+    transform: scale(0.75);
+  }
+  //
+  span {
+    // Pause text.
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "VCR";
+    font-size: 5rem;
+    color: var(--colors__white);
+    ///
+    @media screen and (max-width: 1130px) {
+      font-size: 2.75rem;
+    }
+  }
+}
+
+@keyframes bioPause {
+  to {
+    visibility: hidden;
+  }
+}

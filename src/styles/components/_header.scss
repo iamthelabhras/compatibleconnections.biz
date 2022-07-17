@@ -1,0 +1,87 @@
+header {
+  justify-content: space-between;
+  // Override default flex container margin.
+  margin: var(--boxmodel__default_margin) 0 0 !important;
+  // Override default flex container padding.
+  padding: var(--header__padding) !important;
+  width: var(--boxmodel__span_page);
+  // Custom variables
+  --header__biz_tagline_indent: 110px;
+  /* ↓ Prevents tagline from bleeding into <PinkLine /> */
+  --header__padding: 0;
+  --header__site_identity_padding: 0.625rem;
+  --header__biz_name_font_size: 2.635rem;
+  --header__biz_name_line_height: 60px;
+  --header__biz_tagline_font_size: 1.125rem;
+  --header__social_icons_filter: invert(18%) sepia(58%) saturate(7499%)
+    hue-rotate(319deg) brightness(90%) contrast(93%);
+  --header__social_icons_filter_hover: invert(0);
+  //
+  div.header__site_identity {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--boxmodel__default_indent);
+    padding-bottom: var(--header__site_identity_padding);
+    ///
+    span.header__biz_name,
+    span.header__biz_tagline {
+      display: block;
+      font-family: var(--typography__font_family_2);
+    }
+    ///
+    span.header__biz_name {
+      font-size: var(--header__biz_name_font_size);
+      font-weight: var(--typography__bold);
+      color: var(--colors__white);
+      line-height: var(--header__biz_name_line_height);
+    }
+    ///
+    span.header__biz_tagline {
+      margin-left: var(--header__biz_tagline_indent);
+      font-size: var(--header__biz_tagline_font_size);
+      font-weight: var(--typography__normal);
+      color: var(--colors__brand_color_1);
+    }
+  }
+  //
+  div.social_icons {
+    // <SocialIcon /> Astro component.
+    // Change social icons color to brand_color_1 in header.
+    filter: var(--header__social_icons_filter);
+    ///
+    img.social_icon:focus,
+    img.social_icon:hover {
+      // Remove `filter: invert` for social icons in header. */
+      filter: var(--header__social_icons_filter_hover);
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 895px) {
+  //
+  header {
+    justify-content: center;
+    margin: var(--boxmodel__default_margin) 0px;
+    ///
+    div.social_icons {
+      // <SocialIcons /> Astro component.
+      // Hide social icons on social icons wrap. */
+      display: none;
+    }
+    ///
+    span.pink_line {
+      // <PinkLine /> Astro component. */
+      // Hide pink line on social icons wrap. */
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 690px) {
+  //
+  header {
+    // Hide header on smaller screens.
+    // Must use !important here to over-ride flexbox class's display.
+    display: none !important;
+  }
+}

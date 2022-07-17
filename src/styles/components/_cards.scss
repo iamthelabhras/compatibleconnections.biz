@@ -1,0 +1,168 @@
+.card {
+  // Source: https://codepen.io/aitchiss/pen/QWKmPqx
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: var(--cards__minimum_width);
+  min-height: var(--cards__minimum_height);
+  margin: var(--cards__default_margin);
+  border: 2px solid var(--colors__black);
+  padding: var(--cards__default_padding);
+  font-size: var(--cards__default_font_size);
+  // Note: These custom variables are set on a class-by-class basis.
+  background: linear-gradient(
+      to bottom right,
+      var(--cards__paper_dark),
+      20%,
+      var(--cards__transparent)
+    ),
+    var(--cards__paper_color);
+  // Note: These custom variables are set on a class-by-class basis.
+  box-shadow: var(--cards__shadow-size) var(--cards__shadow-size) 2px
+    var(--cards__paper_dark);
+  // Custom variables
+  --cards__minimum_width: 330px;
+  --cards__minimum_height: 350px;
+  --cards__default_margin: 3.125rem 0;
+  --cards__default_border: 2px solid var(--colors__black);
+  --cards__default_padding: 0.75em;
+  --cards__default_font_size: 2rem;
+  //
+  @media (max-width: 575px) {
+    // Reset minimum width custom variable to 0 on mobile to prevent overflow.
+    --cards__minimum_width: 0;
+  }
+  //
+  p {
+    // Prevent card paragraphs nested within gray sections from inheriting gray section p padding.
+    // TO DO: Figure out a better way to achieve this result with using !important.
+    padding: 0 !important;
+  }
+}
+
+.cards__pink {
+  border: none;
+  // Custom variables.
+  --cards__paper_dark: var(--colors__pink_card_dark);
+  --cards__transparent: var(--colors__pink_card_transparent);
+  --cards__paper_color: var(--colors__pink);
+  --cards__shadow-size: 1px;
+}
+
+.cards__text_plain {
+  width: clamp(var(--cards__minimum_width), 85%, 34.375rem);
+  //
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child,
+  p:first-child {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-weight: var(--typography__bold);
+    font-size: 1.5rem;
+  }
+  //
+  p {
+    max-width: 35ch;
+    font-size: 1.25rem;
+  }
+  //
+  p:last-of-type {
+    padding-bottom: 10px;
+  }
+}
+
+.cards__text_fancy {
+  width: clamp(var(--cards__minimum_width), 40%, 25.375rem);
+  //
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child,
+  p:first-child {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5625rem;
+    color: var(--colors__black);
+    line-height: 1.4;
+  }
+  //
+  p,
+  li {
+    max-width: 40ch;
+    margin-bottom: 0.625rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+  }
+  //
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 1.125rem;
+    color: var(--colors__black);
+  }
+  //
+  li {
+    display: flex;
+    width: 100%;
+  }
+  //
+  img {
+    justify-self: flex-start;
+    align-self: center;
+    width: 35px;
+    height: 20px;
+    padding-right: 15px;
+    filter: invert(180) drop-shadow(2px 2px 1px var(--colors__brand_color_1));
+  }
+}
+
+.cards__hover {
+  // Change card color, change "button" border, and slightly enlarge text on hover.
+  transition: background-color ease-in-out 0.25s;
+  //
+  h3,
+  p,
+  span {
+    transition: color ease-in-out 0.25s, transform ease-in-out 0.25s;
+  }
+  //
+  img {
+    transition: opacity ease-in-out 0.25s;
+  }
+  //
+  a {
+    transition: border ease-in-out 0.25s, transform ease-in-out 0.25s;
+  }
+  //
+  &:hover,
+  &:focus {
+    background-color: var(--colors__brand_color_1) !important;
+    ///
+    h3,
+    p,
+    span {
+      color: var(--colors__white) !important;
+      transform: scale(1.05) !important;
+    }
+    ///
+    img {
+      // Turn up opacity on hover to sharpen image.
+      opacity: 1 !important;
+    }
+    ///
+    a {
+      border: 2px solid var(--colors__white) !important;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { raveTitle, raveName, raveAge, raveLocation} = Astro.props;
+
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<div class="flexbox__basic_column raves__rave">
+  <a href="/sss" target="_blank" class="button raves__medallion">Seek Sort & Select</a>
+  <p>{raveTitle}</p>
+  <slot name="rave_text"/>
+  <div>
+  <span>{raveName}</span>
+  <span>{raveAge} from {raveLocation}</span>
+  </div>
+</div>

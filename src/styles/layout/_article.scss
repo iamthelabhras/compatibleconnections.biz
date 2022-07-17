@@ -1,0 +1,194 @@
+main.article {
+  // Article, ArticleBio, & ArticleSideBar Astro layout components.
+  //
+  h1 {
+    width: 100%;
+    margin: 0 0 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    background-color: var(--colors__brand_color_3);
+    color: var(--colors__white);
+    line-height: 1.5;
+  }
+  //
+  h2 {
+    max-width: 40ch;
+    text-align: center;
+    font-family: var(--typography__font_family_1);
+    font-size: 1.35rem;
+    font-weight: var(--typography__bold);
+  }
+  //
+  ol,
+  ul {
+    ///
+    li {
+      line-height: 1.2;
+      ////
+      h2 {
+        margin: 2rem 0;
+        font-size: 1.875rem;
+      }
+    }
+  }
+  //
+  #article__container_article_and_sidebar {
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+  //
+  section#article__container_article {
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin-top: -7rem;
+    border: 3px solid var(--colors__black);
+    padding: 25px;
+    background-color: var(--colors__white);
+    ///
+    @media screen and (max-width: 1110px) {
+      width: 90%;
+    }
+    ///
+    blockquote {
+      text-align: center;
+      max-width: 40ch;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.375rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    img {
+      align-self: center;
+      max-width: 350px;
+      max-height: 250px;
+      margin: 1.5625rem 0;
+      ////
+      &:first-of-type {
+        margin: 2rem 0;
+      }
+    }
+    ///
+    img#article__signature {
+      max-height: 100px;
+    }
+    ///
+    p {
+      max-width: 55ch;
+      margin: 1rem 0;
+      font-size: 1.125rem;
+      color: var(--colors__black);
+    }
+    ///
+    span#article__valediction {
+      text-align: center;
+      margin-top: 2rem;
+      font-family: var(--typography__font_family_2);
+      font-size: 1.875rem;
+      line-height: 1.4;
+    }
+    ///
+    div#article__container_bio {
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      border-top: 3px solid var(--colors__brand_color_1);
+      background-color: var(--colors__brand_color_3);
+      ////
+      img {
+        border-radius: var(--boxmodel__default_border_radius);
+        border: 1px solid var(--colors__black);
+      }
+      ////
+      h2,
+      p {
+        padding: 0 25px;
+      }
+      ////
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  //
+  aside#article__container_sidebar {
+    align-self: flex-start;
+    min-width: 25%;
+    max-width: 50ch;
+    margin: 2.8125rem 0;
+    border-radius: var(--boxmodel__default_border_radius);
+    border: 1px solid var(--colors__gray_light);
+    background-color: var(--colors__gray);
+    ///
+    @media screen and (max-width: 1415px) {
+      flex-direction: row;
+      align-self: center;
+      justify-content: space-around;
+      align-items: center;
+      min-width: initial;
+      max-width: initial;
+      width: 90%;
+    }
+    ///
+    @media screen and (max-width: 1110px) {
+      display: none;
+    }
+    ///
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+    ///
+    p {
+      font-size: 1rem;
+    }
+    ///
+    div {
+      border-bottom: 1px dotted var(--colors__black);
+      padding: 2rem;
+      ////
+      @media screen and (max-width: 1415px) {
+        border-bottom: none;
+        /////
+        &:first-of-type,
+        &:last-of-type {
+          flex-basis: 30%;
+        }
+        /////
+        &:nth-of-type(2) {
+          flex-basis: 40%;
+          //////
+          h2 {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      ////
+      &:nth-of-type(2) {
+        /////
+        img {
+          margin: 2rem 0;
+          width: 100%;
+        }
+      }
+      ////
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    ///
+    div.article__social_icons {
+      justify-content: space-around;
+      width: 100%;
+      ////
+      a {
+        background-image: none;
+      }
+      ////
+      img:hover {
+        filter: invert(20%) sepia(62%) saturate(7075%) hue-rotate(318deg)
+          brightness(89%) contrast(94%);
+      }
+    }
+  }
+}

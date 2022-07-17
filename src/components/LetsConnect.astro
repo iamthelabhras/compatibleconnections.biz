@@ -1,0 +1,62 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import CardLetsConnect from "./CardLetsConnect.astro";
+
+//    ASTRO LAYOUT COMPONENT IMPORTS
+import HeroGray from "../layout/HeroGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// TO DO: create & implement JS varaibles for e-mail, telephone, and discoverry sessions links.
+/// seems like it would be convenient to collect them all in one place in case anything every changes.
+
+// FULL ASTRO COMPONENT SYNTAX:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<HeroGray id="lets_connect__container">
+  <CardLetsConnect /> 
+  <div id="lets_connect__text">
+    <p>
+      We understand that every women's situation is unique and that you might
+      still have questions.
+    </p>
+    <p>
+      We'd love to help you learn more about how Compatible Connection's
+      services can transform your love life by putting you in front of ideal
+      potential partners.
+    </p>
+    <p>
+      Click on the icons to contact us via
+      <a href="mailto:bernadette@compatibleconnections.biz">
+        <img src="/assets/icons/email-50.png" loading="lazy" />
+        email</a
+      >
+      (bernadette at compatibleconnections dot biz),
+      <a href="tel:215-968-4694">
+        <img src="/assets/icons/phone-50.png" loading="lazy" />
+        telephone</a
+      >
+      (215-968-4694), or to
+      <a href="/discovery_session">
+        <img src="/assets/icons/heart-50.png" loading="lazy" />
+        schedule</a
+      >
+      a 20-minute Discovery Session.
+    </p>
+  </div>
+</HeroGray>

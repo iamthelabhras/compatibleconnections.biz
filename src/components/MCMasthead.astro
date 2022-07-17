@@ -1,0 +1,46 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { issueNumber } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<section id="mc_issue__masthead">
+    <span class="mc_issue__masthead_top_banner"></span>
+    <div class="flexbox__basic_column mc_issue__masthead_title">
+      <h1>The Meet-Cute</h1>
+      <span class="mc_issue__number">Issue #{issueNumber}</span>
+    </div>
+    <div class="flexbox__basic_row mc_issue__masthead_bottom_banner">
+      <img
+        src="/assets/images/meet_cute/meet_cute_couple-alpha.png"
+        alt="A man in a bowtie and a woman in a dress dancing."
+        loading="lazy"
+        class="transparent"
+      /><span class="mc_issue__mc_word">meet-cute:</span
+      ><span class="mc_issue__mc_definition"
+        >an amusing or charming first encounter between two people that leads to a romantic relationship.</span>
+    </div>
+</section>
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO --> 

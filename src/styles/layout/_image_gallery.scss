@@ -1,0 +1,9 @@
+.image_gallery__container {
+  display: grid;
+  gap: 3vw;
+  grid-template-columns: repeat(auto-fill, minxmax(180px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.5625rem;
+}

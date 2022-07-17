@@ -1,0 +1,33 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+const { imgSrc, imgAlt, glossaryWord } = Astro.props;
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<div class="mc_issue__glossary_word flexbox__basic_row">
+  <img class="transparent" src={imgSrc} alt={imgAlt} loading="lazy"/>
+  <div class="mc_issue__glossary_word_text flexbox__basic_column">
+  <h3>{glossaryWord}</h3>
+  <slot name="glossaryWordContent" />
+  </div>
+</div>

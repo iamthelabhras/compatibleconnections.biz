@@ -1,0 +1,191 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from '../../components/NavToggleWrapper.astro';
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+import CheckboxHeart from "../../components/CheckboxHeart.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import MCSection from "../../components/MCSection.astro";
+import MCBookRecommendation from "../../components/MCBookRecommendation.astro";
+import MCHeartBeatItem from "../../components/MCHeartBeatItem.astro";
+import MCMasthead from "../../components/MCMasthead.astro";
+import MCHighlights from "../../components/MCHighlights.astro";
+import MCMessage from "../../components/MCMessage.astro";
+import MCImageToInspire from "../../components/MCImageToInspire.astro";
+import MCThanksForReading from "../../components/MCThanksForReading.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const issueNumber = "3";
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = `https://compatibleconnections.biz/meetcute/issue_${issueNumber}.html`;
+let title = `-♡- The Meet-Cute: Issue ${issueNumber} -♡-`;
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "The Meet-Cute Issue #3.";
+let pageKeywords = "Compatible connections, meet-cute, meet cute, newsletter, dating after divorce, resources for divorced daters, online dating";
+let mainID = `issue_${issueNumber}`;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="mc_issue" id={mainID}>
+        <div class="mc_issue__container">
+          <MCMasthead issueNumber={issueNumber}></MCMasthead>
+          <MCHighlights>
+            <CheckboxHeart><a href="#spring">Coach Bernadette's Take On How Singles Can Make the Most of Spring</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__dating_tips">What It Means To LISTEN FOR COMPATIBILITY ... and Why It's So Important</a></CheckboxHeart>
+            <CheckboxHeart><a href="#podcast">A Great Story-Driven Podcast about the Messiness of Love, Loss, Laughter, and Human Relationships</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__book_recommendations">Some Inspiring & Empowering Book Recommendations</a></CheckboxHeart> 
+          </MCHighlights>
+          <MCMessage>
+            <p slot="messageContent">Love is in the air!  Let's make the most of it!</p>
+            <p slot="messageContent">Spring wants you to find a mate. Seriously! The season is basically handing you one opportunity after another to meet someone and enjoy your time with them.</p>
+            <p slot="messageContent">Beginning a relationship in the spring can be incredibly romantic, but, just like anything else, you have to put in the work.</p>
+            <p class="utility_classes__strong" id="spring" slot="messageContent">Here are a few ideas to help you get your "spring" on.</p>
+            <ul slot="messageContent">
+              <li><h3>If you want your love to blossom like flowers in spring, take charge of it.</h3>
+                <p>Spring cleaning can be applied to more than just your closet.  Let go of anything (or anyone) you're holding onto emotionally that's no longer doing you justice.</p>
+              </li>
+              <li><h3>Breakthrough your bad luck - and any bad habits or patterns that have been holding you back.</h3>
+                <p>Take advantage of the season's natural beauty and start thinking differently.  Prepare your mind and heart to meet more people.  Spring is all about new beginnings!</p>
+              </li>
+              <li><h3>Replace self-defeating negative thoughts with self-affimring positive intentions.</h3>
+                <p>The sun is shining.  Flowers are blooming. Now that the winter's over, give yourself permission to feel hopeful about the future.</p>
+              </li>
+              <li><h3>Switch up your routine.</h3>
+                <p>
+                  Enroll in seasonal activities and clubs where you can meet new people who share your common interests. Try outdoor yoga, tennis, a running club, kayaking ... anything that gives you an excuse to burn a few calories and see some new faces. 
+                </p>
+                <p>
+                  If you have a dog - or know someone with a dog - get into the habit of bringing a furry friend to the dog park. Dogs make excellent wing-men and wing-women! Several former clients of mine have met great guys at the dog park. 
+                </p>
+                <p>
+                  Restaurants and bars with outdoor or rooftop seating will be flooded with people around this time of year, making them ideal places to mingle. Push yourself out of your rut, take a chance, and strike up a conversation with someone. You never know: they may just hold the key to your heart! 
+                </p>
+                <p>
+                  Street fairs, food festivals, and outdoor concerts will be buzzing with activity too. A few simple Google searches should point you in the direction of what's coming up in your area. 
+                </p>
+                <p>
+                  And, of course, lots of couples opt for a spring wedding. If you're lucky enough to be invited to one of these, go! Weddings can be a lot of fun ... and they're a great, low-risk way to meet a lot of new people. 
+                </p>
+              </li>
+            </ul>
+            <p class="utility_classes__strong" slot="messageContent">Don't take the season's gifts for granted!</p>
+            <p slot="messageContent">Spring is a great time to try new things.  Make the most of your options, cultivate a greater sense of optimism, and embark on a new adventure (or two) before the summer doldrums set in.</p>
+            <p id="mc_issue__valediction" slot="messageContent">You Deserve True Love,</p>
+          </MCMessage>
+          <MCSection sectionID="mc_issue__dating_tips" sectionHeader="Dating Tips">
+            <h3 slot="sectionContent">Pay Attention To What Matters & Listen For Compatibility!</h3>
+            <img src="/assets/images/meet_cute/issue_3/issue_3-dating_tips.gif" alt="A woman handing off a pair of headphones to her friend." loading="lazy" slot="sectionContent">
+            <p slot="sectionContent">First dates are all about getting to know someone, but what exactly do you want to know?</p>
+            <p slot="sectionContent">Surprisingly, not very many of my clients can answer this simple question!</p>
+            <p slot="sectionContent">By the end of your first date, the single most important thing you need to know is what the man in front of you cares about.</p>
+            <p slot="sectionContent"> Sometimes, this will be obvious. This might, for example, come up in conversation. Other times, this may be subtle. You'll have to listen carefully to his tones and his observe body language.</p>
+            <p slot="sectionContent">In either case, you'll know he's talking about something important when his tones change and his energy levels rise.</p>
+            <p slot="sectionContent">I call this “listening for compatibility” and it's important because, without compatibility, you'll struggle to turn a promising romance into a lasting partnership!</p>
+          </MCSection>
+          <MCSection sectionID="mc_issue__book_recommendations" sectionHeader="Book Recommendations">
+            <p slot="sectionContent">I did a lot of reading over the past few months!</p>
+            <p slot="sectionContent">Here are two great titles I'm excited to share with you!</p>
+            <MCBookRecommendation bookTitle="Me For You" bookAuthor="Lolly Winston" bookImgSrc="/assets/images/meet_cute/issue_3/issue_3-book_rec-me_for_you.jpg" bookImgAlt="The cover of Me For You by Lolly Winston" bookAmazonURL="https://compatible.click/l5" slot="sectionContent">
+              <p slot="bookRecommendationContent">A richly poignant and stirring story that asks: How soon is too soon to fall in love again?</p>
+              <p slot="bookRecommendationContent">The last thing Rudy expected was to wake up one Saturday morning, a widow at fifty-four years old. Now, ten months after the untimely death of his beloved wife, he's still not sure how to move on from the defining tragedy of his life—but his new job is helping.</p>
+              <p slot="bookRecommendationContent"> Lolly Winston delivers a heartfelt and realistic portrait of two imperfect people coming together to create a perfect love story out of loss and grief, hope and forgiveness. </p>
+            </MCBookRecommendation>
+            <MCBookRecommendation bookTitle="Daring Greatly" bookAuthor="Brené Brown" bookImgSrc="/assets/images/meet_cute/issue_3/issue_3-book_rec-daring_greatly.jpg" bookImgAlt="The cover of Daring Greatly by Brené Brown." bookAmazonURL="https://compatible.click/w0" slot="sectionContent">
+              <p slot="bookRecommendationContent">Based on twelve years of pioneering research, Brené Brown PhD, LMSW, dispels the cultural myth that vulnerability is weakness and argues that it is, in truth, our most accurate measure of courage.</p>
+              <p slot="bookRecommendationContent">Brown explains how vulnerability is both the core of difficult emotions like fear, grief, and disappointment, and the birthplace of love, belonging, joy, empathy, innovation, and creativity.</p>
+              <p slot="bookRecommendationContent">One of my favorite quotes from this book: “When we shut ourselves off from vulnerability, we distance ourselves from the experiences that bring purpose and meaning to our lives.”  So true!</p>
+            </MCBookRecommendation>
+          </MCSection>
+          <MCSection sectionID="mc_issue__heart_beat" sectionHeader="The Heart Beat">
+            <MCHeartBeatItem imgSrc="/assets/icons/video.svg" imgAlt="A play button." imgLink="https://compatible.click/ri" slot="sectionContent">
+              <p slot="heartBeatContent">Brené Brown, the social scientist behind the <a href="https://compatible.click/sg" target="_blank">2010 viral TEDXx talk The Power of Vulnerability</a>, is bringing her wit and wisdom to Netflix. </p>
+              <p slot="heartBeatContent">Her new show, <i><a href="https://compatible.click/ri" target="_blank">Brené Brown: The Call To Courage</a></i>, premiered on the streaming service on April 19th.  <a href="https://compatible.click/ri" target="_blank">Click here to watch a trailer</a> ... just be sure to have some Kleenex ready!</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/1n" slot="sectionContent">
+              <p slot="heartBeatContent">Although online dating sites are (still) a great resource for fabulous singles, they're also a magnet for unscrupulous scammers.</p>
+              <p slot="heartBeatContent">In fact, according to the Federal Trade Commission, <a href="https://compatible.click/1n" target="_blank">romance scams cost Americans $143 million dollars</a> in 2018! Women between the ages of 40 to 69 are especially vulnerable, as the data shows they're twice as likely to fall for scammers as women in their 20s.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/13" slot="sectionContent">
+              <p slot="heartBeatContent">For better or worse, we're living in a world where potential love interests can dig into your digital past with the click of a button.</p>
+              <p slot="heartBeatContent">That makes proactively managing your online profiles a must! Here are <a href="https://compatible.click/13" target="_blank">6 tips to help you give your social feeds a good scrub this spring</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/podcast.svg" imgAlt="A podcast icon." imgLink="https://compatible.click/j8" slot="sectionContent">
+              <p id="podcast" slot="heartBeatContent">Are you looking for something different to listen to during your morning commute?</p>
+              <p slot="heartBeatContent">Or maybe you'd like something new to keep you company while you exercise or sip your morning cup of coffee?</p>
+              <p slot="heartBeatContent"><a href="https://compatible.click/j8" target="_blank">I'd recommend checking out the Love Me podcast</a>. Through personal stories and playful fictions, the show celebrates that weird little voice inside each of us that cries out: "love me."</p>
+              <p slot="heartBeatContent">Bonus: the podcast's creators put together <a href="https://compatible.click/bo" target="_blank">a list of their favorite episodes</a> for new listeners to browse!</p>
+            </MCHeartBeatItem>
+          </MCSection>
+          <MCSection sectionID="mc_issue__image" sectionHeader="This Issue's Image To Inspire">
+            <MCImageToInspire imgSrc="/assets/images/meet_cute/issue_3/image_to_inspire.png" imgAlt="She made broken look beautiful, strong look invincible.  She walked with the Univerise or shoulders and made it look like a pair of wings." slot="sectionContent"/>
+          </MCSection>
+          <MCThanksForReading imgSrc="/assets/images/meet_cute/issue_3/issue_3-thanks_for_reading.gif" imgAlt="A rabbit and a yellow chick in sunglasses cheers each other with cold drinks in a swimming pool." />
+        <!-- The <div> below closes div.container--issue. -->
+        <!-- DO NOT DELETE!  -->
+        </div>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+<Footer client:load />
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+    <a href="404.html"></a>
+  </body>
+</html>

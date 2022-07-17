@@ -1,0 +1,107 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import DottedUL from "./DottedUL.astro";
+import ButtonLink from "./ButtonLink.astro";
+
+//    ASTRO LAYOUT COMPONENT IMPORTS
+import SectionGray from "../layout/SectionGray.astro";
+import FlexRow from "../layout/FlexRow.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// to do: create & implement JS varaibles for e-mail, telephone, and discoverry sessions links.
+///  seems like it would be convenient to collect them all in one place in case anything every changes.
+
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<SectionGray id="content_creators__explainer_1">
+    <FlexRow>
+    <img
+      src="../../../assets/images/interview_and_speaking_requests-1.png"
+      alt="Four different peoples' side profiles are super-imposed on top of the front page of a newspaper."
+      loading="lazy"
+    />
+    <p>
+      Here at Compatible Connections, we love the opportunity to share what we
+      do, and why we think it's important, with a wider audience.
+    </p>
+    </FlexRow>
+</SectionGray>
+
+<SectionGray id="content_creators__explainer_2">
+  <div class="flexbox__basic_column">
+    <p>
+      We know how challenging it can be to create fresh content that cuts
+      through the digital noise.
+    </p>
+    <p>
+      Although it's never been easier to share your ideas online, it's also
+      never been more difficult to find your audience ... or keep their
+      attention.
+    </p>
+    <p>Whether you're a:</p>
+    <DottedUL>
+      <li>
+        <span class="utility_classes__strong">Blogger</span>
+        brainstorming ideas for your post
+        or pitch.
+      </li>
+      <li>
+        <span class="utility_classes__strong">Podcaster</span> trying to stay on top of a
+        demanding release schedule.
+      </li>
+      <li>
+        <span class="utility_classes__strong">Divorce Professional</span> looking for resource
+        that can <span class="utility_classes__emphasis">actually help</span> your clients.
+      </li>
+    </DottedUL>
+    <p>Generating content can fell like a constant, uphill battle!</p>
+  </div>
+</SectionGray>
+
+<SectionGray id="content_creators__explainer_3">
+  <div class="flexbox__basic_row">
+    <div class="flexbox__basic_column">
+      <p>We'd love to help you!</p>
+      <p>
+        Compatible Connections has made working with like-minded Content
+        Creators an integral part of our mission to help every woman find the
+        love of their life after divorce.
+      </p>
+      <p>
+        Below you'll find a wealth of information about how we can help you
+        create content for your next in-store event, podcast, blog post, support
+        group meeting, and more.
+      </p>
+      <p>
+        Scroll down or click the buttons to jump to the section that best fits
+        your needs as a Content Creator.
+      </p>
+    </div>
+    <div class="flexbox__basic_column" id="collab_buttons">
+      <ButtonLink buttonLink="#content_creators__podcasts" buttonLinkText="Podcasts" />
+      <ButtonLink buttonLink="#content_creators__articles_and_blog_posts" buttonLinkText="Articles & Blog Posts" />
+      <ButtonLink buttonLink="#content_creators__presentations_and_workshops" buttonLinkText="Presentations & Workshops" />
+      <ButtonLink buttonLink="#lets_connect__container" buttonLinkText="Schedule A Content Collaboration Call" />
+    </div>
+  </div>
+</SectionGray>
+

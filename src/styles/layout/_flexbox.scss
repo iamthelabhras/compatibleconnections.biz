@@ -1,0 +1,30 @@
+.flexbox__basic_row,
+.flexbox__basic_column {
+  display: flex;
+  flex-wrap: wrap;
+  // Default margin & padding for unnested flex containers.
+  margin: var(--flexbox___default_margin);
+  padding: var(--flexbox___default_padding);
+  // Custom variables.
+  --flexbox___default_margin: 3.125rem auto;
+  --flexbox___default_padding: 1.25rem;
+  //
+  @media (max-width: 575px) {
+    // Custom variables.
+    // Remove margin & padding for unnested containers on mobile.
+    --flexbox___default_margin: 0;
+    --flexbox___default_padding: 0;
+  }
+  //
+  .flexbox__basic_row,
+  .flexbox__basic_column {
+    // Remove margin from nested flex containers.
+    // Prevents "the pecular magic of flexbox & auto margins" from causing difficult-to-debug layout issues.
+    // See:  https://css-tricks.com/the-peculiar-magic-of-flexbox-and-auto-margins/
+    margin: 0;
+  }
+}
+
+.flexbox__basic_column {
+  flex-direction: column;
+}

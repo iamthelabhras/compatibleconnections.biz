@@ -1,0 +1,461 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+import HeroGray from "../layout/HeroGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import BioSlide from "./BioSlide.astro";
+import BioTelevision from "./BioTelevision.astro";
+import BioCloud from "./BioCloud.astro";
+import BioRocket from "./BioRocket.astro";
+import BioPause from "./BioPause.astro";
+import BioBooks from "./BioBooks.astro";
+import BioDatingApp from "./BioDatingApp.astro";
+import BioEmojis from "./BioEmojis.astro";
+import BioFish from "./BioFish.astro";
+import BioRing from "./BioRing.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<HeroGray id="bio__explainer">
+  <img
+    src="/assets/icons/swipe_left-64.png"
+    alt="A hand swiping left."
+    loading="lazy"
+  />
+  <p>
+    Swipe or scroll left and right to read Coach Bernadette's biography!
+  </p>
+  <img
+    src="/assets/icons/swipe_right-64.png"
+    alt="A hand swiping right."
+    loading="lazy"
+  />
+</HeroGray>
+<section id="bio__carousel">
+  <BioSlide
+    slideNumber="slide_1"
+    slideQuote="Once upon a time, you were a little girl with a big dream that you promised you'd make real one day."
+  >
+    <p slot="text">
+      If, like me, you were raised on '60s TV shows like
+      <span class="utility_classes__emphasis">Father Knows Best</span>,
+      <span class="utility_classes__emphasis">Donna Reed</span>, and
+      <span class="utility_classes__emphasis">Dennis the Menace</span>, you probably came to
+      believe that every little girls' dream was to grow up, marry their knight
+      in shining armor, start a family, get a dog, and live happily after.
+    </p>
+    <p class="utility_classes__center" slot="text">I know I definitely did!</p>
+    <p slot="text">
+      By the time I was in my early 20s, I was married. By the time I was in my
+      late 20s, I'd left the workforce and thrown myself entirely into raising
+      my two small children.
+    </p>
+    <p slot="text">
+      Being a mother was everything I expected, nothing like I expected, and so
+      much more! The love I felt towards my children was indescribable, but, as
+      the years began to roll by, I began to feel something else. I began to
+      feel the need to do and be more than "just" a stay-at-home Mom.
+    </p>
+    <BioTelevision slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_2">
+    <p slot="text">
+      I didn't know what this "something more" could be at first. But one day,
+      purely by chance, I picked up a magazine at Barnes & Noble.
+    </p>
+    <p slot="text">
+      While absently flipping through its pages, an ad caught my eye. It was
+      from an organization called the
+      <span class="utility_classes__strong"
+        >International Network for Children and Families</span
+      >
+      <a href="https://www.apecparenting.com/" target="_blank">("INCF")</a>,
+      inviting people to learn more about the work of
+      <a href="https://www.alfredadler.org/alfred-adler" target="_blank"
+        >Alfred Adler</a
+      >,
+      <a href="https://www.icassi.net/rudolf-dreikurs/" target="_blank"
+        >Rudolf Dreikurs</a
+      >, and Parent Education.
+    </p>
+    <p slot="text">
+      Little did I know it at the time, but discovering that little ad would
+      lead me to discover my passion for Coaching, personal development, and
+      helping people build relationships that could stand the test of time!
+    </p>
+    <figure slot="image">
+      <img class="bio__adler transparent"
+        src="/assets/images/bio-adler.png"
+        alt="A portrait of Alfred Adler."
+        loading="lazy"
+      />
+      <figcaption>Alfred Adler</figcaption>
+    </figure>
+      <img class="bio__rcb"
+        src="/assets/images/bio-rcb_book_cover.jpg"
+        alt="The cover of the book Redirecting Children's Behavior by Kathryn J. Kvols"
+        loading="lazy" slot="image"
+      />
+  </BioSlide>
+  <BioSlide slideNumber="slide_3">
+    <p slot="text">
+      Within a year of seeing that ad, I was a
+      <a
+        href="https://www.apecparenting.com/become-an-instructor"
+        target="_blank"
+        >certified INCF Parent Educator</a
+      >.
+    </p>
+    <p slot="text">
+      Within three years, I had completed my
+      <a
+        href="https://coachcampus.com/articles/what-is-a-master-coach/"
+        target="_blank"
+        >Master Coach Certification</a
+      >
+      through
+      <a href="https://www.coachu.com/Home/" target="_blank">Coach University</a
+      >.
+    </p>
+    <p slot="text">
+      This was a lot of work! Coaching was in its infancy back then: this long
+      before anyone with a website (and a weekend's worth of “training”) could
+      claim to be a Coach.
+    </p>
+    <p slot="text">
+      I was still spending my days at home with my family but, at night, I was
+      busy helping other families create long-term, loving relationships with
+      their children.
+    </p>
+    <p slot="text">
+      I taught parenting classes and lead workshops on positive discipline and
+      redirecting children's behavior; I partnered with local hospitals and
+      other child advocates to promote parent education; and I wrote and
+      published my first book, <i>101 Parenting Recipes</i>.
+    </p>
+    <p slot="text">
+      Best of all, I also launched my first business: a coaching firm for
+      parents.
+    </p>
+    <figure class="flexbox__basic_column" slot="image">
+      <img
+        src="/assets/images/bio-coach_bernadette_young_mother.jpeg"
+        alt="A young Coach Bernadette with a toddler on a see-saw."
+        loading="lazy"
+      />
+      <figcaption>Bernadette As A Young Mom</figcaption>
+    </figure>
+    <figure class="flexbox__basic_column" slot="image">
+      <img
+        src="/assets/images/bio-parenting_recipes.jpeg"
+        alt="The table of contents from Coach Bernadette's book 101 Parenting Recipes."
+        loading="lazy"
+      />
+      <figcaption><i>101 Parenting Recipes</i></figcaption>
+    </figure>
+  </BioSlide>
+  <BioSlide
+    slideNumber="slide_4"
+    slideQuote="Sometimes forever after isn't forever, after all."
+  >
+    <p slot="text">
+      And then, one day, after 24-years of marriage, I found myself thrust into
+      the middle of a high conflict divorce. There was someone else. My white
+      picket fence had termites! My little girl's dream was crushed.
+    </p>
+    <p slot="text">
+      My divorce dragged on for two-and-a-half years. It was one of the most
+      difficult periods of my life but, thankfully, I emerged on the other side
+      of divorce with my confidence, my pride, and my optimism intact.
+    </p>
+    <p slot="text">
+      I still believed in true love, but I knew, if I was going to find it, I'd
+      have to radically rethink everything I thought I knew about love, romance,
+      and relationships.
+    </p>
+    <BioCloud slot="image" />
+  </BioSlide>
+  <BioSlide
+    slideNumber="slide_5"
+    slideQuote="Little girls with dreams become women with vision."
+  >
+    <p slot="text">
+      I decided to see life after divorce as a tale of epic adventure and
+      discovery!
+    </p>
+    <p slot="text">
+      Although I hadn't been on a date in decades, I didn't view my newly single
+      status as something to be afraid or ashamed of. I saw it was an
+      opportunity to throw out my old beliefs about relationships, develop new
+      approaches to meeting and partnering with men, and discover what real love
+      meant for me!
+    </p>
+    <p slot="text">
+      Perhaps more importantly, being newly single also gave me an opportunity
+      to rediscover the parts of myself I'd lost touch with after two decades of
+      being a wife and a mother.
+    </p>
+    <p slot="text">
+      These were tall tasks, but I had the support of wonderful friends and
+      colleagues. I also had the enormous advantage of almost two decades' worth
+      of training and experience as a Coach. I decided to use that training and
+      experience to help me systematically tackle the challenges of dating after
+      divorce.
+    </p>
+    <BioRocket slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_6">
+    <p slot="text">
+      I won't lie: it wasn't easy...especially at first. There were plenty of
+      missteps and plenty of blind alleys.
+    </p>
+    <p class="utility_classes__center" slot="text">
+      And, of course, there were plenty of bad dates!
+    </p>
+    <p slot="text">
+      I saw it all! Men who ended up being much older than they looked in their
+      profile pictures. Creepy guys who came on way too strong with “seductive”
+      one-liners. Scam artists that preyed on vulnerable and lonely divorcees.
+      From time to time, I entertained doubts about being (or wanting to be)
+      married again. What a frustrating process!
+    </p>
+    <p slot="text">
+      Through it all, though, I managed to hold onto my sense of optimism. I
+      knew that I deserved true love. I kept learning and I kept moving forward.
+    </p>
+    <BioDatingApp slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_7">
+    <p slot="text">
+      Relatively early on, I realized part of the problem was that, as a
+      teenager, I'd been trained to <em>date randomly</em>.
+    </p>
+    <p slot="text">
+      I had unconsciously acquired the belief that dating was essentially a
+      numbers game with few real rules, apart from "look good" and "attract as
+      many men as possible." Up until that point, I'd implicitly assumed dating
+      was more about being lucky than being smart: all you could do was simply
+      put yourself out there and hoped for the best. Vague criteria (like
+      "chemistry") was all you had to zero-in on potential mates. And even if
+      relationship after relationship lead to dead-ends and heartbreak, you just
+      had to keep dating and eventually you'd find "the One."
+    </p>
+    <p slot="text">
+      None of this made any sense! No wonder so many of our first marriages end
+      in divorce!
+    </p>
+    <img
+      src="/assets/images/bio-dice.png"
+      alt="A pair of six-sided dice."
+      loading="lazy"
+      slot="image"
+    />
+  </BioSlide>
+  <BioSlide slideNumber="slide_8">
+    <p slot="text">If random dating was the problem, what was the solution?</p>
+    <p slot="text">
+      The answer seemed obvious: deliberate dating. I needed to identify what
+      specific traits I was looking for in a partner, and I needed to link every
+      stage of the dating process to "screening" for those traits.
+    </p>
+    <p slot="text">
+      This was a huge breakthrough, but it also raised some big questions!
+    </p>
+    <p slot="text">
+      What specific traits was I looking for in a man? And how could I know,
+      with some degree of certainty, that a man actually had those traits?
+    </p>
+    <p slot="text">
+      I'd learned the hard way that many older men in the dating pool weren't
+      always honest. And, more to the point, asking men to fill out a
+      questionnaire or grilling them on a first date was a surefire way to send
+      them running!
+    </p>
+    <BioEmojis slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_9">
+    <p slot="text">
+      For the second time since my divorce, I was feeling confused, discouraged,
+      and overwhelmed as a later-in-life single.
+    </p>
+    <p class="utility_classes__center" slot="text">But, once again, I kept going!</p>
+    <p slot="text">
+      I decided to hit "pause" on my dating and devote my free time to
+      researching answers to my questions.
+    </p>
+    <BioPause slot="image"/>
+  </BioSlide>
+  <BioSlide slideNumber="slide_10">
+    <p class="utility_classes__center" slot="text">
+      I didn't go on a date again for almost two years.
+    </p>
+    <p slot="text">
+      I read book after book on relationships, dating, and romance; I reached
+      out to fellow Coaches with my questions and asked them for feedback and
+      recommendations; I talked to other single divorcees.
+    </p>
+    <p slot="text">
+      I learned to distinguish the work of real relationship experts from the
+      work of grifters & New Age gurus who offered single women plenty in the
+      way of general advice but very little in the way of practical techniques
+      or real results.
+    </p>
+    <p slot="text">
+      I gave myself permission to worry less about finding someone and worry
+      more about finding myself.
+    </p>
+    <p slot="text">
+      I took up golfing. I reconnected with my love of dancing. I kept growing
+      as a person.
+    </p>
+    <BioBooks slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_11">
+    <p slot="text">
+      My patience paid off and, eventually, my downtime and hard work lead me to
+      another huge breakthrough!
+    </p>
+    <p slot="text">
+      I discovered that compatibility, not chemistry or physical attraction, was
+      the crucial factor driving long-term relationship success.
+    </p>
+    <p slot="text">
+      I came to understand that identifying the traits I was looking for in a
+      compatible partner was inseparable from the process of "partnering with
+      myself first," a phrase I coined to describe the sometimes difficult but
+      always rewarding task of discovering my core needs and values.
+    </p>
+    <p slot="text">
+      I realized that I could use much of the small talk and game-playing that
+      surrounded online dating to my advantage by asking men simple, open-ended
+      questions about themselves and their lives to discreetly assess their
+      compatibility. (I also realized that by making these "connecting
+      questions'' fun, light, and flirty, I could easily avoid making every date
+      feel like a joyless test or job interview.)
+    </p>
+    <p slot="text">
+      I belatedly grasped the fact that relationships are built, not discovered,
+      and that the skills I needed to date deliberately were the same skills I
+      needed to find and keep true love.
+    </p>
+    <img
+      src="/assets/images/bio-newton.png"
+      alt=""
+      loading="lazy"
+      slot="image"
+    />
+  </BioSlide>
+  <BioSlide slideNumber="slide_12">
+    <p slot="text">
+      Armed with this newfound understanding, I re-entered the online dating
+      scene.
+    </p>
+    <p slot="text">
+      There were still missteps, but consistently applying my insights into
+      deliberate dating and compatibility gave me a sense of control, purpose,
+      and perspective I'd never experienced before as a single.
+    </p>
+    <p slot="text">
+      Dating was no longer the anxiety-producing chore it once was. Red flags
+      were easier to spot. I didn't have to wait until a face-to-face meeting to
+      get a general idea of whether or not a man was a good match. I came to
+      genuinely enjoy connecting with men on and offline, even the guys I knew
+      weren't a good fit romantically. (It turns out there are actually a lot of
+      good guys out there, if you know how to find them.)
+    </p>
+    <p slot="text">
+      Dating stopped feeling like a gauntlet I had to run as quickly as
+      possible. I was able to slow down and really appreciate my search for a
+      compatible connection.
+    </p>
+    <BioFish slot="image" />
+  </BioSlide>
+  <BioSlide
+    slideNumber="slide_13"
+    slideQuote="The best relationships are the ones you never saw coming!"
+  >
+    <p class="utility_classes__center" slot="text">
+      In the end, I finally found my happy ending!
+    </p>
+    <p slot="text">
+      Within one year of re-entering the dating pool, I met Stu, the man who
+      would eventually become my second husband, and made the transition from
+      single woman to committed partner.
+    </p>
+    <BioRing slot="image" />
+  </BioSlide>
+  <BioSlide slideNumber="slide_14">
+    <p slot="text">
+      As my relationship with Stu deepened, I made the decision to launch a new
+      Coaching firm, Compatible Connections, to help other divorced women skip
+      right to the good parts of dating after divorce, without having to go
+      through all the trouble, frustration, and heartache I did.
+    </p>
+    <p slot="text">
+      At the heart of my new business were two Signature Series -
+      <a href="/pwyf" target="_blank">Partner With Yourself First</a>
+      and
+      <a href="/sss" target="_blank"
+        >Seek, Sort, & Select Your Compatible Partner Online</a
+      >
+      - that organized and collected the insights and techniques I'd developed
+      over the course of my journey from befuddled divorcee to deliberate dater
+      to happily remarried.
+    </p>
+    <img
+      src="/assets/images/bio-cc_log.png"
+      alt="Compatible Connections' logo."
+      loading="lazy"
+      slot="image"
+    />
+  </BioSlide>
+  <BioSlide slideNumber="slide_15" slideQuote="True love stories never end!">
+    <p slot="text">
+      Since founding Compatible Connections, I've acquired over a decade's worth
+      of experience showing single women how to find the love of their lives
+      after divorce.
+    </p>
+    <p slot="text">
+      I've worked with hundreds of clients whose stories reminded me so much of
+      my own, and it's been my privilege to help them re-discover the joys of
+      dating and coupling.
+    </p>
+    <p slot="text">
+      I get up everyday eager to help another single woman write her happy
+      ending. And I'm grateful for everything I've learned, and continue to
+      learn, in the process.
+    </p>
+    <p slot="text">
+      As it turns out, my little girl dreams did manage to get one thing right:
+      true love stories never end!
+    </p>
+    <img
+      src="/assets/images/bio-true_love_stories.png"
+      alt=""
+      loading="lazy"
+      slot="image"
+    />
+    <span slot="image">If my story resonated with you, reach out!</span>
+    <a href="/discovery_session" slot="image"
+      >Click here to schedule a Discovery Session.</a
+    >
+  </BioSlide>
+</section>

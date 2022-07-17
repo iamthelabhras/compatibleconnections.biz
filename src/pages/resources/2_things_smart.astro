@@ -1,0 +1,122 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from "../../components/NavToggleWrapper.astro";
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import Article from "../../layout/Article.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/resoures/articles/2_things_smart.html";
+let title = "-♡- Article: 2 Things Smart Daters Do After Divorce -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "At its core, dating is a process of elimination with one goal: forming a long-term relationship with a compatible partner.";
+let pageKeywords = "Compatible Connections, Bernadette Smith, Bernadette M. Smith, online dating, dating after divorce, resources for online daters, resources for divorced daters, article, compatibility, dating mistakes, biggest dating mistakes";
+let mainID = "article__2_things_smart";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id={mainID} class="article">
+        <Article articleTitle="2 Things Smart Daters Do After Divorce" imgSrc="/assets/images/resources/articles/2_things_smart.png" imgAlt="A silhouette of a man shrinking and fading away." articleValediction="Wishing You All the Best in Life & Love">
+          <blockquote slot="blockquote">
+            Before we begin, let's be clear: there are no one-size-fits-all rules when it comes to dating after divorce.  
+          </blockquote>
+          <p slot="article_text">
+            There is no “list of things to do to land a man in 30 days” nor is there a reason to blame yourself if he's “just not that into you.” Why? Because every woman dating after divorce is different - and every woman dating after divorce is looking for different things.  
+          </p>
+          <p slot="article_text">
+            Here's the catch, though: most women dating after divorce approach dating the same way. They wait until they're on an actual date to start sizing up a potential partner. The result? A merry-go-round of first meets, bad dates, failed relationships, broken hearts, and a lot of wasted time. 
+          </p>
+          <p slot="article_text">
+            At its core, dating is a process of elimination with one goal: forming a long-term relationship with a compatible partner. The keyword here is process. Dating is a process and, like all processes, if you're not doing it consciously, you're probably doing it wrong. 
+          </p>
+          <p slot="article_text">
+            I have yet to meet a prospective client who dates consciously. Although almost all of the women I've worked with have a checklist (or three!) of things they're looking for in a man, not one of them has ever entertained the idea of trying to recognize a compatible partner before meeting them for the first time. Even more alarmingly, surprisingly few women I've worked with understand how important it is to understand themselves, and what unique traits make them compatible, before they start dating online. 
+         </p>
+          <p slot="article_text">
+            Conscious, confident daters do two things <em>differently</em> and <em>consistently</em>: they <span class="utility_classes__strong">partner with themselves first</span> and they <span class="utility_classes__strong">screen men before they go on dates</span>. 
+          </p>
+          <p slot="article_text">
+            Partnering with yourself first means that a single woman has taken the time to get to know herself, to identify her core needs and values, and to clarify exactly what she's looking for in a relationship. It also means that a single woman understands that she's looking for someone to complement - not complete - her and applies this understanding to every aspect of the dating process. 
+          </p>
+          <p slot="article_text">
+            Armed with this knowledge, a single woman can use the personal information men share about themselves on dating sites to begin identifying potential compatible partners before their first face-to-face meet up.  
+          </p>
+          <p slot="article_text">
+            This approach also empowers them to stop dating randomly and, perhaps for the first time in their lives, begin to experience the joy of dating. 
+          </p>
+          <p slot="article_text">
+            Single women who partner with themselves first don't waste their time in dead-end relationships. As daters, they feel calm, confident and in control of a process they understand. 
+          </p>
+          <p slot="article_text">
+            I can't tell you who Mr. Right is - only you can answer that question - but I can help steer you away from Mr. Wrong. 
+          </p>
+          <p slot="article_text">
+            If what you've read here resonates with you, or you'd like to learn more about how to <a href="/pwyf" target="_blank">Partner With Yourself First</a>, please <a href="mailto:bernadette@compatibleconnections.biz">e-mail me</a> at bernadette at compatibleconnections dot biz or <a href="/discovery_session" target="_blank">schedule a complimentary Discovery Session</a>. I'd love to learn more about you, your story, and how Compatible Connections can help you become a confident, conscious dater! 
+          </p>
+        </Article>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+const { bookTitle, bookAuthor, bookImgSrc, bookImgAlt, bookAmazonURL } = Astro.props;
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<div class="flexbox__basic_row mc_issue__book_recommendation">
+  <div class="flexbox__basic_column mc_issue__book_recommendation_text">
+    <h3>{bookTitle}</h3>
+    <span>by {bookAuthor}</span>
+    <slot name="bookRecommendationContent"></slot>
+    <p><a href={bookAmazonURL} target="_blank">Click here to read more about <i>{bookTitle}</i> on Amazon</a>.</p>
+  </div>
+  <img class="mc_issue__book_recommendation_image" src={bookImgSrc} alt={bookImgAlt}>
+</div>

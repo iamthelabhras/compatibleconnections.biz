@@ -1,0 +1,23 @@
+div.social_icons {
+  display: flex;
+  flex-grow: 1;
+  gap: var(--boxmodel__default_indent);
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: var(--social_icons__margin_left);
+  margin-right: var(--boxmodel__default_indent);
+  --social_icons__default_width: 50px;
+  --social_icons__default_height: 50px;
+  --social_icons__margin_left: 2rem;
+  //
+  img.social_icons__icon {
+    width: var(--social_icons__default_width);
+    height: var(--social_icons__default_height);
+    transition: transform ease-in-out 0.5s;
+  }
+  //
+  img.social_icons__icon:hover,
+  img.social_icons__icon:focus {
+    transform: scale(1.35);
+  }
+}

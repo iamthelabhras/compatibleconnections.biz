@@ -1,0 +1,56 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import ServicesLinks from "./ServicesLinks.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+const { id, imgSrc, imgAlt } = Astro.props;
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<div id={id}>
+  <div class="explore_our_services__pitch_card_container">
+    <div class="explore_our_services__pitch_card"></div>
+    <img
+      class="explore_our_services__pitch_card_image"
+      src={imgSrc}
+      alt={imgAlt}
+      loading="lazy"
+    />
+      <div class="explore_our_services__pitch_card_question_container">
+        <slot name="pitch_card_question" />
+        <span class="explore_our_services__pitch_card_see">
+          <img src="/assets/icons/see_less-16.png" /> Click to see
+          <span class="explore_our_services__pitch_card_see_more">more ...</span
+          ><span class="explore_our_services__pitch_card_see_less">less ...</span>
+        </span>
+      </div>
+      <div class="explore_our_services__pitch_card_answer_container">
+        <slot name="pitch_card_answer" />
+      </div>
+    <slot name="services_links" />
+  </div>
+</div>
+
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: SERVICESPITCHCARD.ASTRO --> 
+<script hoist type="module">
+  import "../js/explore_our_services--pitch_cards.js";
+</script>

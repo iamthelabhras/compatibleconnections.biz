@@ -1,0 +1,190 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from '../../components/NavToggleWrapper.astro';
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+import CheckboxHeart from "../../components/CheckboxHeart.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import MCSection from "../../components/MCSection.astro";
+import MCGlossaryWord from "../../components/MCGlossaryWord.astro";
+import MCDatingAppBreakdown from "../../components/MCDatingAppBreakdown.astro";
+import MCHeartBeatItem from "../../components/MCHeartBeatItem.astro";
+import MCMasthead from "../../components/MCMasthead.astro";
+import MCHighlights from "../../components/MCHighlights.astro";
+import MCMessage from "../../components/MCMessage.astro";
+import MCImageToInspire from "../../components/MCImageToInspire.astro";
+import MCThanksForReading from "../../components/MCThanksForReading.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const issueNumber = "2";
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = `https://compatibleconnections.biz/meetcute/issue_${issueNumber}.html`;
+let title = `-♡- The Meet-Cute: Issue ${issueNumber} -♡-`;
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "The Meet-Cute Issue #2.";
+let pageKeywords = "Compatible connections, meet-cute, meet cute, newsletter, dating after divorce, resources for divorced daters, online dating";
+let mainID = `issue_${issueNumber}`;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="mc_issue" id={mainID}>
+        <div class="mc_issue__container">
+          <MCMasthead issueNumber={issueNumber}></MCMasthead>
+          <MCHighlights>
+            <CheckboxHeart><a href="#4_reasons">Four Reasons It's Actually <em>Great</em> To Be Single Around Valentine's Day </a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__dating_tips">One Reason You Should Never Flash A Guy On The First Date</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__dating_app">An "All Star Fake Number You Can Give Out To Annoying Guys</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__heart_beat">Our Usual Round-Up Of Interesting Articles and Videos on Dating, Romance, and Modern Love</a></CheckboxHeart> 
+          </MCHighlights>
+          <MCMessage>
+            <p slot="messageContent">It's Valentine's Day and, once again, fabulous singles are being constantly “reminded” of their single status.</p>
+            <p slot="messageContent">Don't let the Hallmark cards and heart-shaped chocolates get you down. February is actually a perfect time to reflect on the advantages of being single.</p>
+            <p id="4_reasons" slot="messageContent">Singles are free to learn and grow in ways that women in relationships simply can't. Don't believe me? Here's a short list of things you'll learn about yourself <i>only</i> when you're single.</p>
+            <ul slot="messageContent">
+              <li><h3>You'll discover the importance of being your own best friend.</h3>
+                <p>Becoming comfortable in your own company may be one of the most challenging skills you will ever master. It may also have the greatest payout.</p>
+              </li>
+              <li><h3>You'll rediscover your sexuality.</h3>
+                <p>Heartbreak decimates egos and shatters self-esteem. Rediscovering flirtation, romance and attraction works wonders to heal your spirit.</p>
+              </li>
+              <li><h3>You'll fuel your passions.</h3>
+                <p>As a single, you'll have more free time to rediscover interests and hobbies. You'll have the time to go back and rediscover what brought you happiness. It'll expand your social circle with like-minded people.</p>
+              </li>
+              <li><h3>You'll learn how to become a confident, conscious dater.</h3>
+                <p>
+                  Compatible partners share lifestyle choices, habits, interests, core beliefs, and personal goals. They're attracted to one another, yes, but their attraction is based on a deep and meaningful connection that extends beyond an initial spark or a great first date. Discover your Top 5 Romantic Compatible Traits to recognize Cupid's pick as soon as he shows up!  
+                </p>
+              </li>
+            </ul>
+            <p slot="messageContent"> Although it may seem that Cupid's a bit slow these days, once he finds that compatible guy to warm your heart, February will become hotter than July! In the meantime, get on with learning how to recognize, align, and capture your ideal compatible partner ASAP.  If you're not sure how to get started, we're here to show you how! </p>
+            <p id="mc_issue__valediction" slot="messageContent">You Deserve True Love,</p>
+          </MCMessage>
+          <MCSection sectionID="mc_issue__dating_tips" sectionHeader="Dating Tips">
+            <h3 slot="sectionContent">Are You A Flasher On A First Date?</h3>
+            <img src="/assets/images/meet_cute/issue_2/issue_2-dating_tips.png" alt="A flasher opening his trenchcoat." loading="lazy" class="transparent" slot="sectionContent">
+            <p slot="sectionContent">The Flasher divulges negative personal information about herself on a first date, often without (consciously) realizing it.</p>
+            <p slot="sectionContent">This is typically labelled "baggage" and it lands with a resounding thud on the con side of the pro / con list your date is tallying up in their head.</p>
+            <p slot="sectionContent">Don't end being the <i>"Yes, she was great but ..."</i> girl after a first date!  Get to know men better before you start to open up about your past.  If you don't, most men will take a pass!</p>
+         </MCSection>
+         <MCSection sectionID="mc_issue__glossary" sectionHeader="New Glossary of Modern Romance">
+          <p slot="sectionContent">Cuffing season? Meet-cute?</p>
+          <p slot="sectionContent"> Chances are you've heard these terms being tossed around. There's also a good chance that you have absolutely no idea what they mean ...if you're anywhere north of 40, at least.</p>
+          <p slot="sectionContent">For women of a certain age, having conversations about modern romance can feel a bit like trying to decipher a foreign language.</p>
+          <p slot="sectionContent">But no worries, we've got your back! Here are some key terms and definitions to help you make sense of the New Glossary of Modern Romance.</p>
+          <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_2/issue_2-cuffing_season.png" imgAlt="A pair of handcuffs." glossaryWord="Cuffing Season" slot="sectionContent">
+            <p slot="glossaryWordContent">Cuffing season is the period between early fall and late winter when everyone starts to shack up with the nearest half-decent single person to ward off loneliness and cold during the cooler months. Cuffing season typically implies a short-term, mutually-beneficial arrangement that's strictly seasonal, and it ends as soon as the leaves start turning green again.</p>
+          </MCGlossaryWord>
+          <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_2/issue_2-meetcute.png" imgAlt="A heart hovers above an outline of a man and a woman's head." glossaryWord="Meet-Cute" slot="sectionContent">
+            <p slot="glossaryWordContent">A meet-cute is a scenario in which two individuals are brought together in some unlikely, zany, destined-to-fall-in-love-and-be-together-forever sort of way. These serendipitous encounters are a staple of romantic comedies ... and the inspiration for our newsletter!</p>
+          </MCGlossaryWord>
+          <iframe id="issue_2--new_glossary--video" src="https://www.youtube.com/embed/nqEknI2kIag" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="450" height="450" frameborder="0" slot="sectionContent"></iframe>
+          <span slot="sectionContent">Click the video to see some great examples of meet-cutes from the movies!</span>
+        </MCSection>
+        <MCSection sectionID="mc_issue__dating_app" sectionHeader="Dating App Spotlight">
+         <MCDatingAppBreakdown imgSrc="/assets/images/meet_cute/issue_2/issue_2-dating_app_spotlight-smartphone.svg" imgAlt="" datingAppName="All Star Fake Number" datingAppDesc="A fake number you can give out to annoying guys." datingAppPrice="$0.00 (Free)" slot="sectionContent"></MCDatingAppBreakdown>
+         <p slot="sectionContent">We've all been there.</p> 
+         <p slot="sectionContent">You've tried multiple times to politely decline a guy's request for your number, but he just won't seem to take no for an answer.</p>
+         <p slot="sectionContent">There are almost as many solutions to this problem as there are single women, but one tried and true strategy is to slip our Annonyingly Persistent Friend a fake number.</p>
+         <p slot="sectionContent"> How do you decide what number to give him though? There are so many possibilities ... and you don't want to just randomly recite a bunch of numbers and hope for the best.</p>
+         <p slot="sectionContent">Well, thanks to Kyle Kelly-Yahner, a tech-savvy drummer from San Francisco, you now have the option of slipping your would-be Romeo a number that plays Smash Mouth's "All Star" on a constant loop!</p>
+         <p slot="sectionContent">(For those of you that aren't familiar with Smash Mouth, they had a couple of Top 40 hits back in the 1990's. See the video below.)</p>
+         <p slot="sectionContent">The number is <a href="tel:830-476-5664">830-476-5664</a>.</p> 
+         <p slot="sectionContent">Add it to your contacts so you'll have it ready the next time you need it! That's a San Antonio area code, though, so be sure to have a back story ready in case there are any questions.</p>
+         <iframe src="https://www.youtube.com/embed/UGte3fMnw8o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" slot="sectionContent"></iframe>
+        </MCSection>
+        <MCSection sectionID="mc_issue__heart_beat" sectionHeader="The Heart Beat">
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/facebook-e6395" slot="sectionContent">
+              <p slot="heartBeatContent"><a href="https://compatible.click/facebook-e6395" target="_blank">Facebook is getting into the online dating game, even as their PR woes surrounding user privacy continue to pile up</a>.</p>
+              <p slot="heartBeatContent">Will disenchanted users come back to FB for its dating services ... even if it means sharing more personal data about themselves? Everyone seems to have an opinion on this one!</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/making-online-1e390" slot="sectionContent">
+              <p slot="heartBeatContent">As online dating loses its stigma and dating apps become "the new normal," <a href="https://compatible.click/making-online-1e390" target="_blank">researchers are starting to run honest-to-God experiments to determine why singles prefer some dating sites over others</a>.</p>
+              <p slot="heartBeatContent">Do people like to make their own choices? Or are they happy letting an algorithm do the matching for them? The answer might surprise you!</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/ai-dating" slot="sectionContent">
+              <p slot="heartBeatContent">Artificial Intelligence ("AI") is re-shaping industries at an astounding rate, but can super-smart computers really help you find the one?</p>
+              <p slot="heartBeatContent"><a href="https://compatible.click/ai-dating" target="_blank">Plenty of start-ups are saying yes - but some observers are quick to point out that AI isn't without its drawbacks or problems</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper icon." imgLink="https://compatible.click/dna-dating-b9741" slot="sectionContent">
+              <p slot="heartBeatContent">Of course, other start-ups are using <a href="https://compatible.click/dna-dating-b9741" target="_blank">mice science from the 1970s to tout the benefits of DNA-based dating</a>.</p>
+              <p slot="heartBeatContent">Maybe we should take all this futuristic stuff with a grain of salt?</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/video.svg" imgAlt="A play button icon." imgLink="https://compatible.click/matchmakers-save-242a5" slot="sectionContent">
+              <p slot="heartBeatContent">Despite online dating's popularity, some studies are finding that people are lonelier than ever. </p>
+              <p slot="heartBeatContent">That's the bad news.</p>
+              <p slot="heartBeatContent">The good news? <a href="https://compatible.click/matchmakers-save-242a5" target="_blank">More and more lonely people are turning to matchmakers — both digital and human — to help them find companionship</a>.</p>
+            </MCHeartBeatItem>
+          </MCSection>
+          <MCSection sectionID="mc_issue__image" sectionHeader="This Issue's Image To Inspire">
+            <MCImageToInspire imgSrc="/assets/images/meet_cute/issue_2/issue_2-image_to_inspire.png" imgAlt="Pause and remember.  Change will happen the moment you have the courage to honor your authentic self." slot="sectionContent"/>
+          </MCSection>
+          <MCThanksForReading imgSrc="/assets/images/meet_cute/issue_2/issue_2-thanks_for_reading.gif" imgAlt="A rabbit and a yellow chick in sunglasses cheers each other with cold drinks in a swimming pool." />
+        <!-- The <div> below closes div.container--issue. -->
+        <!-- DO NOT DELETE!  -->
+        </div>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+<Footer client:load />
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+    <a href="404.html"></a>
+  </body>
+</html>

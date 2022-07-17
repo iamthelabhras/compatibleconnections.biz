@@ -1,0 +1,85 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import CardTextFancy from "./CardTextFancy.astro";
+
+//    ASTRO LAYOUT IMPORTS
+
+import SectionGray from "../layout/SectionGray.astro";
+import FlexRow from "../layout/FlexRow.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// TO DO: create & implement JS varaibles for e-mail, telephone, and Discovery Session links.  Seems like it would be convnient to collect them all in one place and update from there and have changes "ripple" across site.
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<SectionGray id="discovery_session__explainer">
+  <FlexRow>
+    <img
+      src="../../../assets/images/discovery_session_upwards_alpha.png"
+      alt="A woman standing on top of several multi-colored shapes points upwards."
+      loading="lazy"
+      class="transparent"
+      id="discovery_session__upwards"
+    />
+    <p>
+      Our complimentary Discovery Sessions give potential clients an opportunity
+      to experience what it's like working with a Certified Dating Coach!
+    </p>
+  </FlexRow>
+  <FlexRow>
+    <CardTextFancy>
+      <h2>Every Divorced Woman's Situation <span class="utility_classes__clean_break_on_wrap">Is Unique!</span></h2>
+      <p>
+        Our Discovery Sessions give you a chance to share your experiences, ask
+        questions, and explore whether any of our services
+        are a good fit for
+        <span class="utility_classes__emphasis">you</span>.
+      </p>
+      <p class="utility_classes__strong">You deserve true love!</p> 
+      <p class="utility_classes__center">Let Compatible Connections <span class="utility_classes__clean_break_on_wrap">lead you there</span>.</p>
+    </CardTextFancy>
+    <CardTextFancy>
+      <h2>After Your <span class="utility_classes__clean_break_on_wrap">Discovery Session</span><span class="utility_classes__clean_break_on_wrap">You Will:</span></h2>
+      <ul>
+        <li>
+          <img src="../../assets/icons/heart-50.png" loading="lazy" />
+          <span
+            >Discover how to avoid the
+            <span class="utility_classes__strong">three massive dating mistakes</span> all divorcees
+            make.</span
+          >
+        </li>
+        <li>
+          <img src="../../assets/icons/heart-50.png" loading="lazy" />
+          <span
+            >Discover how to protect yourself from perfect strangers with a
+            Dating Plan.</span
+          >
+        </li>
+        <li>
+          <img src="../../assets/icons/heart-50.png" loading="lazy" /><span
+            >Discover the three non-negotiables you need to know before picking
+            another life partner.</span
+          >
+        </li>
+      </ul>
+    </CardTextFancy>
+    </FlexRow>
+  </SectionGray>

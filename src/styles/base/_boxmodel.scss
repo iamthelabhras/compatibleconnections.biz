@@ -1,0 +1,25 @@
+:root {
+  // Custom variables.
+  --boxmodel__span_page: 100vw;
+  --boxmodel__default_margin: 1.5625rem;
+  --boxmodel__default_indent: 1.5625rem;
+  --boxmodel__h1_page_title_top_margin: 3.125rem;
+  --boxmodel__h1_page_title_bottom_margin: 3.125rem;
+  --boxmodel__h2_margin_bottom: 1.5625rem;
+  --boxmodel__default_padding: 0.65rem;
+  --boxmodel__default_line_thickness: 0.3125rem;
+  --boxmodel__default_border_radius: 0.9375rem;
+  --boxmodel__card_border_radius: 0.3125rem;
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+main {
+  width: var(--boxmodel__span_page);
+  padding-bottom: 25px;
+  border-top: double 8px var(--colors__brand_color_1);
+  border-bottom: double 8px var(--colors__brand_color_1);
+}

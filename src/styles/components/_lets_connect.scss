@@ -1,0 +1,94 @@
+#lets_connect__container {
+  justify-content: space-evenly;
+  align-items: center;
+  // Custom variables.
+  --lets_connect__icon_width: 40px;
+  --lets_connect__icon_height: 40px;
+  //
+  #lets_connect__card {
+    // Overwrites default styling on .card.
+    flex-wrap: nowrap;
+    margin: 0;
+    transform: rotate(-10deg);
+    overflow: hidden;
+    ///
+    @media (max-width: 1065px) {
+      // Unrotates card when it begins to collide with text container.
+      transform: none;
+    }
+    ///
+    @media (max-width: 1001px) {
+      // Adds bottom margin to card on wrap.
+      margin-bottom: 25px;
+    }
+    ///
+    h3 {
+      text-align: center;
+      align-self: center;
+      padding: 50px 25px;
+    }
+    ///
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 90%;
+      height: var(--lets_connect__icon_height);
+      margin-bottom: 3.125rem;
+    }
+    ///
+    a:hover {
+      // Do not underline linked icons.
+      background-image: none;
+    }
+    ///
+    img.lets_connect__icon {
+      align-self: center;
+      width: var(--lets_connect__icon_width);
+      height: var(--lets_connect__icon_height);
+      filter: invert(97%) sepia(99%) saturate(7495%) hue-rotate(355deg)
+        brightness(104%) contrast(103%);
+      transition: width ease-in-out 0.5s, height ease-in-out 0.5s;
+    }
+    ///
+    img.lets_connect__icon:hover,
+    img.lets_connect__icon:focus {
+      filter: none;
+      width: calc(var(--lets_connect__icon_width) + 15px);
+      height: calc(var(--lets_connect__icon_height + 15px));
+    }
+  }
+  //
+  #lets_connect__text {
+    display: flex;
+    flex-direction: column;
+    ///
+    p {
+      margin: 0.625rem 2.5rem;
+      max-width: 50ch;
+      font-size: 1.125rem;
+    }
+    ///
+    p:first-of-type {
+      max-width: 40ch;
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    img {
+      display: inline-block;
+      margin-bottom: -4px;
+      height: calc(var(--lets_connect__icon_height) / 2);
+      width: calc(var(--lets_connect__icon_width) / 2);
+    }
+  }
+}
+
+// Meet-Cute Issue CSS over-rides
+
+main.mc_issue {
+  section#lets_connect__container {
+    flex-direction: row;
+  }
+}

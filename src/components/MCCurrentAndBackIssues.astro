@@ -1,0 +1,72 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import MCInThisIssue from "./MCInThisIssue.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<section class="flexbox__basic_column" id="meetcute__issues">
+    <h2>Current & Back Issues</h2>
+    <MCInThisIssue issueNumber="4" issueURL="/meetcute/issue_4">
+      <li slot="issue_highlight">
+        4 places you can go this summer to have a blast & meet single guys (plus
+        some great Connecting Questions).
+      </li>
+      <li slot="issue_highlight">
+        A new section dedicated to answer dating's most challenging questions.
+        (First up: how long should you date before having sex?)
+      </li>
+      <li slot="issue_highlight">
+        A list of 10 dating apps that don't exist … but should!
+      </li>
+    </MCInThisIssue>
+    <MCInThisIssue issueNumber="3" issueURL="/meetcute/issue_3">
+      <li slot="issue_highlight">
+        Coach Bernadette's take on how singles can make the most of spring. 
+      </li>
+      <li slot="issue_highlight">
+        A great, story-driven podcast about the messiness of love, loss, laughter, and human relationships. 
+      </li>
+      <li slot="issue_highlight">
+        Some inspiring & empowering book recommendations. 
+      </li>
+      <li slot="issue_highlight">
+        What it means to listen for compatibility … and why it's so important. 
+      </li>
+    </MCInThisIssue>
+    <MCInThisIssue issueNumber="2" issueURL="/meetcute/issue_2">
+      <li slot="issue_highlight">
+        Four reasons why it's actually great to be single around Valentine's Day.
+      </li>
+      <li slot="issue_highlight">
+        One reason you should never flash a guy on a first date.
+      </li>
+    </MCInThisIssue>
+    <MCInThisIssue issueNumber="1" issueURL="/meetcute/issue_1">
+      <li slot="issue_highlight">
+        What do if you find yourself wishing you had a plus one on your arm this holiday season.
+      </li>
+      <li slot="issue_highlight">
+        A must have dating app that can help you protect your privacy, online and off.
+      </li>
+    </MCInThisIssue>
+</section>

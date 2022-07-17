@@ -1,0 +1,40 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { issueNumber, issueURL } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<div class="meetcute__issues_container flexbox__basic_column">
+  <details>
+    <summary><h3>Issue {issueNumber}</h3></summary>
+    <div class="flexbox__basic_column">
+      <span>In This Issue:</span>
+      <ul class="meetcute__issue_highlights flexbox__basic_column">
+        <slot name="issue_highlight" />
+      </ul>
+      <a href={issueURL} class="utiltiy_classes_reset button">
+        Start Reading Issue {issueNumber}!
+      </a>
+    </div>
+  </details>
+</div>

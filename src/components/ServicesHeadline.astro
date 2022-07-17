@@ -1,0 +1,37 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+const { imgSrc, imgAlt, question3, question4, question5 } = Astro.props;
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<div class="explore_our_services__headline_container">
+  <div class="explore_our_services__headline_text">
+    <slot name="services_headline_text"> </slot>
+  </div>
+  <img
+    class="explore_our_services__headline_image transparent"
+    src={imgSrc}
+    alt={imgAlt}
+    loading="lazy"
+  />
+</div>

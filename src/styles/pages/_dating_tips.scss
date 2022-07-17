@@ -1,0 +1,238 @@
+main#dating_tips {
+  //
+  section:not(#lets_connect__container) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ///
+    h2 {
+      margin-bottom: 2rem;
+    }
+    ///
+    p {
+      font-size: 1.125rem;
+    }
+  }
+  //
+  section#dating_tips__explainer {
+    ///
+    p {
+      max-width: 55ch;
+      font-size: 1.125rem;
+    }
+    ///
+    p:first-of-type {
+      text-align: center;
+      max-width: 45ch;
+      margin-bottom: 1.5625rem;
+      font-size: 1.5625rem;
+      font-weight: var(--typography__bold);
+    }
+  }
+  //
+  section#dating_tips__gallery_modal {
+    // Styles DatingTipsGalleryModal Astro component.
+    margin: 5rem 0 1rem 0;
+    ///
+    a {
+      // Remove site-wide link underlining.
+      background-image: none;
+    }
+    ///
+    span.dating_tips__gallery_line {
+      display: inline-block;
+      width: 100%;
+      height: 5px;
+      background-color: var(--colors__brand_color_1);
+      ////
+      &:first-of-type {
+        margin-bottom: 2rem;
+      }
+      ////
+      &:last-of-type {
+        margin-top: 3rem;
+      }
+    }
+    ///
+    div#dating_tips__tips_container {
+      display: grid;
+      gap: 3vw;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+      place-items: center;
+      width: 95%;
+      margin: 0 auto;
+      padding: 25px;
+      ////
+      div.image_modal__container {
+        // Styles & overides ImageModal Astro components.
+        // Dating tips (thumbnail and full screen) are nested within these divs.
+        font-family: initial;
+        padding: 5px 10px;
+        /////
+        div.image_modal__thumbnail {
+          // This div contains the Dating Tip title & thumbnail image.
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border: 2px solid var(--colors__black);
+          padding: 5px 10px;
+          box-shadow: 2px 2px 2px var(--colors__brand_color_2);
+          background: var(--colors__gray);
+          transition: all 0.5s ease-in-out;
+          //////
+          &:hover,
+          &:focus {
+            transform: scale(1.1);
+          }
+          //////
+          h2 {
+            text-align: center;
+            font-family: var(--typography__font_family_1);
+            font-size: 1.25rem;
+          }
+          //////
+          img {
+            margin-top: 1.5625rem;
+            width: 100%;
+            height: 50%;
+            ///////
+            &:hover,
+            &:focus {
+              // Override default styling for dating tips card.
+              // Card resizes on hover, not image.
+              transform: initial;
+            }
+          }
+        }
+        /////
+        div.image_modal__full_screen_bg {
+          // Dark background dating tip cards are laid over.
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          transform: scale(1, 0);
+          transition: transform ease-in-out 250ms;
+          z-index: 999;
+          //////
+          &:target {
+            // Dictates size of dating tip and close toggle.
+            transform: scale(1, 1);
+          }
+          //////
+          div.image_modal__full_screen {
+            // Gray card within which dating tip links, heading, and text appear.
+            width: 50%;
+            height: 90%;
+            border-radius: var(--boxmodel__default_border_radius);
+            background: var(--colors__gray);
+            overflow: scroll;
+            ///////
+            @media screen and (max-width: 985px) {
+              width: 90%;
+            }
+            ///////
+            a.dating_tips__thumbnail_link {
+              position: relative;
+              margin-bottom: 2rem;
+              ////////
+              &:after {
+                // Close "button".
+                position: absolute;
+                content: "X";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                border: 2px solid black;
+                background: var(--colors__brand_color_1);
+                color: var(--colors__white);
+                text-decoration: none;
+              }
+            }
+            ///////
+            a:last-of-type {
+              width: 75%;
+              margin-top: 3rem;
+              border: 2px solid var(--colors__black);
+            }
+            ///////
+            div.dating_tips__full_screen {
+              // Styles HTML associated with <div class="${tips[tip].tipFullScreenClass}" loading="lazy" /> injected into DOM using dating_tips.js.
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              margin-top: 1rem;
+              padding: 3rem;
+              border: 3px solid var(--colors__gray_light);
+              background: var(--colors__white);
+              ////////
+              h2 {
+                text-align: center;
+                max-width: 20ch;
+              }
+              ////////
+              p {
+                margin: 0.75rem 0;
+                max-width: 55ch;
+              }
+              ////////
+              ul {
+                margin: 1.5rem 0;
+                /////////
+                li {
+                  width: 75%;
+                  margin: 0.5rem auto;
+                  padding-left: 2rem;
+                  font-family: var(--typography__font_family_1);
+                  font-size: 1rem;
+                  font-weight: var(--typography__bold);
+                  //////////
+                  &::marker {
+                    content: "💖";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //
+  section#dating_tips__suggestions {
+    ///
+    // Styles and overrides ImageAndTextBlock Astro component.
+    div.block_image_and_text {
+      position: relative;
+      justify-content: space-around;
+      width: 100%;
+      padding: 2rem 0 3rem 0;
+      ////
+      img {
+        background-color: var(--colors__brand_color_2);
+      }
+      ////
+      p:first-of-type {
+        text-align: center;
+        max-width: 43ch;
+        font-size: 1.65rem;
+        font-weight: var(--typography__bold);
+      }
+      ////
+      p {
+        margin: 1.25rem 0;
+      }
+    }
+  }
+}

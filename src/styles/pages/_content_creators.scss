@@ -1,0 +1,94 @@
+main#content_creators {
+  //
+  .content_creators__collab {
+    // Styles Content Collab Astro component.
+    ///
+    p:first-of-type {
+      max-width: 45ch;
+      padding: 1.25rem;
+      font-size: 1.5625rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    p {
+      margin: var(--typography__defaults_margin);
+    }
+    ///
+    li > span {
+      font-weight: var(--typography__bold);
+    }
+    ///
+    .flexbox__basic_row {
+      //  Styles <CardTextFancy> and <slot name="previous_collabs>.
+      justify-content: center;
+      align-items: center;
+      ////
+      > .flexbox__basic_column {
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  //
+  #content_creators__explainer_1 {
+    // Styles ContentCollabExplainer Astro component.
+    ///
+    img:first-of-type {
+      max-width: 25rem;
+      max-height: 18.75rem;
+    }
+    ///
+    img:first-of-type + p {
+      text-align: left;
+      ////
+      @media (max-width: 575px) {
+        font-size: 1.5625rem;
+      }
+    }
+  }
+  //
+  #content_creators__explainer_2 {
+    // Styles ContentCollabExplainer Astro component.
+    ///
+    p:last-of-type {
+      text-align: center;
+      max-width: 35ch;
+      padding: 1.25rem;
+      font-size: 1.5625rem;
+      font-weight: var(--typography__bold);
+    }
+  }
+  //
+  #content_creators__explainer_3 {
+    // Styles ContentCollabExplainer Astro component.
+    button {
+      margin: 0.78125rem 0;
+      font-size: 1.25rem;
+    }
+  }
+  //
+  section#content_creators__presentations_and_workshops {
+    ///
+    //  Styles CotentCollabPresentations Astro component.
+    // Custom variables.
+    // Image Modal Container Astro component custom variable.
+    --content_creators__MAGIC_NUMBER__image_modal_container_width: 100px;
+    ///
+    .image_modal__container {
+      // Styles Image Modal Container Astro component.
+      // Override component's default width.
+      width: var(--content_creators__MAGIC_NUMBER__image_modal_container_width);
+    }
+    ///
+    img.content_creators__book_discussion_flyer {
+      width: clamp(100px, 25%, 200px);
+      border: 1px solid var(--colors__black);
+      box-shadow: 1px 1px 1px 1px var(--colors__black);
+      ////
+      &:first-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

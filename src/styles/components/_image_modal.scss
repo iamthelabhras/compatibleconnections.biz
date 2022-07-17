@@ -1,0 +1,93 @@
+.image_modal__container {
+  width: var(--image_modal__container_default_width);
+  // Custom variables.
+  --image_modal__container_default_width: 100%;
+  //
+  .image_modal__thumbnail {
+    ///
+    a.image_modal__open {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background: none;
+    }
+    ///
+    img {
+      // This width will (usually) be over-ridden & explicitly set depending on the image modal's context.
+      width: auto;
+      transition: transform ease-in-out 0.25s;
+      ////
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+  }
+  //
+  .image_modal__full_screen_bg {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    // "Hide" the full screen container...
+    transform: scale(1, 0);
+    transition: transform ease-in-out 250ms;
+    ///
+    &:target {
+      // ...until the link in the thumbail container is clicked.
+      transform: scale(1, 1);
+    }
+    ///
+    .image_modal__full_screen {
+      position: relative;
+      display: grid;
+      place-items: center;
+      padding: 15px;
+      background: var(--colors__gray_card);
+      box-shadow: 2px 2px 2px var(--colors__black);
+      ////
+      a.image_modal__close {
+        // Pink circle with a white "X".
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        background: var(--colors__brand_color_1);
+        text-decoration: none;
+        font-family: var(--typography__font_family_1);
+        transition: transform ease-in-out 0.25s;
+        /////
+        &:after {
+          content: "X";
+          color: var(--colors__white);
+        }
+        /////
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+      ////
+      img {
+        height: 65vh;
+        /////
+        @media (max-width: 575px) {
+          // Enlarge full screen image on smaller screens.
+          width: 90vw;
+          height: auto;
+        }
+      }
+    }
+  }
+}

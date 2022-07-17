@@ -1,0 +1,211 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from '../../components/NavToggleWrapper.astro';
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+import CheckboxHeart from "../../components/CheckboxHeart.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import MCSection from "../../components/MCSection.astro";
+import MCImageHBlock from "../../components/MCImageHBlock.astro";
+import MCFootnotes from "../../components/MCFootnotes.astro";
+import MCGlossaryWord from "../../components/MCGlossaryWord.astro";
+import MCHeartBeatItem from "../../components/MCHeartBeatItem.astro";
+import MCMasthead from "../../components/MCMasthead.astro";
+import MCHighlights from "../../components/MCHighlights.astro";
+import MCMessage from "../../components/MCMessage.astro";
+import MCImageToInspire from "../../components/MCImageToInspire.astro";
+import MCThanksForReading from "../../components/MCThanksForReading.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const issueNumber = "4"
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = `https://compatibleconnections.biz/meetcute/issue_${issueNumber}.html`;
+let title = `-♡- The Meet-Cute: Issue ${issueNumber} -♡-`;
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "The Meet-Cute Issue #4.";
+let pageKeywords = "Compatible connections, meet-cute, meet cute, newsletter, dating after divorce, resources for divorced daters, online dating";
+let mainID = `issue_${issueNumber}`;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="mc_issue" id={mainID}>
+        <div class="mc_issue__container">
+          <MCMasthead issueNumber={issueNumber}></MCMasthead>
+          <MCHighlights>
+            <CheckboxHeart><a href="#4_places">4 Places You Can Go This Summer To Have a Blast & Meet Single Guys (Plus Come Great Connecting Questions)</a></CheckboxHeart>
+            <CheckboxHeart><a href="#playlist">A "Feel Good Summer" Playlist to Keep You Grooving All the Way To Labor Day</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__deep_dive">A New Section Dedicated To Answering's Dating's Most Challenging Questions (First Up: "How Long Should You Date Before Having Sex?")</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__heart_beat">Our Usual Round of Funny & Informative Dating-Related Content From Around The Web</a></CheckboxHeart> 
+          </MCHighlights>
+          <MCMessage>
+            <p slot="messageContent">Now that the Fourth of July has come and gone, it's officially the height of summer.</p>
+            <p slot="messageContent"> The nights are balmy and long, the weekends are sun-drenched and lazy. It's the perfect time to switch on your dating radar and get into a meet-cute mindset.</p>
+            <p slot="messageContent"> If you want to make the most of your summer, you've got to make time to get out of the house and talk to new people!</p>
+            <p slot="messageContent">This might sound easy, but sometimes it can be a struggle to break out of our usual routines. I know from personal experience that thinking up new places to go can be challenging. Ditto for figuring out what to say to a man you've just met.</p>
+            <p slot="messageContent"> Thankfully you're a <i>Meet-Cute</i> subscriber. You don't have to tackle these challenges on your own!</p>
+            <p slot="messageContent" id="4_places"> Below you'll find a list of fun summer activities that are also great ways to meet men. You'll also find some simple Connecting Questions you can use to strike up a conversation with anyone you might meet while you're out soaking up the sun and having a blast.</p>
+            <MCImageHBlock imgSrc="/assets/images/meet_cute/issue_4/craft_breweries.jpg" imgAlt="The interior of a craft brewery.  Several bar taps are positioned in front of two large fermentation tanks." hBlockHeader="Craft Breweries" slot="messageContent">
+              <p slot="hBlockContent">For whatever reason, craft breweries are a magnet for single men.</p>
+              <p slot="hBlockContent">The craft beer industry has made huge inroads in the U.S. over the past few years, which means that a simple Google search should turn up at least one or two breweries in your area. If that's not the case, dip into your local pubs' online profiles and websites. Odds are at least one of them has a seasonal beer menu, special happy hours, or a microbrew on tap. </p>
+              <p slot="hBlockContent"> Call up a girlfriend (or two) and make plans to check a nearby brewery or pub the middle of the afternoon. Grab a seat at the bar try chatting with your fellow beer drinkers. Start things off with this great ice-breaker: “It's my first time here. Do you have a favorite beer I should try?”</p>
+            </MCImageHBlock>
+            <MCImageHBlock imgSrc="/assets/images/meet_cute/issue_4/summer_festivals.jpg" imgAlt="A panoramic scene of people & tents at an outdoor summer festival." hBlockHeader="Summer Festivals" slot="messageContent">
+              <p slot="hBlockContent">Summer is event season!  It's basically one giant singles mixer.</p>
+              <p slot="hBlockContent">No matter where you live, I guarantee there is some sort of “fest” coming up that caters to one of your interests. Food, music, sporting events, movies … if you can think of it, there's probably a summer event dedicated to it.</p>
+              <p slot="hBlockContent">Gather a few adventurous friends, buy tickets, and get ready to scope out the scene. Talk to the people around you in line. Ask a cute guy what he's going to order at a particular food truck. Ask another cute guy to hold your drink for a second while you tie your shoe: just be sure to introduce yourself when you say thanks!</p>
+            </MCImageHBlock>
+            <MCImageHBlock imgSrc="/assets/images/meet_cute/issue_4/girls_getaway.jpg" imgAlt="Three women laughing as they splash in the ocean." hBlockHeader="A Girls' Getaway" slot="messageContent">
+              <p slot="hBlockContent">Summer is also a great time to hit the road and explore!</p>
+              <p slot="hBlockContent">Be sure everyone has a chance to break away from the group when you're out: most men won't walk up to a table of girlfriends. If you spot a cute guy, get a conversation going with a simple “Hi,” then follow it up with something like, “So, do you have anything fun planned for the rest of the summer?” </p>
+              <p slot="hBlockContent">Don't worry if you feel nervous approaching someone your own. Men love it when women take initiative. It's a major perk of the modern dating world! </p>
+            </MCImageHBlock>
+            <MCImageHBlock imgSrc="/assets/images/meet_cute/issue_4/golf_clinics.jpg" imgAlt="A pink outline of a woman swinging a golf club." hBlockHeader="Golf Clinics" slot="messageContent">
+              <p slot="hBlockContent">Last, but certainly not least, you should seriously consider enrolling in a women's golf clinic.</p>
+              <p slot="hBlockContent">When I was a new divorcee, I took a chance and enrolled in group golf lessons on a whim. It was by far one of the best decisions I made post-divorce. </p>
+              <p slot="hBlockContent">Learning to golf allowed me to make new friends, pick up a sport I could play well into my old age, take in some beautiful scenery, and practice mindfulness. It also gave me a great excuse to visit the “19th hole” after a lesson!</p>
+              <p slot="hBlockContent">Avid golfers like to hit the driving range on their way home from work and on the weekends. Buy a bucket of balls, grab a club from the pro shop, and work on your swing. You don't have to be great golfer. Plenty of the men on the range will be happy to coach you!</p>
+              <p slot="hBlockContent">Summer is a great time to be single, and now you have no excuse to let these sunny months go by without skipping things up! Be sure to notice who's noticing you and be ready to toss out a question or two to help move things along. You never know when you might find yourself in the middle of a meet-cute!</p>
+            </MCImageHBlock>
+            <p id="mc_issue__valediction" slot="messageContent">Here's To Summer Love,</p>
+          </MCMessage>
+          <MCSection sectionID="mc_issue__deep_dive" sectionHeader="Dating Deep Dive">
+            <p slot="sectionContent">"Bernadette, when's the best time to have sex with someone you're dating?"</p>
+            <p slot="sectionContent">Of all the things clients ask me, this is probably the question I get the most.</p>
+           <p slot="sectionContent">There are almost as many answers here as there are single women! Some singles take their cue from Sex and the City's Charlotte York and say three dates is the absolute minimum. Other women I know insist that anything less than five dates is a recipe for disaster. Most women, though, seem baffled. They really don't know what to do. They feel like they're walking blindfolded through a minefield.</p>
+           <p slot="sectionContent">The decision to have (or not to have) sex with your partner is a deeply personal one, and, like most deeply personal questions, this one doesn't lend itself to any one-size-fits-all answers. That said, there are general principles every woman can use to guide their decision-making.</p>
+           <p slot="sectionContent">Enter comedian Steve Harvey. My personal take on sex and dating owes a great deal to Harvey's surprise best-seller <i>Act Like a Lady, Think Like a Man</i>. Admittedly, Harvey's book generated a bit of controversy when it first came out. Some women thanked him for his insights into the male psyche, while others felt he pandered to outdated gender roles. My feeling, though, is that the book's central message - that women approach sex cautiously and only consider sleeping with a man when they're sure he wants a meaningful relationship - will always ring true for divorced women of a certain age.</p>
+           <p slot="sectionContent">Why? Because middle-aged women who suddenly find themselves single, sometimes after decades of marriage, are far more likely than other singles to be targeted by scammers and pick-up artists. <a href="#deep_dive_footnote_1" class="mc_issue__footnote_link"">1</a></p>
+           <p slot="sectionContent">Don't get me wrong. I'm not trying to suggest that danger and heartbreak lurk behind every flirty wink, first date, or text message. Years of working with single women have convinced me there are plenty of great guys out there. Unfortunately, they've also convinced me there are men on every dating site who will try to take advantage of my clients' vulnerability, loneliness, and general cluelessness.</p>
+           <p class="utility_classes__strong" slot="sectionContent">So how do you avoid these bad apples?</p>
+           <p class="utility_classes__strong" slot="sectionContent">How do you tell the good guys from the bad ones?</p>
+           <p slot="sectionContent">It's surprisingly simple! And here's where those general principles I was talking about earlier come into play. </p>
+           <p slot="sectionContent">First, before you even start looking for a date, get clear - really clear - about what you want out of your life after divorce or loss. Articulate what's important to you: your core needs and values, your relationship deal breakers, and your ideal partner's characteristics. Then make sure every new relationship, every budding romance - no matter how promising, no matter how exciting - goes through a probationary period of some kind before you even consider having sex.</p>
+           <p slot="sectionContent">You don't need to explicitly spell this out, although you'll want to tell your partner you'd like to take things slow so you both can get to know each other. However you decide to frame it, don't focus on how long this getting-to-know-you process takes. Time isn't the single most important thing to consider here. Compatibility is.</p>
+           <p slot="sectionContent">Compatibility is like a suit of armor that protects you from the worst aspects of dating. Once you know what you're doing, it's impossible to form a genuinely compatible connection with a man who's out to take advantage of you.</p>
+           <p slot="sectionContent">Master the art of using compatibility to seek, sort, and select potential partners, and you'll eliminate 99% of pick-up artists and scammers from your dating pool before you leave the house for your first date. And if by some miracle one of these sleaze bags manages to get past your screening process, you're still covered. A few simple questions and you'll know you need to steer clear.</p>
+           <p slot="sectionContent">Few scammers and pick-up artists are able to deceive a woman who knows who she is and knows what she wants. Fewer still are able to penetrate the defenses of a woman who understands why randomly dating different guys is the worst way to find true love or discover who is now that she's single for the first time in years. The dating world's bad apples get what they want, quickly and efficiently, by exploiting newly single women's uncertainties and insecurities. Confident and conscious daters who make compatibility a priority - and pre-requisite for sex - don't make good targets. </p>
+           <p slot="sectionContent">Although a lot of what I've outlined here is simple, that doesn't mean compatibility itself is easy. The truth is that it can be surprisingly difficult to put these principles into practice on your own. That's why I've been able to build an entire business around teaching women the art of making compatible connections.</p>
+           <MCFootnotes slot="sectionContent">
+           <li slot="footnoteContent" class="footnote" id="deep_dive_footnote_1"><a href="https://compatible.click/1n" target="_blank">As we pointed out in our last issue, the Federal Trade Commission recently reported that women between the ages of 40 and 69 were TWICE as likely as women in their 20's to be targeted by online dating scammers!</a></li>
+           </MCFootnotes>
+          </MCSection>
+          <MCSection sectionID="mc_issue__glossary" sectionHeader="New Glossary of Modern Romance">
+            <p slot="sectionContent">Flexting? Micro-cheating?</p>
+            <p slot="sectionContent"> Chances are you've heard these terms being tossed around. There's also a good chance that you have absolutely no idea what they mean ...if you're anywhere north of 40, at least.</p>
+            <p slot="sectionContent">For women of a certain age, having conversations about modern romance can feel a bit like trying to decipher a foreign language.</p>
+            <p slot="sectionContent">But no worries, we've got your back! Here are some key terms and definitions to help you make sense of the New Glossary of Modern Romance.</p>
+            <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_4/flexting.png" imgAlt="A flexing bicep." glossaryWord="Flexting" slot="sectionContent">
+              <p slot="glossaryWordContent">Flexting refers to the practice of bragging, name dropping, or exaggerating online in order to impress someone before an offline meeting. Flexting is surprisingly common. According to the dating site Plenty of Fish, 47% of single people have experienced flexting in the past year. Unsurprisingly, though, women are usually on the receiving end of all this hot air: Plenty of Fish also reported that 63% of the women they surveyed received flexts, as compared to just 38% of the men.</p>
+            </MCGlossaryWord>
+            <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_4/microcheating.png" imgAlt="A heart with devil horns." glossaryWord="Micro-Cheating" slot="sectionContent">
+              <p slot="glossaryWordContent">Micro-cheating is a form of infidelity that stops short physically cheating on someone, but still calls a partner's commitment and integrity into question. (Some dating coaches, myself included, would refer to this as emotional infidelity.) Microcheating men typically engage in a range of unsavory behaviors, including contacting exes on social media, lying about their relationship status online, keeping (or utilizing) an active dating profile, using fake names to hide other women in their smartphone contacts, sending other women cutesy or sexually charged texts & emojis, or aggressively flirting with other women in public. If any items in this list remind you of someone you're dating, run!</p>
+            </MCGlossaryWord>
+          </MCSection>
+          <MCSection sectionID="mc_issue__heart_beat" sectionHeader="The Heart Beat">
+            <MCHeartBeatItem imgSrc="/assets/icons/notes.svg" imgAlt="Musical notes." imgLink="https://compatible.click/ccq" slot="sectionContent">
+              <p id="playlist" slot="heartBeatContent">Every fabulous single needs a summer sountrack ... but who has the time to sift through thousands of tracks in search of the perfect mix?</p>
+              <p slot="heartBeatContent">Spotify, that's who! They have a small army of employees - sorry, content curators - who create new playlists for their millions of users. (If you want to learn more about these unsung heros, click <a href="https://compatible.click/fhn" target="_blank">here</a> or <a href="https://compatible.click/woh" target="_blank">here</a>.</p>
+              <p slot="heartBeatContent"><a href="https://compatible.click/ccq" target="_blank">You can listen to the "Feel Good Summer" playlist they just released by clicking here</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/5e8" slot="sectionContent">
+              <p slot="heartBeatContent">We take it for granted that everyone's heart is different. After all, no two women want exactly the same thing when it comes to love and romance!</p>
+              <p slot="heartBeatContent">But did you know that, biologically speaking, your heart is as unique as your iris or your fingerprints? The Pentagon sure did! .</p>
+              <p slot="heartBeatContent"><a href="https://compatible.click/5e8" target="_blank">They've created a laser beam that can identify people by their heart beat!</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/rsb" slot="sectionContent">
+              <p slot="heartBeatContent">Mainstream media outlets are finally starting to understand what I've been saying for years: you can't just Google your way to online dating success.</p>
+              <p slot="heartBeatContent">If you want to get the most out of online dating - especially if you're a busy professional and/or a woman over the age of 40 - you need to hire a certified dating coach.</p>
+              <p slot="heartBeatContent">You don't have to take my word for it: <a href="https://compatible.click/rsb" target="_blank">this Business Insider article explains why a new generation of successful women are turning to dating coaches to help them find love online</a>.</p>
+              <p slot="heartBeatContent">My favorite quote from the piece?</p>
+              <p class="utility_classes__strong" slot="heartBeatContent">“I needed someone who had the training and experience to back up all of the dating advice they were giving me. The Internet couldn't provide that.” </p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/5bu" slot="sectionContent">
+              <p slot="heartBeatContent"><a href="https://compatible.click/5bu" target="_blank">Match.com has begun hiring dating coaches to work with their New York based subscribers</a>.</p>
+              <p slot="heartBeatContent">It's a valuable reminder that dating apps are designed to encourage us to “shop” for dates the way we would shop for anything else online.</p>
+              <p slot="heartBeatContent">Apps might give you access to hundreds of eligible men, but, without a clear sense of who you are and what you're looking for in a partner, you'll struggle to form a meaningful connection offline. </p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/3ny" slot="sectionContent">
+              <p slot="heartBeatContent">Of course, there's always the chance some tech visionary will come along and completely change the way we think about online dating.</p>
+              <p slot="heartBeatContent">While you're waiting for that to happen, check out <a href="https://compatible.click/3ny" target="_blank">this hilarious article from <i>Elle</i> that describes 10 dating apps that don't exist yet ... but that single women would definitely use</a>.</p>
+              <p slot="heartBeatContent">Start-ups take note!</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://compatible.click/1t2" slot="sectionContent">
+              <p slot="heartBeatContent">Finally, here's <a href="https://compatible.click/1t2" target="_blank">an article from Megan Bruneau over at mindbodygreen that explains why emotional intelligence is key to finding true love</a>.</p>
+              <p slot="heartBeatContent">This article does a great job pointing out how traditional approaches to dating are fraught with frustrating contradictions.</p>
+              <p slot="heartBeatContent">Women are taught that love conquers all, but we're all also taught to seek out men who are superficially attractive or wealthy. We're told to follow our hearts, but we're also warned about the dangers of not using our heads.</p>
+              <p slot="heartbeatContent">Megan's article shows us how cultivating emotional intelligence can help us sidestep these contradictions and strike the right balance between logic and passion.</p>
+            </MCHeartBeatItem>
+          </MCSection>
+          <MCSection sectionID="mc_issue__image" sectionHeader="This Issue's Image To Inspire">
+            <MCImageToInspire imgSrc="/assets/images/meet_cute/issue_4/image_to_inspire.png" imgAlt="She made broken look beautiful, strong look invincible.  She walked with the Univerise or shoulders and made it look like a pair of wings." slot="sectionContent"/>
+          </MCSection>
+          <MCThanksForReading imgSrc="/assets/images/meet_cute/issue_4/issue_4-thanks_for_reading.gif" imgAlt="A rabbit and a yellow chick in sunglasses cheers each other with cold drinks in a swimming pool." />
+        <!-- The <div> below closes div.container--issue. -->
+        <!-- DO NOT DELETE!  -->
+        </div>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+<Footer client:load />
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+    <a href="404.html"></a>
+  </body>
+</html>

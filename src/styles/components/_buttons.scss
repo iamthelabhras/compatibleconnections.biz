@@ -1,0 +1,118 @@
+button,
+a.button {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  width: var(--buttons__default_width);
+  margin: var(--buttons__default_margin);
+  border: var(--buttons__default_border);
+  border-radius: var(--boxmodel__default_border_radius);
+  padding: var(--buttons__default_padding);
+  background: var(--colors__brand_color_1);
+  font-family: var(--typography__font_family_1);
+  font-weight: var(--typography__bold);
+  color: var(--colors__white);
+  cursor: hand;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  // Custom variables.
+  --buttons__default_width: clamp(15.625rem, 75%, 44.0625rem);
+  --buttons__default_width_on_mobile: 90%;
+  --buttons__default_margin: 1.5625rem 0;
+  --buttons__default_padding: 0.625rem;
+  --buttons__default_border: 1px solid var(--colors__black);
+  //
+  @media (max-width: 525px) {
+    width: var(--buttons__default_width_on_mobile);
+  }
+  //
+  &::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: var(--colors__brand_color_2);
+    position: absolute;
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -1;
+    transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+  }
+  //
+  &::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: var(--colors__brand_color_1);
+    position: absolute;
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -2;
+    transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+  }
+  //
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+  //
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+    width: 116%;
+  }
+  //
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    width: 120%;
+  }
+  //
+  span {
+    font-size: 1.25rem;
+    font-weight: var(--typography__bold);
+    color: var(--colors__white);
+  }
+}
+
+.buttons__expanding {
+  //
+  &:hover,
+  &:focus {
+    padding: 1.8754rem 0.625rem;
+  }
+}
+
+.buttons__scaling {
+  //
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+button[type="link"] {
+  //
+  a {
+    background-image: none;
+  }
+  //
+  a:link,
+  a:visited,
+  a:focus,
+  a:hover {
+    color: var(--colors__white);
+  }
+  //
+  a:active {
+    color: var(--colors__black);
+  }
+}

@@ -1,0 +1,67 @@
+.utility_classes__strong {
+  font-weight: var(--typography__bold);
+}
+
+.utility_classes__emphasis {
+  font-style: italic;
+}
+
+.utility_classes__center {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.utility_classes__align-left {
+  // Currently (7/8/22) only uses to style Coaching, PWYF, and SSS Astro components.
+  text-align: left !important;
+}
+
+.utility_classes__clean_break_on_wrap {
+  display: inline-block;
+}
+
+/* Add span-specific styling rules so that when certain utility classes
+    are implemented as spans within other text elements they "blend"
+    seamlessly with their parent elements & do not revert to the 
+    "vanilla" span element's base styling. */
+
+span.utility_classes__emphasis {
+  margin: 0;
+  padding: 0;
+}
+
+span.utility_classes__strong,
+span.utility_classes__emphasis,
+span.utility_classes__clean_break_on_wrap {
+  font-family: inherit;
+}
+
+span.utility_classes__emphasis,
+span.utility_classes__clean_break_on_wrap {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* Visual (mostly image-related) utility classes. */
+
+.utility_classes__lighten {
+  filter: brightness(125%);
+}
+
+.utility_classes__darken {
+  filter: brightness(75%);
+}
+
+a.utility_classes__reset {
+  // Reset sitewide default link behavior.
+  // Useful for when you need to style links as "buttons".
+  text-decoration: initial;
+  background-image: initial;
+  background-size: initial;
+  background-position: initial;
+  background-repeat: initial;
+  &:hover {
+    background-image: initial;
+    background-size: initial;
+  }
+}

@@ -1,0 +1,40 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+const { imgSrc, imgAlt } = Astro.props;
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<section id="mc_issue__thanks_for_reading">
+    <img
+      src={imgSrc}
+      alt={imgAlt}
+      loading="lazy"
+    />
+    <div
+      class="
+        flexbox__basic_column"
+        id="mc_issue__thanks_for_reading_text">
+      <p>Thanks for reading!</p>
+      <p>See you next time.</p>
+    </div>
+</section>

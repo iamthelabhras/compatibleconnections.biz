@@ -1,0 +1,510 @@
+main#bio {
+  // Custom variables.
+  --bio__gallery_width: 95vw;
+  --bio__font_size_quote: 1.725rem;
+  --bio__font_size_text: 1.25rem;
+  --bio__desktop_breakpoint: 1130px;
+  //
+  > section#bio__explainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    ///
+    @media screen and (max-width: 1130px) {
+      // Hides "swipe left or right" instructions on smaller screens.
+      display: none;
+    }
+    ///
+    p {
+      // Explainer text.
+      font-family: var(--typography__font_family_1);
+      font-size: 1.25rem;
+      font-weight: var(--typography__bold);
+    }
+  }
+  //
+  section#bio__carousel {
+    // Styles shared across all screen sizes.
+    overflow: scroll;
+    display: grid;
+    width: var(--bio__gallery_width);
+    grid-template-columns: repeat(15, var(--bio__gallery_width));
+    grid-column-gap: 25vw;
+    margin: 5rem auto;
+    border: 1px solid var(--colors__black);
+    background: var(--colors__brand_color_3);
+    box-shadow: 2px 2px 1px var(--colors__black);
+    scroll-snap-type: both mandatory;
+    -webkit-scroll-snap-type: both mandatory;
+    -ms-scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    ///
+    &:active {
+      scroll-snap-type: unset;
+      -webkit-scroll-snap-type: unset;
+      -ms-scroll-snap-type: unset;
+      ////
+      @media screen and (max-width: 1130px) {
+        scroll-snap-type: none;
+        -webkit-scroll-snap-type: none;
+        -ms-scroll-snap-type: none;
+      }
+    }
+    ///
+    @media screen and (max-width: 1130px) {
+      // Reflow carousel at this breakpoint.
+      // Switch from grid to flexbox.
+      // Switch from horiztonal scrolling to vertical, non-scrolling.
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      border: none;
+      background: var(--colors__white);
+      box-shadow: none;
+      grid-template-columns: none;
+      grid-column-gap: none;
+      grid-row-gap: none;
+      scroll-snap-type: none;
+      -webkit-scroll-snap-type: none;
+      -ms-scroll-snap-type: none;
+      scroll-padding: none;
+    }
+    ///
+    @media screen and (max-width: 695px) {
+      width: 95%;
+    }
+  }
+  //
+  .flexbox__basic_row,
+  .flexbox__basic_column {
+    // Remove default margin & padding from flex containers.
+    margin: 0;
+    padding: 0;
+  }
+  //
+  div.bio__slide {
+    // Styles all slides.
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // Set each slide's width to gallery width.
+    width: var(--bio__gallery_width);
+    margin: 2rem 0;
+    // Snap slides to center as user moves from slide-to-slide up to breakpoint.
+    scroll-snap-align: center;
+    ///
+    @media screen and (max-width: 1130px) {
+      // All slides became columns.
+      flex-direction: column;
+      gap: 2rem;
+      width: 85%;
+      margin: 6.25rem auto;
+      padding: 3.125rem 0;
+      background: var(--colors__gray);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      scroll-snap-align: none;
+    }
+    ///
+    @media screen and (max-width: 625px) {
+      // Further increase width on smallest screens.
+      width: 95%;
+    }
+    ////
+    div.bio__slide_text,
+    div.bio__slide_image {
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      // Horizontally & vertically center slide content by default.
+      justify-content: center;
+      align-items: center;
+      // Default width for all slides.
+      padding: 0 2rem;
+      /////
+      @media screen and (max-width: 1130px) {
+        // Text & image flex boxes within slides grow to 100% width.
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+    ////
+    div.bio__slide_text {
+      /////
+      p:first-of-type {
+        // Remove first p from DOM by default.
+        // Slides 2, 3, 6, 7, 8, 9, 10, 11, 12, and 14 do not have slideQuote Astro props set.
+        display: none;
+        // slideQuote Astro prop.
+        text-align: center;
+        max-width: 40ch;
+        margin-bottom: 2.5vh;
+        font-size: var(--bio__font_size_quote);
+        font-weight: var(--typography__bold);
+        color: var(--colors__brand_color_1);
+        text-shadow: 1px 1px 1px var(--colors__white);
+      }
+      /////
+      p {
+        max-width: 45ch;
+        font-size: var(--bio__font_size_text);
+      }
+    }
+    ////
+    div.bio__slide_image {
+      // No default styling across slides.
+    }
+    ////
+    span.bio__slide_instructions {
+      // Astro component instruction text.
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin: 0.25rem 0;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: var(--typography__bold);
+    }
+  }
+  //
+  #slide_1,
+  #slide_4,
+  #slide_5,
+  #slide_13,
+  #slide_15 {
+    ///
+    p:first-of-type {
+      // Override default styling to show slideQuote Astro.prop.
+      display: initial;
+    }
+  }
+  //
+  #slide_1,
+  #slide_2,
+  #slide_3,
+  #slide_4,
+  #slide_5,
+  #slide_6,
+  #slide_7,
+  #slide_8,
+  #slide_10,
+  #slide_11,
+  #slide_12,
+  #slide_13,
+  #slide_14,
+  #slide_15 {
+    align-content: center;
+  }
+  //
+  #slide_2,
+  #slide_10,
+  #slide_11 {
+    // Remove images on these slides when carousel reflows from grid to flexbox.
+    ///
+    div.bio__slide_image {
+      ////
+      @media screen and (max-width: 1130px) {
+        display: none;
+      }
+    }
+  }
+  //
+  #slide_2,
+  #slide_3 {
+    ///
+    div.bio__slide_image {
+      justify-content: space-around;
+    }
+    ///
+    figure {
+      ////
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      ////
+      img {
+        min-width: 40%;
+        max-width: 250px;
+        max-height: 191px;
+        height: auto;
+        /////
+        &.bio__adler {
+          max-width: 200px;
+        }
+      }
+      ////
+      figcaption {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 1.05rem;
+        font-weight: var(--typography__bold);
+        color: var(--colors__black);
+      }
+    }
+    ///
+    img.bio__rcb {
+      height: 250px;
+      width: 200x;
+    }
+  }
+  //
+  #slide_2 {
+    ///
+    div.bio__slide_image {
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+  //
+  #slide_3 {
+    ///
+    div.bio__slide_image {
+      ////
+      @media screen and (max-width: 1130px) {
+        flex-direction: row;
+      }
+      ////
+      img {
+        border-radius: var(--boxmodel__default_border_radius);
+      }
+      ////
+      figure:last-of-type {
+        //////
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
+      }
+    }
+  }
+  //
+  #slide_4 {
+    ///
+    div.bio__slide_text {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      /////
+      p {
+        max-width: 55ch;
+      }
+    }
+    ///
+    div.bio__slide_image {
+      display: flex;
+      align-self: center;
+      width: 40%;
+      min-width: 350px;
+      min-height: 300px;
+    }
+  }
+  //
+  #slide_5 {
+    ///
+    div.bio__slide_text {
+      align-self: center;
+    }
+    ///
+    div.bio__slide_image {
+      position: relative;
+      width: 50%;
+      // Min width & height are explicit values that contain absolutely positioned BioRocket component.
+      min-width: 350px;
+      min-height: 500px;
+      ////
+      @media screen and (max-width: 1130px) {
+        min-height: 389px;
+      }
+    }
+  }
+  //
+  #slide_7 {
+    ///
+    div.bio__slide_image {
+      justify-content: center;
+      align-items: center;
+      ////
+      img {
+        // Dice.
+        width: 300px;
+        height: 300px;
+        /////
+        @media screen and (max-width: 1130px) {
+          width: 215px;
+          height: 215px;
+        }
+      }
+    }
+  }
+  //
+  #slide_8 {
+    ///
+    div.bio__slide_image {
+      ////
+      label.toggle_label {
+        cursor: pointer;
+        position: relative;
+        width: 55%;
+        height: 35px;
+        margin: 1rem 0;
+        border-radius: 0.5em;
+        border: 1px solid #9f9f9f;
+        background-image: linear-gradient(#f2f2f2, #fff, #f2f2f2);
+        filter: drop-shadow(0.015em 0.015em 0.01em rgba(0, 0, 0, 0.3));
+        /////
+        @media screen and (max-width: 1130px) {
+          width: 80%;
+        }
+        /////
+        @media screen and (max-width: 565px) {
+          width: 90%;
+        }
+      }
+      ////
+      input.toggle_input {
+        position: absolute;
+        visibility: hidden;
+        //////
+        &:checked + div.toggle_div::after {
+          // Controls how far along toggle bar toggled emojis move.
+          left: 50%;
+        }
+      }
+      ////
+      div.toggle_div::after {
+        position: absolute;
+        text-align: center;
+        top: -15px;
+        left: 0;
+        width: 50%;
+        font-size: 50px;
+        transition: all 500ms cubic-bezier(0.34, 0.78, 0.55, 1.4);
+      }
+      ////
+      label.happy_sad div.toggle_div::after {
+        // happy & sad: happy
+        content: "😁";
+      }
+      ////
+      label.happy_sad input.toggle_input:checked + div.toggle_div::after {
+        // happy & sad: sad
+        content: "😭";
+      }
+      ////
+      label.love_hate div.toggle_div::after {
+        // love & hate: love
+        content: "😍";
+      }
+      ////
+      label.love_hate input.toggle_input:checked + div.toggle_div::after {
+        // love & hate:hate
+        content: "😡";
+      }
+      ////
+      label.nerd_cool div.toggle_div::after {
+        // nerd & cool: cool
+        content: "😎";
+      }
+      ////
+      label.nerd_cool input.toggle_input:checked + div.toggle_div::after {
+        // nerd & cool: nerd
+        content: "🤓";
+      }
+      ////
+      label.heart_break div.toggle_div::after {
+        // heart & heartbroken: heart
+        content: "💘";
+      }
+      ////
+      label.heart_break input.toggle_input:checked + div.toggle_div::after {
+        // heart & heartbroken: heartbroken
+        content: "💔";
+      }
+      ////
+      label.thumbs_up_down div.toggle_div::after {
+        // thumbs up & down: thumbs up
+        content: "👍";
+      }
+      ////
+      label.thumbs_up_down input.toggle_input:checked + div.toggle_div::after {
+        // thumbs up & down: thumbs down
+        content: "👎";
+      }
+    }
+  }
+  //
+  #slide_11 {
+    ///
+    div.bio__slide_image {
+      ////
+      img {
+        border-radius: var(--boxmodel__default_border_radius);
+      }
+    }
+  }
+  //
+  #slide_12 {
+    ///
+    div.bio__slide_image {
+      ////
+      span.bio__slide_instructions {
+        margin-top: 1.5rem;
+        // Text is slightly off-center.
+        // This nudges it into place.
+        margin-left: 10px;
+      }
+    }
+  }
+  //
+  #slide_13 {
+    ///
+    div.bio__slide_image {
+      // Set div to position relative so BioRing can be absolutely positioned within it.
+      position: relative;
+      // Set an explicit height on div so that BioRing doesn't overflow container.
+      height: 300px;
+    }
+  }
+  //
+  #slide_14 {
+    ///
+    div.bio__slide_image {
+      ////
+      img {
+        width: 250px;
+        height: 250px;
+        /////
+        @media screen and (max-width: 1130px) {
+          width: 215px;
+          height: 215px;
+        }
+      }
+    }
+  }
+  //
+  #slide_15 {
+    ///
+    div.bio__slide_image {
+      ////
+      img {
+        max-width: 605px;
+        width: 100%;
+        height: auto;
+      }
+      ////
+      span {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: var(--typography__font_family_2);
+        font-size: 1.75rem;
+        font-weight: var(--typography__bold);
+      }
+    }
+  }
+}

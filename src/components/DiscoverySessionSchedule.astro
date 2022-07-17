@@ -1,0 +1,59 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import ButtonSchedule from "./ButtonSchedule.astro";
+
+//    ASTRO LAYOUT IMPORTS
+
+import SectionGray from "../layout/SectionGray.astro";
+import FlexColumn from "../layout/FlexColumn.astro";
+
+//    ASTRO PAGE-SPECIFIC COMPONENT IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// to do: create & implement JS varaibles for e-mail, telephone, and discoverry sessions links.
+///  seems like it would be convenient to collect them all in one place in case anything every changes.
+
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<SectionGray id="discovery_session__schedule">
+<FlexColumn>
+  <p id="discovery_session__override_p_first_child">
+    Use the button below to schedule a Discovery Session.
+  </p>
+  <img
+    src="../../assets/images/coach_bernadette-1.jpg"
+    alt="A smiling Coach Bernadette sitting in chair."
+    loading="lazy"
+    class="transparent"
+  />
+  <p>Our Discovery Sessions are, and always will be, free!</p>
+  <p>
+    If you'd like to learn more about Coach Bernadette before scheduling your
+    call, you can find additional information about
+    <a href="coach_bernadettes_bio/"
+      >her coaching certifications here</a
+    >
+    and
+    <a href="coach_bernadettes_certifications/">her personal bio here</a
+    >.
+  </p>
+  <!-- Calendly widget -->
+  <ButtonSchedule calendlySlug="Calendly.showPopupWidget('https://calendly.com/ccbiz/discoverysession.html');return false;" schedule="My Discovery Session"></ButtonSchedule>
+</FlexColumn>
+</SectionGray>

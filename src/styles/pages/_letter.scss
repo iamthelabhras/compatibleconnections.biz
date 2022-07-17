@@ -1,0 +1,170 @@
+main#letter {
+  // Set overflow: visible so that flexbox & position: sticky play nice.
+  overflow: visible;
+  //
+  section#letter__explainer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    ///
+    p {
+      max-width: 55ch;
+      font-size: 1.125rem;
+      ////
+      &:first-of-type {
+        text-align: center;
+        max-width: 45ch;
+        margin-bottom: 1.5625rem;
+        font-size: 1.5625rem;
+        font-weight: var(--typography__bold);
+      }
+    }
+  }
+  //
+  section#letter__letter {
+    margin: 0 2rem;
+    justify-content: space-around;
+    ///
+    div#letter__letter_text {
+      flex-basis: 45%;
+      justify-content: center;
+      align-items: center;
+      margin: 3.125rem 0 5.125rem 0;
+      padding: 25px;
+      border: 1px solid var(--colors__gray_light);
+      background-color: var(--colors__gray);
+      box-shadow: var(--shadows__default_box_shadow);
+      ////
+      @media screen and (max-width: 1160px) {
+        flex-basis: 80%;
+      }
+      ////
+      h2 {
+        margin-bottom: 1.5625rem;
+        font-size: 2rem;
+      }
+      ////
+      p {
+        max-width: 39ch;
+        font-size: 1.15rem;
+      }
+      ////
+      span.letter__valediction {
+        margin: 2rem 0;
+        font-family: var(--typography__font_family_2);
+        font-size: 2rem;
+      }
+      ////
+      img.letter__signature {
+        align-self: center;
+        max-width: 350px;
+        max-height: 100px;
+      }
+    }
+    ///
+    aside#letter__letter_sidebar {
+      flex-basis: 40%;
+      justify-content: space-between;
+      margin: inherit;
+      padding: 25px;
+      ////
+      @media screen and (max-width: 1160px) {
+        display: none;
+      }
+      ////
+      > div:first-of-type {
+        position: sticky;
+        top: 90px;
+        margin-bottom: 4rem;
+        display: grid;
+        place-items: center;
+        /////
+        @media screen and (max-width: 1202px) {
+          margin-bottom: 8rem;
+        }
+        /////
+        > figure {
+          display: grid;
+          place-items: center;
+          img {
+            max-width: 300px;
+            border-radius: var(--boxmodel__default_border_radius);
+            border: 2px solid var(--colors__gray_light);
+          }
+          figcaption {
+            margin: 1rem 0 2rem 0;
+            font-size: 1.5rem;
+            color: var(--colors__black);
+            font-weight: var(--typography__bold);
+          }
+        }
+        /////
+        > div#letter__certifications {
+          justify-content: space-around;
+          width: 75%;
+          border-radius: var(--boxmodel__default_border_radius);
+          border: 1px solid var(--colors__gray_dark);
+          //////
+          img {
+            width: 125px;
+            border: none;
+            ///////
+            @media screen and (max-width: 1202px) {
+              width: 75px;
+            }
+          }
+        }
+      }
+      ////
+      div:nth-of-type(2) {
+        // Learn more about ... containing div.
+        position: sticky;
+        width: 100%;
+        border-radius: var(--boxmodel__default_border_radius);
+        border: 1px solid var(--colors__gray_dark);
+        background-color: var(--colors__white);
+        /////
+        ul {
+          padding: 50px 50px;
+          //////
+          @media screen and (max-width: 1566px) {
+            padding: 40px 40px;
+          }
+          //////
+          @media screen and (max-width: 1517px) {
+            padding: 30px 30px;
+          }
+        }
+        /////
+        li {
+          display: flex;
+          flex-basis: 100%;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 100%;
+          margin: 1.25rem;
+          //////
+          @media screen and (max-width: 1517px) {
+            justify-content: space-around;
+          }
+          //////
+          img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.75rem;
+          }
+          //////
+          span {
+            flex-basis: 70%;
+            max-width: 45ch;
+            ///////
+            @media screen and (max-width: 1290px) {
+              max-width: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}

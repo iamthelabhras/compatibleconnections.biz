@@ -1,0 +1,95 @@
+main#main,
+main#page_not_found {
+  //
+  section#welcome {
+    // Styles MainWelcome Astro component.
+    ///
+    #main__welcome_container {
+      justify-content: space-evenly;
+      align-items: center;
+      // 75% of the section.hero_gray top-and-bottom padding.
+      padding: 2.34275rem;
+    }
+    ///
+    #main__welcome_image_and_animation {
+      position: relative;
+    }
+    ///
+    #main__welcome_text {
+      // Styles text to the right of Coach Bernadette.
+      align-items: center;
+      padding: 0;
+      ////
+      > p {
+        align-self: center;
+        max-width: 35ch;
+        text-align: center;
+        font-weight: var(--typography__bold);
+        font-size: 2rem;
+      }
+    }
+  }
+  //
+  section#main__why_is_compatibility_important {
+    // Styles MainCompatibility Astro component.
+    // Override default overflow: hidden to allow compatibility hearts to float above section.
+    overflow: visible;
+    ///
+    .hearts_compatibility__hearts {
+      // Styles & overrides HeartsCompatibility Astro component.
+      ////
+      @media (max-width: 850px) {
+        // Hide animated hearts when "Why Is Compatibility Important?" wraps.
+        display: none;
+        animation: initial;
+      }
+    }
+  }
+  //
+  section#main__explore_our_website {
+    // Styles MainExplore Astro component.
+    ///
+    div.block_image_and_text {
+      // Styles & override ImageBlockText Astro component.
+      // Row-reverse places images in block on right, text on left.
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+main#page_not_found {
+  // Styles 404 Astro page.
+  justify-content: center;
+  align-items: center;
+  //
+  div#main__welcome_container {
+    justify-content: space-around;
+    width: 80vw;
+  }
+  //
+  div#main__welcome_image_and_animation {
+    display: grid;
+    place-items: center;
+  }
+  //
+  div#main__welcome_text {
+    justify-content: center;
+    align-items: center;
+    ///
+    > p {
+      text-align: center;
+      width: 35ch;
+      font-size: 2rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    p:nth-of-type(2) {
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+    }
+    p.main__404_instructions {
+      margin-top: 25px;
+      font-size: 1.25rem;
+    }
+  }
+}

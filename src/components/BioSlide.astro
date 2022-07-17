@@ -1,0 +1,36 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { slideNumber, slideQuote } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<div class="bio__slide" id={slideNumber}>
+  <div class="bio__slide_text">
+    <p>{slideQuote}</p>
+     <slot name="text" />
+  </div>
+  <div class="bio__slide_image">
+    <slot name="image"/>
+  </div>
+</div>

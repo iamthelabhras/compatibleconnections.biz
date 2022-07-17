@@ -1,0 +1,124 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from "../../components/NavToggleWrapper.astro";
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import Article from "../../layout/Article.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/resoures/articles/5_simple_things.html";
+let title = "-♡- Article: 5 Simple Things You Need To Start Doing -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "A breakdown of 5 simple things divorced daters can start doing every day to find true love.";
+let pageKeywords = "Compatible Connections, Bernadette Smith, Bernadette M. Smith, online dating, dating after divorce, resources for online daters, resources for divorced daters, article, compatibility, dating mistakes, biggest dating mistakes";
+let mainID = "article__5_simple_things";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id={mainID} class="article">
+        <Article articleTitle="5 Simple Things You Need To Start Doing" imgSrc="/assets/images/resources/articles/5_simple_things.png" imgAlt="A large pink neon sign shaped like the number 5." articleValediction="Wishing You All the Best in Life & Love">
+          <blockquote slot="blockquote">
+            Imagine what it would be like if you knew exactly what you needed to find true love. This is not an impossible dream! This is an attainable reality! 
+          </blockquote>
+          <p slot="article_text">
+            In this post, I'll discuss 5 simple things you can start doing every day to find true love. 
+          </p>
+          <ol slot="article_text">
+            <li>
+              <h2>1. Let Go Of Taking Things Personally</h2>
+              <p>
+                Remember no matter what happens after that first date it has nothing to do with you. Thinking thoughts: “I just dodged a bullet.” “He was pretty good, can't wait to meet my soul mate.” “I like me better.” “You deserve true love.” 
+              </p>
+            </li>
+            <li>
+              <h2>2. Let Go Of What Other People Think</h2>
+              <p>
+                Don't let other people influence your actions. Remember this rule of thumb: when you put yourself out there authentically 10% of people will hate it, 80% will be indifferent, and 10% will be your raving fans! And raving fans are awesome make them your tribal people. 
+              </p>
+            </li>
+            <li>
+              <h2>3. Let Go Of Something You're Not</h2>
+              <p>
+                Your soul mate can't find you if you pretend to be something you're not. There are somethings about ourselves we can't change and that's a good thing. Own who you are and celebrate your uniqueness. 
+              </p>
+            </li>
+            <li>
+              <h2>4. Let Go Of The Need To Be Perfect</h2>
+              <p>
+                Never let anyone make you feel bad about yourself. There is a lid for every pot! There's a quote that sits on my desk I read to clients and it goes like this: While you're busy looking for the perfect person, you'll probably miss the imperfect person who could make you perfectly happy. 
+              </p>
+            </li>
+            <li>
+              <h2>5. Let Go Of "Should-ing" On Yourself</h2>
+              <p>
+                Mistakes are opportunities to do things differently. Keep the faith and remember this: one day someone is going to hug you so tight that all of your broken pieces will stick back together. You deserve true love! 
+              </p>
+            </li>
+          </ol>
+       </Article>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

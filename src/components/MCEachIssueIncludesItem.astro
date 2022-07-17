@@ -1,0 +1,34 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { imgSrc, imgAlt, itemHeading, itemDesc } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<div class="meetcute__each_issue_img_and_text flexbox__basic_row">
+  <img src={imgSrc} alt={imgAlt} loading="lazy" class="transparent" />
+  <div class="flexbox__basic_column">
+    <h3>{itemHeading}</h3>
+    <p>{itemDesc}</p>
+  </div>
+</div>
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO --> 

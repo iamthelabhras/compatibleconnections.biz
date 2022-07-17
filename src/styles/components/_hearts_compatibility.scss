@@ -1,0 +1,80 @@
+.hearts_compatibility__container {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  //
+  span {
+    // Span contains the string "compatibility".
+    display: inline-block;
+    font-family: inherit;
+    font-weight: inherit;
+  }
+  //
+  .hearts_compatibility__hearts {
+    position: absolute;
+    display: flex;
+    gap: 25px;
+    transform: translateY(-30px);
+  }
+  //
+  .hearts_compatibility__heart {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 35px;
+    position: relative;
+    opacity: 0;
+    animation: 3s linear 0s infinite normal both running
+      animateHeartsCompatibility;
+    ///
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      background-color: var(--colors__brand_color_2);
+      width: inherit;
+      height: 15px;
+      top: 12px;
+      left: 0;
+    }
+    ///
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: var(--colors__brand_color_2);
+      width: 15px;
+      top: 0;
+      left: 12px;
+      height: inherit;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+}
+
+@keyframes animateHeartsCompatibility {
+  0% {
+    margin-bottom: 35px;
+    opacity: 0;
+  }
+  25% {
+    opacity: 25;
+  }
+  50% {
+    opacity: 45;
+    margin-bottom: 75px;
+    transform: rotate(80deg);
+  }
+  75% {
+    opacity: 25;
+    transform: rotate(40deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(20deg);
+    margin-bottom: 150px;
+  }
+}

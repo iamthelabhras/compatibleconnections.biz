@@ -1,0 +1,93 @@
+---
+
+//    CSS & STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from '../components/NavToggleWrapper.astro';
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import ContentCollabExplainer from "../components/ContentCollabExplainer.astro";
+import ContentCollabPodcasts from "../components/ContentCollabPodcasts.astro";
+import ContentCollabArticles from "../components/ContentCollabArticles.astro";
+import ContentCollabPresentations from "../components/ContentCollabPresentations.astro";
+import ContentCollabSchedule from "../components/ContentCollabSchedule.astro"; 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+
+///    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+
+let pageURL = "https://compatibleconnections.biz/work/content_creators.html";
+let title = "-♡- For Content Creators -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "Working with Content Creators is an integral part of Compatible Connections' mission to help every woman find the love of their life after divorce.";
+let pageKeywords = "dating, divorce, dating after divorce, dating after 40, dating after 60, compatibility, Bernadette Smith, Bernadette m. Smith, dating tips, partner with yourself first, seek sort and select, coaching, dating coaching, relationship coaching, dating podcasts, dating articles, dating blogs, dating presentations, dating workshops, content collaboration";
+
+
+// FULL ASTRO COMPONENT SYNTAX:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <HeadStatic></HeadStatic>
+    <!-- Import Calendly external style sheet for scheduler. -->
+    <link
+      href="https://calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id="content_creators">
+        <h1>For Content Creators</h1>
+        <ContentCollabExplainer />
+        <ContentCollabPodcasts />
+        <ContentCollabArticles />
+        <ContentCollabPresentations />
+        <ContentCollabSchedule client:visible />
+      </main>
+    </NavToggleWrapper>
+    <Footer client:load />
+  </body>
+</html>

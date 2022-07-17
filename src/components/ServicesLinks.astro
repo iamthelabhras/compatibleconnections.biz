@@ -1,0 +1,64 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+const { question2, question3, question4, question5 } = Astro.props;
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+--- 
+
+<nav class="explore_our_services__link_container">
+  <h2>Click on a question to <span class="utility_classes__clean_break_on_wrap">explore this service!</span></h2>
+  <ul class="explore_our_services__links">
+       <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#like_you">Does This Sound Like You?</a>
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#for_you">{question2}</a>
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#question_3">{question3}</a>
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#question_4"
+        >{question4}</a
+      >
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#question_5"
+        >{question5}</a
+      >
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#how_much">How Much Does This Cost?</a>
+    </li>
+    <li class="explore_our_services__link">
+      <!-- <img src="../assets/icons/heart-50.png" loading="lazy" /> -->
+      <a href="#next_steps">I'm Interested! <span class="utility_classes__clean_break_on_wrap">What Are</span> My Next Steps?</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,616 @@
+main.explore_our_services {
+  // Styles all Explore Our Services pages.
+  // Custom variables.
+  --services__h1_font_size: calc(var(--typography__font_size_h1) * 1.5);
+  --services__headline_text_box_shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  --services__pitch_card_top_and_bottom_margin: 15vh;
+  --services__pitch_card_left_and_right_margin: 5vw;
+  --services__pitch_card_box_shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  --services__services_links_box_shadow: 0px 4px 8px rgba(122, 122, 122, 0.1);
+  //
+  h1 {
+    // Slightly enlarge main.h1's on Service pages to visually emphasize services.
+    font-size: var(--services__h1_font_size);
+    ///
+    @media (max-width: 690px) {
+      font-size: calc(
+        var(--services__h1_font_size) *
+          var(--typography__font_size_mobile_scale)
+      );
+    }
+  }
+  //
+  nav.explore_our_services__link_container {
+    // Styles ServicesLink Astro component.
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    grid-row: 4;
+    ///
+    @media (max-width: 575px) {
+      // Remove top-most service links container from DOM on mobile.
+      display: none;
+    }
+    ///
+    @media (max-width: 1085px) {
+      padding-bottom: 50px;
+    }
+    ///
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--colors__black);
+      ////
+      @media (max-width: 690px) {
+        font-size: calc(3rem * var(--typography__font_size_mobile_scale));
+      }
+    }
+    ///
+    ul.explore_our_services__links {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style: none;
+      font-family: var(--typography__font_family_1);
+      background: var(--colors__brand_color_1);
+    }
+    ///
+    li.explore_our_services__link {
+      text-align: center;
+      list-style: none;
+      ////
+      a {
+        // Styles ServicesLinks Astro component.
+        // Styles links for _all_ instances of component on page.
+        display: inline-block;
+        max-width: 20ch;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: all 0.5s;
+        background-image: none;
+        /////
+        &:link {
+          color: var(--colors__black);
+        }
+        /////
+        &:visited {
+          color: var(--colors__black);
+        }
+        /////
+        &:hover {
+          color: var(--colors__white);
+        }
+        /////
+        &:active {
+          color: var(--colors__yellow);
+        }
+        /////
+        span {
+          color: inherit;
+        }
+      }
+    }
+  }
+  //
+  section#explore_our_services__headline {
+    // Styles & extends HeroGray Astro component.
+    justify-content: center;
+    align-items: center;
+    ///
+    @media (max-width: 1085px) {
+      padding: 0px 25px;
+    }
+    ///
+    div.explore_our_services__headline_container {
+      // Styles ServicesHeadline Astro component.
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 10vh 0.5fr 10vh;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10vh;
+      background: inherit;
+      ////
+      @media (max-width: 1085px) {
+        grid-template-rows: 25px 1fr 1fr 25px;
+      }
+      ////
+      div.explore_our_services__headline_text {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        border-radius: var(--boxmodel__default_border_radius);
+        padding: 1.5rem;
+        background: var(--colors__white);
+        box-shadow: var(--services__headline_text_box_shadow);
+        /////
+        @media (max-width: 1085px) {
+          place-self: center;
+          grid-column: 1 / -1;
+          grid-row: 3 / 3;
+        }
+        /////
+        @media (max-width: 575px) {
+          // Remove box-shadow and background on mobile to make this a simple gray hero.
+          box-shadow: none;
+          background: inherit;
+        }
+      }
+      ////
+      p {
+        text-align: center;
+        max-width: 30ch;
+        margin-top: 40px;
+        font-size: 2.5rem;
+        /////
+        @media (max-width: 690px) {
+          font-size: calc(2.5rem * var(--typography__font_size_mobile_scale));
+        }
+      }
+      ////
+      p:first-of-type {
+        font-size: 2.75rem;
+        margin-top: 0;
+        font-weight: var(--typography__bold);
+        /////
+        @media (max-width: 690px) {
+          font-size: calc(2.75rem * var(--typography__font_size_mobile_scale));
+        }
+      }
+      ////
+      img.explore_our_services__headline_image {
+        grid-column: 8 / 9;
+        grid-row: 1 / 3;
+        max-height: 510px;
+        /////
+        @media (max-width: 1085px) {
+          grid-column: 1 / -1;
+          grid-row: 2 / 2;
+          place-self: center;
+          max-height: 382.5px;
+        }
+      }
+      ////
+      span {
+        color: var(--colors__brand_color_1);
+      }
+    }
+    ///
+    + nav.explore_our_services__link_container {
+      // Styles ServiceLinks Astro component that *immediately follows* section#explore_our_services__headline.
+      width: 90%;
+      margin: 10rem auto;
+      ////
+      ul.explore_our_services__links {
+        padding: 1.5rem 0.85rem;
+        border-radius: var(--boxmodel__default_border_radius);
+        box-shadow: var(--shadows__default_box_shadow);
+      }
+      ////
+      li.explore_our_services__link {
+        flex-basis: 33%;
+      }
+    }
+    //
+  }
+  //
+  section.explore_our_services__pitch_cards {
+    // Contains all pitch cards on a specific Explore Our Services page.
+    // All pitch card Astro components are nested within this section.
+    padding: 25px 0;
+    ///
+    div.explore_our_services__pitch_card_container {
+      // Styles ServicesPitchCard Astro component.
+      // Contains image-and-text and ServiceLinks.
+      display: grid;
+      grid-template-columns:
+        [left-edge] 0.5fr repeat(2, 1fr)
+        [gap-between-image-and-text] 0.25fr repeat(6, 1fr)
+        [right-edge] 0.5fr;
+      grid-template-rows: repeat(2, 25px) repeat(2, auto) repeat(2, auto) repeat(
+          2,
+          0.25fr
+        );
+      grid-template-areas:
+        "	.	    .	    .	    .	.	    .	    .	    .	    .	    .	      .		"
+        "	.	    .	    .	    .	.	    .	    .	    .	    .	    .	      .		"
+        "	image	image	image	.	ques	ques	ques	ques	ques	ques		.	  "
+        "	image	image	image	.	ques	ques	ques	ques	ques	ques		.	  "
+        "	.     .     .     .	answ  answ  answ	answ	answ	answ		.	  "
+        "	.	    .	    .	    .	answ	answ	answ	answ	answ	answ	  .	  "
+        "	.	    .	    .	    .	.	    .	    .	    .	    .	    .	      .	  "
+        "	link link link link link link link link link link link        ";
+      justify-content: center;
+      width: 90vw;
+      margin-top: var(--services__pitch_card_top_and_bottom_margin);
+      margin-bottom: var(--services__pitch_card_top_and_bottom_margin);
+      margin-right: var(--services__pitch_card_left_and_right_margin);
+      margin-left: var(--services__pitch_card_left_and_right_margin);
+      ////
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+      }
+      ////
+      .explore_our_services__pitch_card {
+        // Contains image & text.
+        // Necessary for the image out-of-border layout effect.
+        grid-column: 2 / -2;
+        grid-row: 2 / 7;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--boxmodel__default_border_radius);
+        background: var(--colors__gray);
+        box-shadow: var(--services__pitch_card_box_shadow);
+      }
+      ////
+      img.explore_our_services__pitch_card_image {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2%;
+        background-color: inherit;
+        border-radius: var(--boxmodel__default_border_radius);
+        box-shadow: 2px 2px 2px 2px var(--colors__brand_color_1);
+        cursor: pointer;
+        /////
+        @media (max-width: 1024px) {
+          width: 415px;
+          height: 310px;
+        }
+        /////
+        @media (max-width: 690px) {
+          width: 315px;
+          height: 210px;
+        }
+      }
+      ////
+      .explore_our_services__pitch_card_question_container {
+        grid-area: ques;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2%;
+        border-bottom: 1px dotted var(--colors__brand_color_1);
+        //////
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          ///////
+          @media (min-width: 691px) {
+            ////////
+            h2 {
+              font-size: 3rem;
+              color: var(--colors__black);
+            }
+          }
+        }
+        //////
+        h2 {
+          text-align: center;
+          max-width: 30ch;
+          font-size: 2.75rem;
+          color: var(--colors__brand_color_1);
+          margin: 0 0 3vw;
+          font-family: var(--typography__font_family_1);
+          ///////
+          @media (max-width: 690px) {
+            color: var(--colors__black);
+            font-size: calc(
+              2.75rem * var(--typography__font_size_mobile_scale)
+            );
+          }
+        }
+        //////
+        span {
+          color: inherit;
+        }
+        //////
+        h2,
+        span {
+          transition: all ease-in-out 0.25s;
+        }
+        //////
+        span.explore_our_services__pitch_card_see {
+          padding-bottom: 20px;
+          ///////
+          img {
+            padding-right: 25px;
+          }
+          ///////
+          span.explore_our_services__pitch_card_see_more {
+            font-size: initial;
+          }
+          ///////
+          span.explore_our_services__pitch_card_see_less {
+            font-size: 0;
+          }
+        }
+      }
+      ////
+      .explore_our_services__pitch_card_answer_container {
+        grid-area: answ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        height: 0;
+        margin-bottom: 5%;
+        padding-top: 0;
+        background-color: inherit;
+        opacity: 0;
+        transition: all ease-in-inout 0.25s;
+        transform: scale(0);
+        overflow: hidden;
+        /////
+        &.explore_our_services__pitch_card_active {
+          padding: 10px 20px;
+          width: 100%;
+          height: auto;
+          opacity: 1;
+          transition: all ease-in-out 0.25s;
+          transform: scale(1);
+        }
+        ////
+        p:first-child {
+          text-align: center;
+          max-width: 38ch;
+          font-size: 1.9rem;
+          font-weight: var(--typography__bold);
+          /////
+          @media (max-width: 690px) {
+            font-size: calc(1.9rem * var(--typography__font_size_mobile_scale));
+          }
+        }
+        ////
+        p {
+          margin: 1.5rem 0;
+          max-width: 50ch;
+          font-size: 1.4rem;
+          /////
+          @media (max-width: 690px) {
+            font-size: calc(1.4rem * var(--typography__font_size_mobile_scale));
+          }
+        }
+      }
+      ////
+      ul.explore_our_services__pitch_card_answer_container {
+        // Styles ServicesPitchCardChecked Astro component.
+        // Note that ServicesPitchCard & ServicesPitchCardChecked are *nearly* identicaly; where ServiesPitchCard has a div.explore_our_services__answer_container, ServicesPitchCardCheck has a ul.explore_our_services__answer_container.
+        /////
+        li {
+          // Styles Checkbox.astro component.
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 65%;
+          padding: 10px;
+          //////
+          @media (max-width: 1330px) {
+            width: 100%;
+          }
+          //////
+          img {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+          }
+          //////
+          span {
+            width: 35ch;
+            font-size: 1.4rem;
+            ///////
+            @media (max-width: 690px) {
+              font-size: calc(
+                1.4rem * var(--typography__font_size_mobile_scale)
+              );
+            }
+          }
+        }
+      }
+      ////
+      .explore_our_services__pitch_card_active {
+        // Toggled when user clicks "see more" / "see less".
+        // See: explore_our_services--pitch_cards.js
+        /////
+        span.explore_our_services__pitch_card_see_more {
+          font-size: 0 !important;
+        }
+        /////
+        span.explore_our_services__pitch_card_see_less {
+          font-size: initial !important;
+        }
+      }
+      ////
+      > .explore_our_services__link_container {
+        // These rules style the service links within each pitch card.
+        grid-area: link;
+        display: initial;
+        margin-top: 2%;
+        //
+        h2 {
+          display: none;
+        }
+        //
+        ul.explore_our_services__links {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          border-left: 2px solid var(--colors__gray_dark);
+          border-right: 2px solid var(--colors__gray_dark);
+          list-style: none;
+          font-family: var(--typography__font_family_1);
+          background: var(--colors__white);
+          transition: all ease-in-out 0.25s;
+          @media (max-width: 1199px) {
+            // Resizes service links container and reflows service links when pitch card links wrap.
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 auto;
+            width: 75%;
+            border-left: none;
+            border-right: none;
+          }
+          @media (max-width: 690px) {
+            width: initial;
+          }
+          @media (min-width: 690px) {
+            // Only allow hoverable ul service links container above hamburger break.
+            &:hover {
+              border: initial;
+              border-left: 1px solid var(--colors__white);
+              border-right: 1px solid var(--colors__white);
+              border-radius: var(--boxmodel__default_border_radius);
+              background: var(--colors__gray);
+              box-shadow: var(--services__services_links_box_shadow);
+              transition: all ease-in-out 0.25s;
+              @media (max-width: 1199px) {
+                // Removes border when pitch card links wrap.
+                border-left: inherit;
+                border-right: inherit;
+              }
+              li.explore_our_services__link {
+                a:link {
+                  color: var(--colors__gray_light);
+                }
+                a:visited {
+                  color: var(--colors__gray_light);
+                }
+                a:hover {
+                  color: var(--colors__black);
+                }
+                a:active {
+                  color: var(--colors__yellow);
+                }
+              }
+            }
+          }
+        }
+        li.explore_our_services__link {
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          text-align: center;
+          list-style: none;
+          width: initial;
+          @media (max-width: 1199px) {
+            // Sets service links' flex-basis so that links below pitch cards and links below services headline are identically styled.
+            flex-basis: 33%;
+          }
+          @media (max-width: 690px) {
+            flex-basis: 50%;
+          }
+          //
+          a {
+            font-size: 0.75rem;
+            text-shadow: none;
+            @media (max-width: 690px) {
+              &:link {
+                color: var(--colors__gray_dark);
+              }
+              //
+              &:visited {
+                color: var(--colors__gray_dark);
+              }
+              &:hover {
+                color: var(--colors__black);
+              }
+              &:active {
+                color: var(--colors__yellow);
+              }
+            }
+            span {
+              font-size: inherit;
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  //
+  #like_you {
+    ///
+    // Styles "Does This Sound Like You?" pitch card.
+    .explore_our_services__pitch_card_container {
+      margin-top: initial;
+    }
+  }
+  //
+  #next_steps {
+    ///
+    // Styles "I'm Interested! What Are My Next Steps?" pitch card.
+    .explore_our_services__pitch_card_answer_container {
+      ////
+      p:last-of-type {
+        // 85% the size of opening paragraph for visual emphasis.
+        font-size: calc(1.9rem * 0.85);
+        font-weight: var(--typography__bold);
+        font-style: italic;
+      }
+      ////
+      div.explore_our_services__link_container {
+        // Remove SeviceLinks Astro component from last pitch card.
+        display: none;
+      }
+    }
+  }
+}
+
+main#one_on_one_coaching {
+  // Styles One-on-One Coaching Explore Our Services page.
+  //
+  section#explore_our_services__headline {
+    ///
+    @media (max-width: 1205px) and (min-width: 1086px) {
+      // Add top margin to Explore Our Services Hero Grays so that h1 and grid image have a bit of breathing room before Coach Bernadette finally wraps.
+      margin-top: 100px;
+    }
+  }
+}
+
+main#pwyf {
+  // Styles Partner With Yourself First Explore Our Services page.
+  //
+  section#explore_our_services__headline {
+    ///
+    .explore_our_services__headline_container {
+      ////
+      img.explore_our_services__headline_image {
+        // Position image on extra (implicit) grid row to preserve image and top and bottom "breaking" white container.  Needed in this case because of PWYF's longer headline text.
+        grid-row: 1/4;
+        /////
+        @media (max-width: 1085px) {
+          // Re-position image back on (explicit) grid on wrap.
+          grid-row: 1/3;
+          // Add additional margin at bottom of image for "breathing room" betwen image and headline text.
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
+main#sss {
+  // Styles Seek, Sort, & Select Explore Our Services page.
+  //
+  h1 {
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.7);
+    ///
+    span {
+      font-family: var(--typography__font_family_2);
+      font-size: 3.5rem;
+    }
+  }
+}

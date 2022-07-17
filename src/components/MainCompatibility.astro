@@ -1,0 +1,104 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import HeartsCompatibility from "./HeartsCompatibility.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+import SectionGray from "../layout/SectionGray.astro"
+import ImageAndTextBlock from "../layout/ImageAndTextBlock.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<SectionGray id="main__why_is_compatibility_important">
+  <h2>Why Is <HeartsCompatibility /> Important?</h2>
+  <ImageAndTextBlock>
+    <img
+      src="../../assets/images/crystal_ball-cleaned_up-colored_hearts-brand_bg_white_hands_purple_base.png"
+      alt="A pair of hands hovering over a crystal ball with two hearts floating within it."
+      loading="lazy"
+      slot="image"
+    />
+    <h3 slot="text">
+      Most women
+      <a
+        href="resources/random_dating_vs"
+        target="_blank"
+        >date randomly</a
+      >.
+    </h3>
+    <p slot="text">
+      They allow things like first impressions, chemistry, or sheer physical
+      attraction to lead them into one bad relationship after another.
+    </p>
+    <p slot="text">
+      While chemistry is an undeniably important part of any romance, it's a
+      poor indicator of a relationship's long-term success.
+    </p>
+  </ImageAndTextBlock>
+
+  <ImageAndTextBlock>
+    <img
+      src="../../assets/images/compatibility_like_glue-1-brand_color_bg-1-black_hair.png"
+      alt="A couple holding hands on a park bench."
+      loading="lazy"
+      slot="image"
+    />
+    <h3 slot="text">
+      Compatibility is like the glue that holds a relationship together.
+    </h3>
+    <p slot="text">
+      It's the foundation on which you and your partner build happy lives
+      together. Compatible partners share lifestyle choices, habits, interests,
+      core beliefs, and personal goals.
+    </p>
+    <p slot="text">
+      They're attracted to one another, yes, but their attraction is based on a
+      deep and meaningful connection that extends beyond an initial spark or a
+      great first date.
+    </p>
+  </ImageAndTextBlock>
+
+  <ImageAndTextBlock>
+    <img
+      src="../../assets/images/reacquaint-7-cropped-bg.png"
+      alt=" A confident woman taking a selfie."
+      loading="lazy"
+      slot="image"
+    />
+    <h3 slot="text">
+      To find genuinely compatible connections, women need to learn how to
+      <a
+        href="resources/random_dating_vs"
+        target="_blank"
+        >date deliberately</a
+      >.
+    </h3>
+    <p slot="text">
+      They need to take time to reacquaint themselves with what's really
+      important to them.
+    </p>
+    <p slot="text">
+      And they need to learn, practice, and cultivate the surprisingly simple
+      techniques that can steer them towards compatible men that will bring them
+      the love they so richly deserve.
+    </p>
+  </ImageAndTextBlock>
+</SectionGray>

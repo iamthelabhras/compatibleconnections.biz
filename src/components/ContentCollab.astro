@@ -1,0 +1,43 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import ButtonSchedule from "./ButtonSchedule.astro";
+import CardTextFancy from "./CardTextFancy.astro"
+import FlexColumn from "../layout/FlexColumn.astro";
+import FlexRow from "../layout/FlexRow.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+const {media} = Astro.props;
+const { linkId } = Astro.props;
+---
+
+<section class="section_gray content_creators__collab" id={linkId}>
+  <FlexColumn >
+    <h2>{media}</h2> 
+    <slot name="after_h2" />
+    <slot name="paragraphs" />
+    <FlexRow>
+      <CardTextFancy>
+      <slot name="topics" />
+      </CardTextFancy>
+      <slot name="previous_collabs" />
+    </FlexRow>
+    <ButtonSchedule calendlySlug="Calendly.showPopupWidget('https://calendly.com/ccbiz/content-collaboration-call');return false;" schedule="A Content Collaboration Call" /> 
+  </FlexColumn>
+</section>

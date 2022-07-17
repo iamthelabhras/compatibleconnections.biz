@@ -1,0 +1,42 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const { cardType, recTitle, recAuthor, amazonLink } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<div class="flexbox__basic_row cards__hover resources__rec_card" data-card={cardType}>
+  <div class="flexbox__basic_column resources__rec_card_media">
+    <slot name="media" />
+  </div>
+  <div class="flexbox__basic_column resources__rec_card_text">
+    <div class="flexbox__basic_column">
+     <h3>{recTitle}</h3>
+     <span>{recAuthor}</span>
+     <a href={amazonLink} target="_blank" class="button">Amazon Link</a>
+    </div>
+    <div class="flexbox__basic_column">
+      <slot name="text" />
+    </div>
+  </div>
+</div>

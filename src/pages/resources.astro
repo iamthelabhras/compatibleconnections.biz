@@ -1,0 +1,249 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from "../components/NavToggleWrapper.astro";
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import HeroGray from "../layout/HeroGray.astro";
+import SectionGray from "../layout/SectionGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import ArticleCard from "../components/ArticleCard.astro";
+import RecCard from "../components/RecCard.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/resources";
+let title = "-♡- Resources For Divorced Daters -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "A collection of useful resources for divorced daters, including articles, book recommendations, videos, inspirational graphics, and dating tips.";
+let pageKeywords = "Compatible Connections, online dating, online dating resources, dating books, dating book recommendations, dating articles, dating videos, dating inspiration, dating tips, dating mistakes, dating after divorce, resources for divorced daters";
+let mainID = "resources";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main id={mainID}>
+        <h1>Resources for Divorced Daters</h1>
+        <HeroGray id="resources__explainer">
+          <p>Dating after divorce can be a thrilling adventure of self-discovery, but it can also be a personal minefield!</p>
+          <p>
+            What separates successful daters from unsuccessful ones isn't good looks, luck, or a steady stream of online admirers. Successful daters understand that dating, especially dating after divorce, isn't a numbers game. It's both an art they can master and a science they can learn...if they're willing to take the time.
+           </p>
+           <p>
+            Below you'll find a curated list of <a href="#resources__articles">articles</a>, <a href="#resources__book_recommendations">books</a>, and <a href="#resources__videos">videos</a> to help you become a confident, conscious dater.
+          </p> 
+          <p>   
+            This list is updated on a regular basis, so be sure to check back in from time-to-time. And don't forget to check out our <a href="/dating_tips" target="_blank">Dating Tips</a> and <a href="/inspirational_graphics" target="_blank">Inspirational Graphics</a> too! 
+           </p>
+        </HeroGray>
+        <SectionGray id="resources__articles">
+          <h2>Articles By Coach Bernadette</h2>
+          <div class="flexbox__basic_row">
+            <ArticleCard 
+              articleTitle="Love Your Life After Divorce" 
+              articleLink="/resources/love_your_life" 
+              imgSrc="/assets/images/resources/articles/love_your_life.png" 
+              imgAlt="A smiling woman holding a bouquet of flowers." articleBlurb="No one walks down the aisle thinking their relationship will end in divorce. Unfortunately, according to the American Psychological Association, 40-50% of marriages end in divorce."
+            />
+            <ArticleCard 
+              articleTitle="4 Empowering Ways To Reclaim Your Life After Divorce" 
+              articleLink="/resources/4_empowering_ways" 
+              imgSrc="/assets/images/resources/articles/4_empowering_ways.png" 
+              imgAlt="Four different panels of people doing different kinds of work." 
+              articleBlurb=" Going through a divorce is hard, but that doesn't mean life after divorce has to be difficult too. In fact, life after divorce can be filled with joy, peace, and fulfillment."
+            />
+            <ArticleCard 
+              articleTitle="The Slow Fade: What It Means ... And How to Avoid It" 
+              articleLink="/resources/the_slow_fade"
+              imgSrc="/assets/images/resources/articles/the_slow_fade.png" imgAlt="A silhouette of a man shrinking and fading away as he recedes towards the horizon." 
+              articleBlurb="So you had that first or even second date, but he's gone cold on you? That's the “slow fade.” At this point you're probably wondering, 'What's next? What can I do?'" 
+            />
+            <ArticleCard 
+              articleTitle="2 Things Smart Daters Do After Divorce"
+              articleLink="/resources/2_things_smart"
+              imgSrc="/assets/images/resources/articles/2_things_smart.png" 
+              imgAlt="A pair of hands holding two cell phones that each display half of a heart." 
+              articleBlurb="Before we begin, let's be clear: there are no one-size-fits-all rules when it comes to dating after divorce."
+            />
+            <ArticleCard 
+              articleTitle="The One Secret To Attracting Ideal Men"
+              articleLink="/resources/the_1_secret"
+              imgSrc="/assets/images/resources/articles/the_1_secret.png" 
+              imgAlt="A silhouetted face blowing seeds off of a dandelion." 
+              articleBlurb="Let's face it: most single women feel like an awful lot of work goes into finding a great guy. But what if I told you there was a painless way you could overcome this limiting belief?"
+            />
+            <ArticleCard 
+              articleTitle="5 Simple Things You Need To Start Doing" 
+              articleLink="/resources/5_simple_things"
+              imgSrc="/assets/images/resources/articles/5_simple_things.png" 
+              imgAlt="A large pink neon sign shaped like the number 5." articleBlurb="Imagine what it would be like if you knew exactly what you needed to find true love. This is not an impossible dream! This is an attainable reality! In this post, I'll unveil 5 simple things you need to start doing every day if you want to find true love." 
+            />
+            <ArticleCard 
+              articleTitle="Random Dating vs. Dating Deliberately"
+              articleLink="/resources/random_dating_vs" 
+              imgSrc="/assets/images/resources/articles/random_dating_vs.png" 
+              imgAlt="A pair of hands holding a Magic Eight Ball." articleBlurb="So many things separate random daters from deliberate daters, but perhaps the biggest single difference is deliberate daters understand the importance of compatibility. Does compatibility mean different things for different people? Of course! But all deliberate daters know what compatibility means for them. And that means they know what they're looking for in a partner long before they hop on the Internet or sit down for a first date." 
+            />
+          </div>
+        </SectionGray>
+        <SectionGray id="resources__book_recommendations">
+          <h2>Book Recommendations</h2>
+          <p>
+            There are more books on dating than dieting!
+          </p>
+          <p>
+             Most dating books on the market are advice-drive and written for notoriety. They're all about pushing your buttons, playing on your emotions, and peddling one-size-fits-all solutions to complex problems.  
+          </p>
+          <p>
+            Trust me, I know; I've read most of them.
+          </p>
+          <p>
+            Having said that, there <em>are</em> some real gems out there.  Here are a few titles that won't waste your time, insult your intelligence, or ignore what makes your search for lasting love uniquely your own.
+          </p>
+          <RecCard cardType="book" recTitle="Act Like A Lady, Think Like A Man" recAuthor="Steve Harvey" amazonLink="https://www.amazon.com/Like-Lady-Think-Expanded-Relationships/dp/0062351567/">
+            <img src="/assets/images/resources/book_recommendations/think_like_a_lady.png" loading="lazy" slot="media" />
+            <p slot="text">
+              In this book, Steve Harvey, has a sincere desire to help women learn how men think. He is the first male author I know willing to literally throw men under the bus! Harvey pull no punches, and tells his readers what men really are thinking! You'll enjoy his stories. 
+            </p>
+          </RecCard>
+          <RecCard cardType="book" recTitle="Men Are From Mars, Women Are From Venus" recAuthor="John Gray, Ph.D." amazonLink="https://www.amazon.com/Men-are-Mars-women-Venus/dp/0060195061/">
+            <img src="/assets/images/resources/book_recommendations/men_are_from_mars.jpg" loading="lazy" slot="media" />
+            <p slot="text">
+              This is the best book John Gray wrote. It's the foundation to understanding men and how men and women communicate differently. Once you understand it's just the way it is … life, dating, and relationships become easier! There's no “fixing”!
+            </p>
+          </RecCard>
+          <RecCard cardType="book" recTitle="Attached: The New Science Of Adult Attachment" recAuthor="Amir Levine, M.D. & Rachel S.F. Heller, M.A." amazonLink="https://www.amazon.com/Attached-Anxious-Avoidant-science-attachment/dp/1529032172/">
+            <img src="/assets/images/resources/book_recommendations/attached.jpg" loading="lazy" slot="media" />
+            <p slot="text">
+              Levine and Heller guide readers in determining what attachment style they and their mate (or potential mate) follow, offering a road map for building stronger, more fulfilling connections with the people they love. 
+            </p>
+          </RecCard>
+          <RecCard cardType="book" recTitle="In The Meantime" recAuthor="Iyania Vanzant" amazonLink="https://www.amazon.com/Meantime-Finding-Yourself-Love-Want/dp/0684848066/">
+            <img src="/assets/images/resources/book_recommendations/in_the_meantime.jpg" loading="lazy" slot="media" />
+            <p slot="text">
+              You'll find this book to be one of your favorites. It's a great place to begin as a divorcee as you put your pieces of yourself and your life back together again. It's a fun and educational read. You'll definitely learn something new about yourself in each chapter! 
+            </p>
+            <p slot="text">
+              Every living being wants to experience the light of love. The problem is that our windows are dirty! The windows of our hearts and minds are streaked with past pains and hurts, past memories and disappointments. In this book, Iyanla Vanzant teaches us how to do our mental housekeeping so that we can clean the windows, floors, walls, closets, and corners of our minds. If we do a good job, our spirits will shine bringing in the light of true love and happiness. 
+            </p>
+          </RecCard>
+          <RecCard cardType="book" recTitle="Spiritual Divorce" recAuthor="Debbie Ford" amazonLink="https://www.amazon.com/Spiritual-Divorce-Catalyst-Extraordinary-Life/dp/0061227129/">
+            <img src="/assets/images/resources/book_recommendations/spiritual_divorce.png" loading="lazy" slot="media" />
+           <p slot="text">
+            Divorce rocks the very foundation of our beings, leaving us feeling lonely, flawed, enraged, undesirable, hopeless, and empty. In <i>Spiritual Divorce</i>, Debbie Ford reveals how this devastation can be transformed into a profoundly enlightening experience. This empowering guide shows how the collapse of a marriage is, at root, a spiritual wake-up call, an opportunity to liberate ourselves and reclaim our lives. The end of a relationship—no matter who ends it—is a damaging moment. Ford offers a clear program for turning ruin into renewal. 
+          </p>
+          </RecCard>
+          <RecCard cardType="book" recTitle="The Way of Integrity" recAuthor="Martha Beck" amazonLink="https://www.amazon.com/Way-Integrity-Finding-Path-Your/dp/1984881485/">
+            <img src="/assets/images/resources/book_recommendations/way_of_integrity.png" loading="lazy" slot="media" />
+           <p slot="text">
+            With techniques tested on hundreds of her clients, Beck brings her expertise as a social scientist, life coach, and human being to help readers to uncover what integrity looks like in their own lives. She takes us on a spiritual adventure that not only will change the direction of our lives but bring us to a place of genuine happiness. 
+          </p>
+          </RecCard>
+        </SectionGray>
+        <SectionGray id="resources__videos">
+            <h2>Videos</h2>
+            <p>
+              Over the past decade, there's been an explosion of relationship & personal development content on platforms like <a href="https://vimeo.com/search?q=dating" target="_blank">Vimeo</a> and <a href="https://www.youtube.com/results?search_query=dating" target="_blank">YouTube</a>. 
+            </p>
+            <p>
+              There's a small army of self-proclaimed "experts" out there, and they're all competing for your clicks and attention. They're not shy about telling you what you should or shouldn't do to find love, they all seem to contradict each other, and they've produced <em>hours</em> of content for you to wade through. 
+            </p>
+            <p>
+              In my professional opinion as a Dating Coach, the best videos are short, accessible lectures by experts that focus on the core fundamentals of dating and international relationships. Here are some of my favorites! 
+            </p>
+            <RecCard cardType="video" recTitle="The Power of Vulnerability" recAuthor="Brené Brown" >
+                <iframe src="https://embed.ted.com/talks/brene_brown_the_power_of_vulnerability" scrolling="no" allowfullscreen="" frameborder="0" loading="lazy" slot="media" />
+              <p slot="text">
+                Brené Brown studies human connection — our ability to empathize, belong, love. In a poignant, funny talk, she shares a deep insight from her research, one that sent her on a personal quest to know herself as well as to understand humanity. A talk to share.  
+              </p>
+            </RecCard>
+            <RecCard cardType="video" recTitle="You Can't Always Trust Your Gut About Dating & Mating" recAuthor="LeslieBeth Wish Ed.D." >
+              <iframe src="https://www.youtube.com/embed/n2XYo9f_CWI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" loading="lazy" slot="media" /> 
+              <p slot="text">
+                Your gut instincts about love could be strong--yet WRONG! Learn how to get rid of what gets in the way of your intuition being accurate, and how to use surprising tips to "read" people--and you--correctly. 
+              </p>
+              <p slot="text">
+                LeslieBeth Wish, Ed.D., MA, MSS, is an award-winning psychotherapist and author, nationally honored for her pioneering research about women's issues about love, trauma, career, and intuition. Her book "Smart Relationships" is based on research with thousands of women. She says when something “bothers” her that she cannot fully explain she does research. 
+              </p>
+          </RecCard>
+          <RecCard cardType="video" recTitle="How Changing Your Story Can Change Your Life" recAuthor="Lori Gottlieb" >
+            <iframe src="https://embed.ted.com/talks/lori_gottlieb_how_changing_your_story_can_change_your_life" scrolling="no" allowfullscreen="" frameborder="0" loading="lazy" slot="media" />
+           <p slot="text">
+            Stories help you make sense of your life -- but when these narratives are incomplete or misleading, they can keep you stuck instead of providing clarity. In an actionable talk, psychotherapist and advice columnist Lori Gottlieb shows how to break free from the stories you've been telling yourself by becoming your own editor and rewriting your narrative from a different point of view. 
+          </p>
+        </RecCard>
+        <RecCard cardType="video" recTitle="Happiness Lessons" recAuthor="Prof. Laurie Santos" >
+          <iframe src="https://www.youtube.com/embed/iy1PgjsM4Qs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" loading="lazy" slot="media" />
+         <p slot="text">
+          Professor Laurie Santos joins Dr Mark Williamson for an inspiring conversation sharing life-changing findings from the science of happiness. This was broadcast as an Action for Happiness webinar on 11 June 2020. 
+        </p>
+      </RecCard>
+      <RecCard cardType="video" recTitle="Why She Feel In Love With You" recAuthor="Simon Sinek" >
+        <iframe src="https://www.youtube.com/embed/m9_70poLEvU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" loading="lazy" slot="media" />
+        <p slot="text">
+          Love takes time - it doesn't happen overnight. We fall in love with someone when they show us, consistently, that they're willing to put our needs ahead of their own. It's the small, seemingly insignificant actions that add up over time, until one day we realize, “I love them.” 
+        </p>
+    </RecCard>
+        </SectionGray>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+    <a href="404.html"></a>
+  </body>
+</html>

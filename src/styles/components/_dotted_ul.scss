@@ -1,0 +1,19 @@
+ul.dotted_ul {
+  text-align: initial;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 60ch;
+  margin: 1.875rem 0;
+  padding: 1.875rem;
+  border: 1px dotted var(--colors__black);
+  border-radius: var(--boxmodel__default_border_radius);
+  font-size: 1.125rem;
+  background: var(--colors__white);
+  list-style: square;
+  //
+  li {
+    margin: 0.3125rem 0;
+  }
+}

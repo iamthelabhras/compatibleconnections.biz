@@ -1,0 +1,50 @@
+---
+
+//    ASTRO COMPONENT IMPORTS
+import CardTextPlain from "./CardTextPlain.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+import HeartsCoachBernadette from "./HeartsCoachBernadette.astro";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<section id="welcome">
+  <h1>Welcome, <span class="utility_classes__clean_break_on_wrap">Fabulous Single!</span></h1>
+  <div class="flexbox__basic_row" id="main__welcome_container">
+    <div id="main__welcome_image_and_animation">
+      <HeartsCoachBernadette>Compatibility.</HeartsCoachBernadette>
+      <!-- Set explicit width & height on img to prevent layout shift on load.-->
+      <img
+        src="../../assets/images/coach_bernadette_hello_redux-1-alpha.png"
+        alt="A drawing of Coach Bernadette smiling & waving."
+        width="258px"
+        height="518px"
+        loading="lazy"
+      />
+    </div>
+    <div class="flexbox__basic_column" id="main__welcome_text">
+      <p>
+        Compatible Connections is a boutique coaching firm that works
+        <span class="utility_classes__emphasis">exclusively</span> with divorced women across all
+        50 states.
+      </p>
+      <CardTextPlain>
+        <p>Most divorcées are petrified at the thought of dating!</p>
+        <p>
+          They haven't been on a date in years, and they have no idea where to
+          begin.
+        </p>
+        <p>
+          Our services teach our clients how to become confident, conscious
+          daters who understand the importance of compatibility.
+        </p>
+        <p>
+          Our mission is to show every woman we work with how to find the love
+          of their life after divorce.
+        </p>
+      </CardTextPlain>
+    </div>
+  </div>
+</section>

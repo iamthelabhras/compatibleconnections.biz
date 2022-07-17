@@ -1,0 +1,81 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import PinkLine from './PinkLine.astro';
+import SocialIcons from "./SocialIcons.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+let currentYear = new Date().getFullYear();
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<PinkLine />
+<footer>
+  <img
+    src="../../assets/images/footer-cc_logo.png"
+    alt="Compatible Connections' logo"
+    id="footer__logo"
+    loading="lazy"
+  />
+  <div class="flexbox__basic_column" id="footer__site_details">
+    <p>© {currentYear} Compatible Connections</p>
+    <p>
+      Powered by
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+        target="_blank"
+        class="footer__dev_link"
+        >HTML</a
+      >,
+      <a href="https://sass-lang.com/" target="_blank" class="footer__dev_link">Sass</a
+      >,
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        target="_blank"
+        class="footer__dev_link"
+        >Vanilla JS</a
+      >, 
+           <a
+        href="https://mailgo.dev"
+        target="_blank"
+        class="footer__dev_link"
+        >mailgo.dev</a
+      >,  
+      &
+      <a href="https://astro.build/" target="_blank" class="footer__dev_link">Astro</a>.
+      <br />
+      Designed, Developed, & Maintained by
+      <a
+        href="https://larrymg.me"
+        target="_blank"
+        class="footer__dev_link"
+      >
+        Labhrás Mac Gabhann</a
+      >.
+    </p>
+  </div>
+  <SocialIcons />
+</footer>
+
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: FOOTER.ASTRO -->
+<!-- Imports mailgo JS library across entire site. -->
+<script
+  hoist
+  src="https://cdn.jsdelivr.net/npm/mailgo@0.9.15/dist/mailgo.min.js"
+  type="text/javascript"
+></script>

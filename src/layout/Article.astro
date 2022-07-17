@@ -1,0 +1,53 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+import ArticleBio from "./ArticleBio.astro";
+import ArticleSidebar from "./ArticleSidebar.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const {articleTitle, imgSrc, imgAlt, articleValediction } = Astro.props;
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<h1>{articleTitle}</h1>
+<div
+  class="flexbox__basic_row"
+  id="article__container_article_and_sidebar"
+>
+  <section 
+    class="flexbox__basic_column" 
+    id="article__container_article">
+      <slot name="blockquote" />
+      <img 
+        src={imgSrc} 
+        alt={imgAlt} 
+        loading="lazy" />
+      <slot name="article_text" />
+      <span id="article__valediction">{articleValediction},</span>
+      <img 
+        id="article__signature"
+        src="/assets/images/svg_paths/coach_bernadette_signature.svg"
+        alt="Coach Bernadette's cursive signature." 
+        loading="lazy" />
+    <ArticleBio />
+  </section>
+  <ArticleSidebar />
+</div>

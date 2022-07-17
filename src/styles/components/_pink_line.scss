@@ -1,0 +1,6 @@
+span.pink_line {
+  display: block;
+  border-bottom: var(--boxmodel__default_line_thickness) solid
+    var(--colors__brand_color_1);
+  width: var(--boxmodel__span_page);
+}

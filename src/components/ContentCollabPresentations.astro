@@ -1,0 +1,92 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import ImageModal from "./ImageModal.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import FlexColumn from "../layout/FlexColumn.astro"; 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import ContentCollab from "./ContentCollab.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<ContentCollab
+  linkId="content_creators__presentations_and_workshops"
+  media="Presentations & Workshops"
+>
+  <p slot="after_h2" class="utility_classes__center">
+    Our presentations and workshops inspire & educate singles!
+  </p>
+  <p slot="paragraphs">
+    In-person or virtual presentations and workshops are a great way to engage
+    your stakeholders, connect with your customers, and grow your brand. In the
+    past, we've partnered with small businesses, support groups, non-profits,
+    and many other types of organizations to do help them do just that.
+  </p>
+  <p slot="paragraphs">
+    Some of our most popular topics are listed below. If you have any ideas of
+    your own, let us know!
+  </p>
+  <p slot="paragraphs">
+    We've been working with divorced women for decades, and we'd be happy to
+    share our experiences and insights with you!
+  </p>
+  <h3 slot="topics">
+    Presentation & <span class="utility_classes__clean_break_on_wrap">Workshop Topics</span>
+  </h3>
+  <ul slot="topics">
+    <li>
+      <img src="../../assets/icons/heart-50.png" loading="lazy" />
+      <span>Online Dating 101 For Divorcées</span>
+    </li>
+    <li>
+      <img src="../../assets/icons/heart-50.png" loading="lazy" />
+      <span>Dating Secrets From A Certified Master Coach</span>
+    </li>
+    <li>
+      <img src="../../assets/icons/heart-50.png" loading="lazy" />
+      <span>Online Dating Profile Workshops</span>
+    </li>
+
+    <li>
+      <img src="../../assets/icons/heart-50.png" loading="lazy" />
+      <span>Guided Book Discussions </span>
+    </li>
+  </ul>
+  <FlexColumn slot="previous_collabs">
+    <ImageModal
+      imgLinkFullScreen="#discover_what_makes_you_attractive"
+      imgIdFullScreen="discover_what_makes_you_attractive"
+      imgClass="content_creators__book_discussion_flyer"
+      imgSource="/assets/images/ContentCollabWhatMakesYouAttractive.png"
+      imgAlt="Promotional flyer for a guided book discussion of Marie Forleo's Make Every Man Want You."
+      imgLinkThumbnail="#discover_what_makes_you_attractive_thumbnail"
+      imgIdThumbnail="discover_what_makes_you_attractive_thumbnail"
+    />
+    <ImageModal
+      imgLinkFullScreen="#easing_the_stress"
+      imgIdFullScreen="easing_the_stress"
+      imgClass="content_creators__book_discussion_flyer"
+      imgSource="/assets/images/ContentCollabEasingTheStress.png"
+      imgAlt="Promotional flyer for a guided book discussion of Steve Harvey's Act Like A Lady, Think Like A Man."
+      imgLinkThumbnail="#easing_the_stress_thumbnail"
+      imgIdThumbnail="easing_the_stress_thumbnail"
+    />
+    </FlexColumn>
+</ContentCollab>

@@ -1,0 +1,169 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from '../../components/NavToggleWrapper.astro';
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import LetsConnect from "../../components/LetsConnect.astro";
+import Footer from "../../components/Footer.astro";
+import CheckboxHeart from "../../components/CheckboxHeart.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+import MCSection from "../../components/MCSection.astro";
+import MCGlossaryWord from "../../components/MCGlossaryWord.astro";
+import MCDatingAppBreakdown from "../../components/MCDatingAppBreakdown.astro";
+import MCHeartBeatItem from "../../components/MCHeartBeatItem.astro";
+import MCMasthead from "../../components/MCMasthead.astro";
+import MCHighlights from "../../components/MCHighlights.astro";
+import MCMessage from "../../components/MCMessage.astro";
+import MCImageToInspire from "../../components/MCImageToInspire.astro";
+import MCThanksForReading from "../../components/MCThanksForReading.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+const issueNumber = "1"
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = `https://compatibleconnections.biz/meetcute/issue_${issueNumber}.html`;
+let title = `-♡- The Meet-Cute: Issue ${issueNumber} -♡-`;
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "The Meet-Cute Issue #1.";
+let pageKeywords = "Compatible connections, meet-cute, meet cute, newsletter, dating after divorce, resources for divorced daters, online dating";
+
+let mainID = `issue_${issueNumber}`;
+let issueImgPath = `/assets/images/meet_cute/issue_${issueNumber}/`;
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="mc_issue" id={mainID}>
+        <div class="mc_issue__container">
+          <MCMasthead issueNumber={issueNumber}></MCMasthead>
+          <MCHighlights>
+            <CheckboxHeart><a href="#plus_one">What To Do If You Find Yourself Wishing You Had A "Plus One" On Your Arm Heading Into The New Year</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__dating_app">A Great App You Can Use To Protect Your Privacy Online</a></CheckboxHeart>
+            <CheckboxHeart><a href="#mc_issue__heart_beat">Our Usual Round-Up Of Fun, Light, and Flirty Content From Around the Web</a></CheckboxHeart> 
+          </MCHighlights>
+          <MCMessage>
+            <p slot="messageContent">Everything —yes, everything — looks better from the outside than the inside.</p>
+            <p slot="messageContent">You may think having a partner to share the New Year with is all you need to be happy, but being in a relationship isn't easy. It requires a lot of work, healthy compromises, and understanding differences without judgment.</p>
+            <p slot="messageContent">Relationship experts, however, are quick to warn us that happy couples are almost never as happy as they seem.</p>
+            <p slot="messageContent">Is the grass always greener? I know from personal experience, and from working with my clients, the answer most of the time is no. How many women really know how to be great pickers the first time around? Not many! The truth is most of us get fooled.</p>
+            <p id="plus_one" slot="messageContent">If you find yourself wishing you had a “plus one” on your arm this year, stop and remember that being single frees you to live authentically. You don't have to fake your way through another holiday, family gathering, or work-related event, straining to keep a smile on your face while secretly wishing you could leave a miserable relationship behind you.</p>
+            <p slot="messageContent">Yes, singles may feel lonely sometimes, but true loneliness is feeling alone in a marriage. Be grateful that your occasional feelings of loneliness stem from actually being alone, not from being stuck in the wrong relationship!</p>
+            <p slot="messageContent">So many men and women settle, whether they fully realize it or not. They marry the wrong person because it seemed like the next logical step. Or because their biological clock was ticking. Or because everyone expected them to propose, so they did. Or because they were worried no one else would come along. And while it's true that couples can (sometimes) make a mediocre marriage work, in the end do these lucky few ever feel like they're truly loved? Probably not.</p>
+            <p slot="messageContent">Great gifts are worth waiting for: being cherished by a man who says "I can't believe I met you!" is something you truly deserve. Remember that as you head into the New Year. And, as always, if there's anything I can do for you, please let me know!</p>
+            <p id="mc_issue__valediction" slot="messageContent">You Deserve True Love,</p>
+          </MCMessage>
+         <MCSection sectionID="mc_issue__glossary" sectionHeader="New Glossary of Modern Romance">
+          <p slot="sectionContent">Ghosting? Breadcrumbing? Orbiting?</p>
+          <p slot="sectionContent"> Chances are you've heard these terms being tossed around. There's also a good chance that you have absolutely no idea what they mean ...if you're anywhere north of 40, at least.</p>
+          <p slot="sectionContent">For women of a certain age, having conversations about modern romance can feel a bit like trying to decipher a foreign language.</p>
+          <p slot="sectionContent">But no worries, we've got your back! Here are some key terms and definitions to help you make sense of the New Glossary of Modern Romance.</p>
+          <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_1/issue_1-ghosting.png" imgAlt="A ghost." glossaryWord="Ghosting" slot="sectionContent">
+            <p slot="glossaryWordContent">The opposite of love isn't hate; it's indifference. Ghosting, for those of you who have yet to experience it, is what happens when someone you believe cares about you disappears without explanation. No phone calls or emails, not even a text. Ghosting isn't new - people have long done disappearing acts - but years ago this kind of behavior was limited to a certain type of scoundrel. In today's dating culture, though, ghosting is an increasingly widespread phenomenon.</p>
+          </MCGlossaryWord>
+          <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_1/issue_1-breadcrumbing.png" imgAlt="A loaf of bread." glossaryWord="Breadcrumbing" slot="sectionContent">
+            <p slot="glossaryWordContent">Ah, breadcrumbing! The coward's way out of what is <em>already</em> a coward's way out. Unlike ghosters who cease all communication completely, breadcrumbers will send flirtatious but non-commital texts - like "Hey, what's up?" - without ever making an effort to meet up. Breadcrumbing can go on for months, even years. For the breadcrumber, this behavior is an "easy" way for them to keep one foot in your life in case they decide they want to pursue something further on down the line. (More alarmingly, breadcrumbing can also be used to make you so desperate you'll jump at the chance to spend time with someone ... on their terms of course.) Sometimes, the breadcrumber will disappear for weeks, only to resurface and throw a few more crumbs your way, leaving you to tear your hair out, wondering whether or not they're interested in you at all.</p>
+          </MCGlossaryWord>
+          <MCGlossaryWord imgSrc="/assets/images/meet_cute/issue_1/issue_1-orbiting.png" imgAlt="A satellite." glossaryWord="Orbiting" slot="sectionContent">
+            <p slot="glossaryWordContent">This is one of the newer, and more terrible, modern dating trends. When someone is orbiting you, they'll outwardly be ghosting you but continue to closely follow you on social media. (You won't know this is happening on Facebook or Twitter, but Instagram Stories and Snapchat will tell you who has watched your content.) More often than not, if someone you thought was ghosting you suddenly reappears, they've been orbiting you the whole time. People's motivations for orbiting can vary, but this kind of behavior is especially popular with men who don't want to fully commit but also want to hedge their bets. Avoid orbiters at all costs! As the saying goes, if someone doesn't want you at your worst, then they don't deserve you at your best!</p>
+          </MCGlossaryWord>
+
+        </MCSection>
+        <MCSection sectionID="mc_issue__dating_app" sectionHeader="Dating App Spotlight">
+         <MCDatingAppBreakdown imgSrc="/assets/images/meet_cute/issue_1/issue_1-dating_app_spotlight-burner.jpg" imgAlt="A phone on fire." datingAppName="Burner" datingAppDesc="A private phone number." datingAppPrice="$0.00 (Free Trial)" slot="sectionContent">
+          <a href="https://apple.co/2Hf5fL3" target="_blank">iPhone</a>
+          <a href="https://play.google.com/store/apps/details?id=com.adhoclabs.burner&hl=en_US&gl=US" target="_blank">Android</a>
+        </MCDatingAppBreakdown>
+         <p slot="sectionContent">"Only give your number to people you trust.  For everyone else, there's Burner..."</p> 
+         <p slot="sectionContent">I have to admit, that's a pretty good tagline! </p>
+         <p slot="sectionContent">As someone who worries about my safety, as well as the safety of my clients, it resonates.</p>
+         <p slot="sectionContent"> Whether it's a blind date or a too-good-to-be-true listing on Craigslist, we've all experienced trepidation when giving our number to a total stranger. Burner handles this conundrum with grace and style, putting multiple short-term phone numbers at your disposal for any occasion, each of which can be nuked with the tap of a button.</p> 
+         <p slot="sectionContent">Signup is quick and painless, although you are required to share your real iPhone number with the developer, which then becomes your account number. </p>
+         
+        </MCSection>
+        <MCSection sectionID="mc_issue__heart_beat" sectionHeader="The Heart Beat">
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://bit.ly/2QPUIWp" slot="sectionContent">
+              <p slot="heartBeatContent">Dating can be a thrilling adventure, but it can also be dangerous.</p>
+              <p slot="heartBeatContent">That's why it's so important for single women to proactively protect themselves, online and off.  This article from The Rebel Chick does a great job of breaking down <a href="https://bit.ly/2QPUIWp" target="_blank">why you should use a fake phone when online dating</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://bit.ly/2AZq4ov" slot="sectionContent">
+              <p slot="heartBeatContent">Burner phones (or numbers) used to be associated with espionage and other shady dealings; today the technology behind them is quickly becoming a necessary feature of online dating.</p>
+              <p slot="heartBeatContent">In fact, this article from the <i>Daily Dot</i> <a href="https://bit.ly/2AZq4ov" target="_blank">says burners are the secret weapon every online dater needs</a>!</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper." imgLink="https://bit.ly/2DfwfGx" slot="sectionContent">
+              <p slot="heartBeatContent"> Bad first dates happen to everyone...but sometimes first dates are so bad they make the leap from terrible to hilarious.</p>
+              <p slot="heartBeatContent">Just ask these 10 women who shared their <a href="https://bit.ly/2DfwfGx" target="_blank">hilarious worst first date stories</a>.</p>
+            </MCHeartBeatItem>
+            <MCHeartBeatItem imgSrc="/assets/icons/newspaper.svg" imgAlt="A newspaper icon." imgLink="https://bit.ly/2sy4X7K" slot="sectionContent">
+              <p slot="heartBeatContent">Too many divorced women hesitate to try online dating because they feel it takes all the magic and romance out of falling in love.</p>
+              <p slot="heartBeatContent"> ot true! Quite the opposite in fact, as self-confessed online dating skeptic Diana Bruk argues in this wonderful article, <a href="https://bit.ly/2sy4X7K" target="_blank">"I Hired an Online Dating Coach and This Is What I Learned"</a>.</p>
+            </MCHeartBeatItem>
+          </MCSection>
+          <MCSection sectionID="mc_issue__image" sectionHeader="This Issue's Image To Inspire">
+            <MCImageToInspire imgSrc="/assets/images/meet_cute/issue_1/issue_1-image_to_inspire.png" imgAlt="You do not need a perfect relationship.  All you need is somsone who loves your weirdness, wants to spend time with you, and loves you." slot="sectionContent"/>
+          </MCSection>
+          <MCThanksForReading imgSrc="/assets/images/meet_cute/issue_1/issue_1-thanks_for_reading.gif" imgAlt="A rabbit and a yellow chick in sunglasses cheers each other with cold drinks in a swimming pool." />
+        <!-- The <div> below closes div.container--issue. -->
+        <!-- DO NOT DELETE!  -->
+        </div>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+<Footer client:load />
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+    <a href="404.html"></a>
+  </body>
+</html>

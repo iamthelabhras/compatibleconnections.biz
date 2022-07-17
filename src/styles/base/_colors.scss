@@ -1,0 +1,21 @@
+:root {
+  // Custom variables.
+  // Basic colors.
+  --colors__black: hsl(0, 0%, 15%);
+  --colors__gray: hsl(0, 0%, 96%);
+  --colors__gray_light: hsl(0, 0%, 87%);
+  --colors__gray_dark: hsl(0, 0%, 45%);
+  --colors__pink: hsl(338, 100%, 74%);
+  --colors__pink_dark: hsl(329, 84%, 47%);
+  --colors__pink_light: hsl(333, 95%, 78%);
+  --colors__pink_meet_cute: hsl(329, 85%, 57%);
+  --colors__white: hsl(150, 100%, 98%);
+  --colors__yellow: hsl(60, 100%, 50%);
+  // Brand colors.
+  --colors__brand_color_1: var(--colors__pink_dark);
+  --colors__brand_color_2: var(--colors__pink);
+  --colors__brand_color_3: var(--colors__pink_light);
+  // Card colors.
+  --colors__pink_card_transparent: hsla(0, 0%, 100%, 0);
+  --colors__pink_card_dark: hsl(352, 31%, 68%);
+}

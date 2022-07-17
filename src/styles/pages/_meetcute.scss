@@ -1,0 +1,372 @@
+main#meetcute {
+  //
+  h2 {
+    // Current & Back Issues, Each new Issue Includes, All New Subscribers Receive, & Subscribe headings.
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+  //
+  section#meetcute__explainer {
+    // Styles MCExplainer Astro component.
+    justify-content: space-around;
+    align-items: center;
+    ///
+    img {
+      width: 600px;
+      height: 600px;
+      ////
+      @media screen and (max-width: 680px) {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    ///
+    div {
+      justify-content: center;
+      align-items: center;
+      ////
+      p {
+        max-width: 45ch;
+        font-size: 1.125rem;
+      }
+      ////
+      p:first-of-type {
+        text-align: center;
+        max-width: 30ch;
+        margin-bottom: 3.125rem;
+        font-size: 1.875rem;
+        font-weight: var(--typography__bold);
+      }
+      ////
+      a.button:link,
+      a.button:visited,
+      a.button:hover,
+      a.button:focus,
+      a.button:active {
+        margin-top: 3.125rem;
+        font-size: 1.125rem;
+        color: var(--colors__white);
+      }
+    }
+  }
+  //
+  section#meetcute__issues {
+    // Styles MCCurrentandBackIssues Astro component.
+    justify-content: center;
+    align-items: center;
+    ///
+    div.meetcute__issues_container {
+      // Styles MCInThisIssue Astro component.
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      ////
+      details {
+        width: 55%;
+        margin: 1.5625rem 0;
+        /////
+        @media screen and (max-width: 800px) {
+          width: 90%;
+        }
+        /////
+        &[open] div {
+          opacity: 100;
+          border-top: 5px solid #bbbbbb;
+          border-bottom: 1px dashed #bbbbbb;
+          border-left: 1px dashed #bbbbbb;
+          border-right: 1px dashed #bbbbbb;
+          background: var(--colors__white);
+        }
+        /////
+        div {
+          justify-content: center;
+          align-items: center;
+          width: 95%;
+          margin: 1rem auto 0 auto;
+          padding: 20px;
+          opacity: 0;
+          transition: opacity ease-in-out 1s;
+        }
+        /////
+        span {
+          text-align: center;
+          margin: 0.625rem 0;
+          padding: 0.625rem;
+          font-size: 1.875rem;
+          font-weight: var(--typography__bold);
+          color: var(--colors__brand_color_1);
+          text-shadow: 1px 2px 1px var(--colors__brand_color_3),
+            1px 1px 1px var(--colors__black);
+        }
+        /////
+        ul.meetcute__issue_highlights {
+          justify-content: center;
+          align-items: center;
+          margin: 1rem;
+          //////
+          li {
+            max-width: 45ch;
+            margin: 0.625rem 0;
+            font-size: 1.25rem;
+            font-weight: var(--typography__bold);
+          }
+        }
+        /////
+        a.button {
+          // "Start Reading Issue #"
+          width: 50%;
+          font-size: 1.125rem;
+        }
+      }
+      ////
+      summary {
+        cursor: pointer;
+        text-align: center;
+        min-width: 100%;
+        border-radius: var(--boxmodel__default_border_radius);
+        padding: 1.75rem;
+        background: #2b2b2b;
+        box-shadow: var(--shadows__default_box_shadow);
+        color: var(--colors__white);
+        font-weight: var(--typography__bold);
+        font-size: 1.375rem;
+        transition: margin-bottom ease-in-out 0.5s;
+        /////
+        h3 {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          color: inherit;
+          font-family: var(--typography__font_family_1);
+          font-size: inherit;
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+  //
+  section#meetcute__each_issue_includes {
+    // Styles MCEachIssueIncludes Astro component.
+    justify-content: center;
+    align-items: center;
+    ///
+    h2 {
+      // Ensures "Each New Issue" takes up first row of flexbox.
+      flex-basis: 100%;
+    }
+    ///
+    div.meetcute__each_issue_img_and_text {
+      // Styles MCEachIssueIncludesItem Astro component.
+      flex-basis: 50%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      ////
+      @media screen and (max-width: 950px) {
+        // Reset flex-basis on smaller screens.
+        flex-basis: 100%;
+      }
+      ////
+      div {
+        width: 75%;
+        border-radius: var(--boxmodel__default_border_radius);
+        padding: 3.4375rem;
+        background: rgba(255, 255, 154, 0.4);
+        /////
+        @media screen and (max-width: 950px) {
+          // Enlarge div containing {itemHeading} & {itemDesc} on smaller screnes.
+          width: 90%;
+        }
+      }
+    }
+    ///
+    img {
+      width: 75px;
+      height: 75px;
+      margin-right: 2rem;
+      // filter to var(--colors_brand_color_1).
+      filter: invert(24%) sepia(80%) saturate(7479%) hue-rotate(319deg)
+        brightness(89%) contrast(93%);
+      ////
+      @media screen and (max-width: 1065px) {
+        // Remove icons on smaller screens.
+        display: none;
+      }
+    }
+    ///
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: var(--typography__font_family_1);
+      font-size: 1.125rem;
+      font-weight: var(--typography__bold);
+    }
+    ///
+    p {
+      text-align: center;
+    }
+  }
+  //
+  section#meetcute__subscribe {
+    // Styles MCSubscribe Astro component.
+    justify-content: space-around;
+    ///
+    div#mc_embed_signup {
+      /// Styles MCSubscribeForm Astro component.
+      // This div was auto-generatd by Mailchimp's embedded form builder.  It wraps the entire subscribe form.
+      // Because div is auto-generated by Mailchimp it does not follow standard, site-wide formatting rules!
+      flex-basis: 30%;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      font-family: var(--typography__font_family_1);
+      font-size: 1rem;
+      font-weight: var(--typography__bold);
+      background: var(--colors__white);
+      ////
+      @media screen and (max-width: 1540px) {
+        flex-basis: 40%;
+      }
+      ////
+      @media screen and (max-width: 1320px) {
+        flex-basis: 100%;
+      }
+      ////
+      h2 {
+        margin-top: 1rem;
+        /////
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 90%;
+          height: 5px;
+          border-bottom: 5px double var(--colors__brand_color_1);
+        }
+      }
+      ////
+      p:first-of-type {
+        max-width: 35ch;
+        font-size: 1.25rem;
+        font-weight: var(--typography__bold);
+      }
+      ////
+      p:nth-of-type(2) {
+        max-width: 40ch;
+        margin: 2rem auto 2.5rem auto;
+      }
+      ////
+      p {
+        text-align: center;
+      }
+      ////
+      form {
+        justify-content: center;
+        align-items: center;
+        // Remove default border.
+        border: none;
+        width: 100%;
+        /////
+        div.mc-field-group {
+          // Wraps each label and input element in subscription form.
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // Set an explicit height to ensure equal spacing between labels & inputs.
+          height: 55px;
+          //////
+          label {
+            flex-basis: 40%;
+            height: 35px;
+            font-style: italic;
+          }
+          //////
+          input {
+            flex-basis: 60%;
+            height: 35px;
+            border: 2px solid var(--colors__gray_light);
+            padding-left: 10px;
+            &:focus {
+              // Override default styling on focus.
+              outline: 2px solid var(--colors__brand_color_1);
+            }
+          }
+        }
+        //
+        div.clear {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input#mc-embedded-subscribe {
+            cursor: pointer;
+            width: 75%;
+            margin: 3rem 0 2rem 0;
+            border-radius: var(--boxmodel__default_border_radius);
+            border: none;
+            padding: 1.75rem;
+            font-family: var(--typography__font_family_1);
+            font-size: 1.125rem;
+            font-weight: var(--typography__bold);
+            color: var(--colors__white);
+            background: var(--colors__brand_color_1);
+            transition: all ease-in-out 0.25s;
+            &:hover,
+            &:focus {
+              transform: scale(1.25);
+            }
+          }
+        }
+      }
+    }
+    ///
+    div#meetcute__subscribe_gifts {
+      // Styles MCSubscribeGifts Astro component.
+      flex-basis: 60%;
+      justify-content: space-around;
+      align-items: center;
+      ////
+      @media screen and (max-width: 1540px) {
+        // Reset flex basis when images in image-and-text blocks are set to display: none.
+        flex-basis: 40%;
+      }
+      ////
+      @media screen and (max-width: 1320px) {
+        // Reset flex-basis to stack flex items, prevent 'squished' layout.
+        flex-basis: 100%;
+      }
+      ////
+      div.block_image_and_text {
+        /////
+        // Styles ImageAndTextBlock Astro component.
+        @media screen and (max-width: 1320px) {
+          // Reset flex-basis to stack flex items, prevent 'squished' layout.
+          width: 100%;
+        }
+        /////
+        img {
+          width: 160px;
+          height: auto;
+          //////
+          @media screen and (max-width: 1540px) {
+            // Hide images in image-and-text blocks to free up space as screen size decreases.
+            display: none;
+          }
+          //////
+          @media screen and (max-width: 1320px) {
+            // Redisplay images in image-and-text blocks when flex basis is set to 100%.
+            display: initial;
+          }
+        }
+        /////
+        p {
+          max-width: 45ch;
+        }
+        /////
+        p:first-of-type {
+          text-align: center;
+          max-width: 30ch;
+        }
+      }
+    }
+  }
+}

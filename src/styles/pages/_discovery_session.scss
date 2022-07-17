@@ -1,0 +1,146 @@
+main#discovery_session {
+  //
+  section#discovery_session__explainer {
+    // Styles DiscoverySessionExplainer Astro component.
+    ///
+    div.flexbox__basic_row:first-of-type {
+      justify-content: space-evenly;
+      align-items: center;
+      ////
+      img#discovery_session__upwards {
+        max-width: 25rem;
+        max-height: 15.625rem;
+      }
+      ////
+      img#discovery_session__upwards + p {
+        text-align: center;
+        max-width: 35ch;
+        padding: 1.25rem;
+        font-size: 1.875rem;
+        font-weight: var(--typography__bold);
+        /////
+        @media (max-width: 575px) {
+          margin-top: 3.125rem;
+          font-size: 1.5625rem;
+        }
+      }
+    }
+    ///
+    div.flexbox__basic_row:nth-of-type(2) {
+      gap: 3.4375rem;
+      justify-content: space-around;
+      max-width: 90%;
+      margin: 0 auto;
+      margin-top: 1.5625rem;
+      padding: 0 1.25rem;
+      ////
+      div:first-of-type {
+        // Every Divorced Woman's Situation Is Unique!
+        transform: rotate(-3.25deg);
+      }
+      ////
+      div:nth-of-type(2) {
+        // After Your 20-Minute Discovery Session You Will:
+        transform: rotate(3.25deg);
+      }
+      ////
+      div:first-of-type,
+      div:nth-of-type(2) {
+        /////
+        @media (max-width: 830px) {
+          // Unrotate cards on smaller screens.
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  //
+  section#discovery_session__schedule {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    ///
+    p#discovery_session__override_p_first_child {
+      // Lower max-width to prevent unsightly wrapping of "Discovery Session" text.
+      // TO DO: Figure out a better name for this class: way too verbose!
+      max-width: 35ch;
+    }
+    ///
+    p:nth-of-type(2),
+    p:nth-of-type(3) {
+      // Text in this gray section is center-aligned.
+      text-align: center;
+    }
+    ///
+    img {
+      width: clamp(12.5rem, 25%, 18.75rem);
+      height: clamp(12.5rem, 25%, 18.75rem);
+      margin: 0.625rem;
+      border-radius: 50%;
+      ////
+      @media (max-width: 756px) {
+        display: none;
+      }
+    }
+    ///
+    button {
+      // Styles ButtonSchedule Astro component.
+      ////
+      @media (max-width: 756px) {
+        // Resize button when button <span> text wraps.
+        width: 90%;
+      }
+    }
+    ///
+    button.buttons__scaling:hover,
+    button.buttons__scaling:focus {
+      ////
+      @media (max-width: 756px) {
+        // If schedule button is set to scaling, reduce scaling factor to prevent it from scaling outside of parent.
+        transform: scale(1.085);
+      }
+    }
+  }
+  //
+  div#discovery_session__lets_connect_info {
+    // Styles DiscoverySessionLetsConnectionInfo Astro component.
+    // Note CSS deviates from section#discovery_session__name here because we're using a HeroGray with an id of lets_connect__container to style a "one-off" LetsConnect Astro component for this specific page: DiscoverySessionLetsConnect.
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 450px;
+    height: 250px;
+    border-radius: var(--boxmodel__card_border_radius);
+    background: var(--colors__brand_color_1);
+    font-size: 1.125rem;
+    font-weight: var(--typography__bold);
+    color: var(--colors__white);
+    ///
+    @media screen and (max-width: 1094px) {
+      margin-bottom: 50px;
+    }
+    ///
+    div {
+      // Div containing icon (e.g. contact book) & text (e.g. Your First & Last Name).
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      ////
+      span {
+        // Text (e.g. Your First & Last Name).
+        display: inline-block;
+        width: 25ch;
+        font-weight: inherit;
+        color: var(--colors__white);
+      }
+      ////
+      img {
+        // Icon (e.g. contact book).
+        filter: invert(100);
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,395 @@
+nav {
+  // Custom variables.
+  // Shared across all nav elements.
+  --nav__margins: 10px 0px;
+  --nav__nav_icons_sizing: 35px;
+  --nav__dropdown_border_radius: 5px;
+  --nav__dropdown_list_item_padding: 12px 16px;
+  --nav__transition_time_dropdown_links_fast: 0.5s;
+  --nav__transition_time_dropdown_links_slow: 1s;
+  --nav__transition_time_icons: 0.25s;
+  --nav__about_us_dropdown_center: -38px;
+  --nav__resources_for_divorced_daters_dropdown_center: 8px;
+  //
+  &.nav__sticky {
+    position: sticky;
+    top: 0;
+  }
+  //
+  img.nav__icon {
+    width: var(--nav__nav_icons_sizing);
+    height: var(--nav__nav_icons_sizing);
+    // Make nav icons white.
+    filter: invert(100);
+    transition: filter var(--nav__transition_time_icons) ease-in;
+    ///
+    &:hover {
+      width: var(--nav__nav_icons_sizing);
+      height: var(--nav__nav_icons_sizing);
+      // Make nav icons black.
+      filter: invert(0);
+    }
+  }
+}
+
+// NavDesktop Astro Component.
+
+#nav__nav_desktop {
+  // Level 0.
+  // This is the nav's outermost flexbox.
+  // There is only a single ul element nested within this flexbox.
+  display: flex;
+  margin: var(--nav__margins);
+  background: var(--colors__brand_color_1);
+  z-index: 999;
+}
+
+#nav__nav_desktop > ul {
+  // Level 1.
+  // Topmost nav link "headers" (e.g. Home, Resources for Divorced Daters, etc.) are nested within this element.
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  padding: 15px;
+  list-style: none;
+  //
+  > li {
+    // Style & position individual topmost anv link "headers".
+    position: relative;
+    text-align: center;
+    font-weight: var(--typography__extra_bold);
+    color: var(--colors__white);
+    font-size: 0.9375rem;
+  }
+  //
+  > li:first-of-type,
+  > li:last-of-type {
+    // Home (first) and Client Login (last) icons grow to fil whatever space is left in navbar after "headers" are placed within flexbox.
+    flex-grow: 1;
+  }
+  //
+  > li:first-of-type {
+    display: flex;
+    // Push Home icon to far-left of desktop nav.
+    justify-content: flex-start;
+  }
+  //
+  > li:last-of-type {
+    display: flex;
+    // Push Client Login icon to far-right of desktop nav.
+    justify-content: flex-end;
+  }
+}
+
+#nav__nav_desktop > ul > li {
+  // Level 2.
+  // Dropdown list items are nested within this ul container.
+  //
+  > ul {
+    // Prevent hover event from "spilling out" of nav.
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    // height: auto cannot be transitioned.
+    // Use max-height to create "roll out" animation instead.
+    max-height: 0vh;
+    border-radius: var(--nav__dropdown_border_radius);
+    text-align: center;
+    background-color: var(--colors__brand_color_2);
+    box-shadow: var(--shadows__default_box_shadow);
+    transition: opacity ease var(--nav__transition_time_dropdown_links_slow),
+      max-height ease-out var(--nav__transition_time_dropdown_links_fast);
+  }
+}
+
+#nav__nav_desktop > ul > li:hover {
+  // Desktop nav's transition cascade out from here.
+  color: var(--colors__yellow);
+  text-shadow: 1px 0px 0px var(--colors__black);
+  //
+  > ul {
+    opacity: 100;
+    max-height: 100vh;
+    // Prevent nested elements from inheriting containing ul's text-shadow.
+    text-shadow: none;
+    transition: opacity ease var(--nav__transition_time_dropdown_links_fast),
+      max-height ease-out var(--nav__transition_time_dropdown_links_slow);
+  }
+}
+
+#nav__nav_desktop > ul > li#nav__about_us {
+  //
+  ul {
+    //  Center "About Us" dropdown links container below container's header.
+    left: var(--nav__about_us_dropdown_center);
+  }
+}
+
+#nav__nav_desktop > ul > li#nav__resources_for_divorced_daters {
+  //
+  ul {
+    // Center "Resources for Divorced Daters" dropdown links container below container's header.
+    left: var(--nav__resources_for_divorced_daters_dropdown_center);
+  }
+}
+
+#nav__nav_desktop > ul > li#nav__work_with_us {
+  //
+  ul {
+    // Tweak width to prevent "A" in "Schedule A Discovery Session" from wrapping.
+    width: 140px;
+    // Center "Work With Us" dropdown links container below container's header.
+    left: -10px;
+  }
+}
+
+#nav__nav_desktop > ul > li > ul {
+  // Level 3.
+  // Dropdown list items & links are styled here.
+  //
+  > li {
+    padding: var(--nav__dropdown_list_item_padding);
+    ///
+    a {
+      font-size: 1.125rem;
+      color: var(--colors__white);
+    }
+  }
+  //
+  > li:hover {
+    border-radius: var(--nav__dropdown_border_radius);
+    background-color: var(--colors__gray_light);
+    ///
+    a {
+      color: var(--colors__black);
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  //
+  nav#nav__nav_desktop {
+    // Hide nav desktop on smaller screens.
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1181px) {
+  //
+  #nav__nav_desktop > ul {
+    ///
+    > li {
+      max-width: 20ch;
+    }
+    ///
+    > li#nav__resources_for_divorced_daters {
+      ////
+      > ul {
+        top: 45px;
+        left: -15px;
+      }
+    }
+    ///
+    > li#nav__the_meet_cute {
+      ////
+      > ul {
+        left: -5px;
+      }
+    }
+    ///
+    > li#nav__explore_our_services {
+      ////
+      > ul {
+        top: 45px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1090px) {
+  //
+  #nav__nav_desktop > ul {
+    ///
+    > li#nav__about_us,
+    > li#nav__the_meet_cute,
+    > li#nav__work_with_us {
+      ////
+      > ul {
+        top: 45px;
+      }
+    }
+  }
+}
+
+// NavMobile Astro Component
+
+nav#nav__mobile {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: var(--colors__brand_color_1);
+  z-index: 998;
+  //
+  @media screen and (min-width: 1025px) {
+    // Hide NavMobile on larger screens.
+    display: none;
+  }
+  //
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    list-style: none;
+    font-weight: 800;
+    ///
+    li {
+      align-self: center;
+      display: inline-block;
+      padding-left: 15px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      color: var(--colors__white);
+      ////
+      &:first-of-type {
+        // Home MobileNav icon.
+        // Position home icon on far-left of nav bar.
+        flex-grow: 1;
+      }
+      &:nth-of-type(2) {
+        // Hamburger MobileNav icon.
+        // Flex-grow value pushes following list item to far-right of nav bar.
+        flex-grow: 1;
+      }
+      &:last-of-type {
+        // Client Login MobileNav icon.
+        flex-grow: 0;
+        // Prevent Client Login icon from laying flush with window.
+        padding-right: 20px;
+      }
+      ////
+      a {
+        color: var(--colors__white);
+      }
+    }
+  }
+}
+
+// NavMobileLinks Astro component.
+
+nav#nav__mobile_links {
+  display: none;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: var(--border_radius);
+  background: var(--body_bg-lighter);
+
+  //
+  span {
+    font-size: 1.25rem;
+    color: var(--colors__white);
+  }
+  //
+  span.nav__close_menu {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--colors__black);
+    display: inline-block;
+    padding: 1.25rem 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  //
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    list-style: none;
+    ///
+    li {
+      margin: 10px;
+      border-radius: var(--border_radius);
+      padding-left: 25px;
+      background: var(--colors__brand_color_1);
+      ////
+      &:hover,
+      &:focus {
+        background: var(--colors__brand_color_2);
+      }
+      ////
+      &:last-of-type {
+        // Close This Menu.
+        margin-top: 35px;
+      }
+      ////
+      a {
+        padding: 0;
+        font-size: 1rem;
+        font-weight: var(--typography__normal);
+        color: var(--colors__white);
+        text-transform: none;
+      }
+    }
+  }
+
+  //
+  details {
+    ///
+    li {
+      font-size: 1.15rem;
+      color: var(--colors__white);
+      background: transparent;
+      ////
+      &:last-of-type {
+        // Remove margin inherited from "Close This Menu" CSS styles.
+        margin-top: 0;
+        padding-bottom: 25px;
+      }
+      ////
+      a {
+        /////
+        &:hover {
+          color: var(--colors__black);
+        }
+      }
+    }
+  }
+  //
+  details > summary {
+    list-style: none;
+  }
+  //
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  //
+  a,
+  summary span {
+    display: inline-block;
+    padding: 2rem 2rem;
+    font-weight: var(--typography__bold);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.nav__site_hidden {
+  // This class is toggled on NavToggleWrapper Astro component to hide site when NavMobileLinks is opened.
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.nav__mobile_open {
+  // This class is toggled on NavMobileLinks Astro component to hide/show mobile links.
+  display: flex !important;
+}

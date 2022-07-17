@@ -1,0 +1,87 @@
+.block_image_and_text {
+  display: flex;
+  // Wrap places images in block on left, text on right by default.
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--block_image_and_text__margin);
+  padding: var(--block_image_and_text__padding);
+  // Custom variables.
+  --block_image_and_text__margin: 3.125rem 1.25rem;
+  --block_image_and_text__padding: 1.25rem;
+  --block_image_and_text__h3_font_size: 1.65rem;
+  --block_image_and_text__h3_max_width: 43ch;
+  --block_image_and_text__p_font_size: 1.25rem;
+  --block_image_and_text__p_max_width: 52ch;
+  --block_image_and_text__img_width_and_height: 10.9375rem;
+  --block_image_and_text__img_border_radius: 0.9375rem;
+  --block_image_and_text__img_box_shadow: 10px 10px 2px
+    var(--colors__brand_color_1);
+  --block_image_and_text__inner_div_width: 40.4375rem;
+  --block_image_and_text__img_top_margin_on_wrap: 1.25rem;
+  --block_image_and_text__h2_padding_on_image_and_text_block: 0 0.78125rem;
+  --block_image_and_text__h2_padding_on_image_and_text_block_wrap: 0 1.5625rem;
+  //
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child,
+  p:first-child {
+    max-width: var(--block_image_and_text__h3_max_width);
+    padding: var(--block_image_and_text__h2_padding_on_image_and_text_block);
+    font-family: var(--typography__font_family_1);
+    font-size: var(--block_image_and_text__h3_font_size);
+    font-weight: var(--typography__bold);
+  }
+  //
+  p {
+    max-width: var(--block_image_and_text__p_max_width);
+    font-size: var(--block_image_and_text__p_font_size);
+  }
+  //
+  img {
+    width: var(--block_image_and_text__img_width_and_height);
+    height: var(--block_image_and_text__img_width_and_height);
+    border-radius: var(--block_image_and_text__img_border_radius);
+    box-shadow: var(--block_image_and_text__img_box_shadow);
+  }
+  //
+  div {
+    // Set an explicit width on inner div, otherwise div containers with headers that *do not* wrap will not properly align with containers whose headers *do* wrap.
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    width: var(--block_image_and_text__inner_div_width);
+  }
+}
+
+.block_image_and_text.images_on_right {
+  // Row-reverse places images in block on right, text on left.
+  // Currently not able to directly apply this class to <ImageAndTextBlock> components directly.
+  // Flex direction on components is explicitly changed to row-reverse in the following *page-specific* Sass partials: main.scss.
+  flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1245px) {
+  // Breakpoint where image & text blocks wrap & reflow from rows to columns.
+  // TO DO: Rename custom variable associated with margin-bottom.
+  // Variable names shoudl reflect fact that it's not just h3 elements that are being styled.
+  // Heading of the image & text block component is what's being styled.
+  //
+  .block_image_and_text {
+    // !important needed to overright Sass-nested image and text blocks (with greater specificity) in page-specific Sass partials.
+    // See code comment in .block_image_and_text.images_on_right for more details.
+    flex-flow: column wrap !important;
+    ///
+    h3 {
+      text-align: center;
+    }
+    ///
+    div {
+      align-items: center;
+      width: auto;
+      margin-top: var(--block_image_and_text__img_top_margin_on_wrap);
+    }
+  }
+}

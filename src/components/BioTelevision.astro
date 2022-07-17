@@ -1,0 +1,50 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+<!--  GRMA Annarita Tranfici.  See https://sitepoint.com/creating-vintage-television-using-bem-css3-javascript" -->
+
+<div class="bio_television">
+  <div class="bio_television__top">
+    <div class="bio_television__antenna bio_television__antenna_left"></div>
+    <div class="bio_television__antenna bio_television__antenna_right"></div>
+    <div class="bio_television__antenna_base"></div>
+  </div>
+  <!-- television__top -->
+  <div class="bio_television__center">
+    <div class="bio_television__screen">
+      <video controls>
+        <source src="/assets/video/bio-television.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- television__screen -->
+  </div>
+  <!-- television__center -->
+  <div class="bio_television__base">
+    <div class="bio_television__foot bio_television__foot_left"></div>
+    <div class="bio_television__foot bio_television__foot_right"></div>
+  </div>
+  <!-- television__base -->
+  <span class="bio__slide_instructions">Click on the television!</span>
+</div>

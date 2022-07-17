@@ -1,0 +1,3 @@
+# Ignore MD files.
+# This prevents Prettier from wreaking havoc with local TaskWiki integration.
+*.md

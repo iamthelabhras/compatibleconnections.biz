@@ -1,0 +1,61 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<nav class="nav__sticky" id="nav__mobile">
+  <ul>
+    <li class="nav__mobile_icons" id="nav__mobile_home">
+      <a href="/">
+        <img
+          src="/assets/icons/home-64.png"
+          alt="Home icon."
+          class="nav__icon"
+        />
+      </a>
+    </li>
+    <li class="nav__mobile_icons" id="nav__mobile_hamburger">
+      <a href="#">
+        <img
+          src="/assets/icons/hamburger-48.png"
+          alt="Hamburger icon."
+          class="hamburger--toggle nav__icon"
+          id="nav--icons--hamburger"
+        />
+      </a>
+    </li>
+    <li class="nav__mobile_icons" id="nav__client_login">
+      <a href="">
+        <img
+          src="/assets/icons/enter-48.png"
+          alt="Client Login icon."
+          class="nav__icon"
+          id="client_login--icon"
+        />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ASTRO COMPONENT-SPECIFIC IMPORTS SCRIPTS: NAVMOBILE.ASTRO -->
+<script hoist type="module">
+  import "../js/nav--nav_mobile_links.js";
+</script>

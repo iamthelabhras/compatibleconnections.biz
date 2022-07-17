@@ -1,0 +1,210 @@
+main#certifications {
+  //
+  > section#certifications__1_grown_exponentially {
+    img#certifications__tree {
+      // Override default styling inherited from <SectionGray>.
+      max-width: initial;
+      max-height: initial;
+      width: 530px;
+      height: 400px;
+    }
+  }
+  //
+  > section#certifications__2_mixed_feelings {
+    // Placeholder.
+  }
+  //
+  > section#certifications__3_a_good_coach {
+    ///
+    img#certifications__graduate {
+      // Override default styling inherited from <SectionGray>.
+      max-width: initial;
+      max-height: initial;
+      width: 530px;
+      height: 350px;
+    }
+  }
+  //
+  > section#certifications__4_icf {
+    ///
+    img#certifications__icf {
+      max-width: initial;
+      max-height: initial;
+      margin: 1.5625rem 0;
+      width: 380px;
+      ////
+      @media screen and (max-width: 560px) {
+        width: 280px;
+      }
+    }
+  }
+  //
+  > section#certifications__5_coach_u {
+    ///
+    img#certifications__coach_u {
+      max-width: initial;
+      max-height: initial;
+      margin: 1.5625rem 0;
+      height: 140px;
+    }
+  }
+  //
+  > section#certifications__6_larger_puzzle {
+    // Placeholder.
+  }
+  //
+  > section#certifications__7_due_diligence {
+    // Placeholder.
+  }
+  //
+  > section#certifications__8_personal_questions {
+    // Placeholder.
+  }
+  //
+  > section#certifications__9_coach_interview_questions {
+    // Placeholder.
+  }
+  //
+  > section#certifications__10_discovery_session {
+    // Placeholder.
+  }
+  //
+  ul.certifications__requirements {
+    // Styles CertRequirements Astro component.
+    max-width: 60ch;
+    margin: 1.875rem;
+    padding: 30px;
+    border: 1px dotted var(--colors__black);
+    border-radius: var(--boxmodel__default_border_radius);
+    background: var(--colors__white);
+    font-size: 1rem;
+    font-weight: var(--typography__bold);
+    list-style: square;
+    ///
+    li {
+      margin: 0.625rem;
+    }
+    ///
+    span.certifications__requirements_label {
+      align-self: center;
+      display: inline-block;
+      text-align: center;
+      width: 75%;
+      margin: 1.5625rem 0 -45px 0;
+      padding: 5px 10px;
+      border-radius: var(--boxmodel__default_border_radius);
+      background: var(--colors__brand_color_1);
+      font-weight: var(--typography__bold);
+      color: var(--colors__white);
+      ////
+      @media screen and (max-width: 542px) {
+        width: 100%;
+      }
+    }
+  }
+  //
+  details.certifications__questions {
+    // Styles CertQuestions Astro component.
+    width: 50%;
+    margin-top: 4rem;
+    background-color: var(--colors__gray);
+    cursor: pointer;
+    ///
+    &[open] {
+      ////
+      ul {
+        opacity: 100;
+      }
+    }
+    ///
+    @media screen and (max-width: 921px) {
+      width: 90%;
+      margin-top: 3.125rem;
+    }
+    ///
+    summary {
+      text-align: center;
+      border-radius: var(--boxmodel__default_border_radius);
+      padding: 20px;
+      background-color: var(--colors__brand_color_1);
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      font-weight: var(--typography__bold);
+      color: var(--colors__white);
+      cursor: pointer;
+    }
+    ///
+    ul {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 60ch;
+      // Haveing trouble getting flexbox to center dropdown uls.
+      // Falling back on "margin *px auto" workhorse.
+      margin: 30px auto;
+      padding: 30px;
+      border: 1px dotted var(--colors__black);
+      border-radius: var(--boxmodel__default_border_radius);
+      background: var(--colors__white);
+      list-style: square;
+      ////
+      li {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        font-size: 1.15rem;
+        font-weight: var(--typography__bold);
+      }
+      ////
+      ul {
+        margin-top: initial;
+        margin-bottom: initial;
+        padding: 10px;
+        border: none;
+        list-style: circle;
+        /////
+        li {
+          font-size: 1rem;
+          font-weight: var(--typography__normal);
+        }
+      }
+    }
+    ///
+    ul,
+    ul ul {
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+  }
+  //
+  section#credentials__bibliography {
+    // Styles CertBibliography Astro component.
+    justify-content: space-evenly;
+    ///
+    > div {
+      border: 1px dotted var(--colors__black);
+      border-radius: var(--boxmodel__default_border_radius);
+      background: var(--colors__white);
+      width: 40%;
+      ////
+      @media screen and (max-width: 1080px) {
+        margin-top: 2rem;
+        width: 90%;
+      }
+      ////
+      @media screen and (max-width: 745px) {
+        padding: 25px;
+      }
+      ////
+      h2 {
+        text-align: center;
+        font-family: var(--typography__font_family_1);
+        font-size: 1.75rem;
+      }
+      ////
+      p {
+        font-size: 0.85rem;
+        color: var(--colors__black);
+      }
+    }
+  }
+}

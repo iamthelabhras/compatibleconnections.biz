@@ -1,0 +1,124 @@
+---
+
+/// NOTE: DEFAULT FILE PATHS ARE CONFIGURED FOR .astro PAGES STORED AT /SRC ROOT.  PAGES NESTED WITHIN ROOT WILL NEED THEIR FILE PATHS UPDATED!
+
+
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss";
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import NavToggleWrapper from "../components/NavToggleWrapper.astro";
+import Header from "../components/Header.astro";
+import NavDesktop from "../components/NavDesktop.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavMobileLinks from "../components/NavMobileLinks.astro";
+import CardTextPlain from "../components/CardTextPlain.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/404.html";
+let title = "-♡- Compatible Connections 404 -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "Compatible Connections' custom 404 (Not Found) page.";
+let pageKeywords = "404, 404 error, 404 Not Found, HTTP status code";
+let mainID = "page_not_found";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="flexbox__basic_column" id={mainID}>
+          <h1 class="utility_classes__center">
+            Sorry, <span class="utility_classes__clean_break_on_wrap">Fabulous Single!</span>
+          </h1>
+          <div class="flexbox__basic_row" id="main__welcome_container">
+            <div id="main__welcome_image_and_animation">
+              <!-- Set explicit width & height on img to prevent layout shift on load.-->
+              <img
+                src="../../assets/images/coach_bernadette_hello_redux-1-alpha.png"
+                alt="A drawing of Coach Bernadette smiling & waving."
+                width="258px"
+                height="518px"
+                loading="lazy"
+              />
+            </div>
+            <div class="flexbox__basic_column" id="main__welcome_text">
+              <p>
+                You're looking for love <span class="utility_classes__clean_break_on_wrap">in all the wrong places.</span>
+              </p>
+              <CardTextPlain>
+                <p>The page you're looking for doesn't exist.</p>
+                <iframe
+                  width="350"
+                  height="315"
+                  src="https://www.youtube.com/embed/8mxIHL6d-RM?start=48"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <p class="main__404_instructions">
+                  Try using the navigation menu above to get to where you want
+                  to go. Alternately, if you're experiencing serious
+                  difficulties using our website, please
+                  <a href="mailto:ops@compatibleconnections.biz"
+                    >email our website's administrator</a
+                  >
+                  for assistance.
+                </p>
+             </CardTextPlain>
+            </div>
+          </div>
+        <LetsConnect />
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+    <Footer client:load />
+  </body>
+</html>

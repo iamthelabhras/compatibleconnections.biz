@@ -1,0 +1,35 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import PinkLine from "./PinkLine.astro";
+import SocialIcons from "./SocialIcons.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+let bizName = 'Compatible Connections';
+let bizTagline= 'The Science Behind Forever After';
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<header class="flexbox__basic_row">
+  <div class="header__site_identity">
+    <span class="header__biz_name">{bizName}</span>
+    <span class="header__biz_tagline">{bizTagline}</span>
+  </div>
+  <SocialIcons />
+  <PinkLine />
+</header>

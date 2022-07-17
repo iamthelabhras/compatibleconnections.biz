@@ -1,0 +1,48 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+import ButtonSchedule from "./ButtonSchedule.astro";
+
+//    ASTRO LAYOUT IMPORTS
+
+import HeroGray from "../layout/HeroGray.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+import ContentCollabCardLetsConnect from "./ContentCollabCardLetsConnect.astro";
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// to do: create & implement JS varaibles for e-mail, telephone, and discoverry sessions links.
+///  seems like it would be convenient to collect them all in one place in case anything every changes.
+
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<HeroGray id="lets_connect__container">
+  <ContentCollabCardLetsConnect /> 
+  <div id="lets_connect__text">
+    <p>
+   Click the button below to schedule a time to talk with us about how we can contribute to your next podcast, blog post, conference, divorce support group, or other event.  
+    </p>
+     <ButtonSchedule calendlySlug="Calendly.showPopupWidget('https://calendly.com/ccbiz/content-collaboration-call');return false;" schedule="A Content Collaboration Call" />
+  </div>
+</HeroGray>
+
+<!-- ASTRO COMPONENT IMPORTS SCRIPTS: DISCOVERYSESSIONSCHEDULER.ASTRO --> 
+<script hoist
+src="https://calendly.com/assets/external/widget.js"
+type="text/javascript"
+></script>

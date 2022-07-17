@@ -1,0 +1,134 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--boxmodel__span_page);
+  background: var(--colors__brand_color_1);
+  // Custom variables
+  --footer__social_icons_wrap_width: 25px;
+  --footer__social_icons_wrap_height: 25px;
+  //
+  img#footer__logo {
+    width: 175px;
+    height: 150px;
+    // Pulls CC logo just above footer.
+    margin-top: -50px;
+    border-radius: 50%;
+    filter: brightness(1.25);
+  }
+  //
+  div#footer__site_details {
+    flex-basis: 40%;
+    // Remove default flexbox margin.
+    margin: 0;
+    // Remove default flexbox padding.
+    padding: 0;
+    ///
+    p {
+      margin-top: 0;
+      color: var(--colors__black);
+      font-size: 0.625rem;
+      font-weight: var(--typography__extra_light);
+      font-style: italic;
+    }
+    ///
+    p:first-of-type {
+      // Copyright Compatible Connections text.
+      font-size: 0.9375rem;
+      color: var(--colors__white);
+      font-weight: var(--typography__bold);
+      font-style: normal;
+    }
+    ///
+    p:nth-of-type(2) {
+      // Spacing between copyright and development info.
+      margin-top: 0.625rem;
+    }
+    ///
+    a.footer__dev_link {
+      // CSS differs slightly from site-wide link styles in _base.scss.
+      // Do not rewrite / override when refactoring!
+      text-decoration: none;
+      background-image: linear-gradient(
+          rgba(255, 255, 0, 0),
+          rgba(255, 255, 0, 0)
+        ),
+        linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0));
+      background-size: 100% 2px, 0 2px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat, no-repeat;
+      transition: background-size 0.4s linear, background-image 0.4s ease-in-out;
+      color: var(--colors__yellow);
+      font-weight: var(--typography__extra_light);
+    }
+    ///
+    a.footer__dev_link:hover {
+      background-image: linear-gradient(
+          rgba(255, 255, 0, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(rgba(255, 255, 0, 1), rgba(255, 255, 0, 1));
+      background-size: 0 2px, 100% 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 978px) {
+  //
+  footer {
+    ///
+    div#footer__site_details {
+      // Push site detail text leftwards as screen shrinks.
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  //
+  footer {
+    // Reflow flex container on smaller screens to stack elements.
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ///
+    div#footer__site_details,
+    div.social_icons {
+      // Add padding when flex container reflows.
+      padding: 1rem 0;
+    }
+    ///
+    div#footer__site_details {
+      // Pull site details "up" towards cc logo when flex container reflows.
+      margin-top: -20px;
+    }
+    ///
+    div.social_icons {
+      // Resize & center social icons container when flex container reflows.
+      justify-content: center;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      ////
+      img.social_icons__icon {
+        // Slightly reduce width & height of social icons on smaller screens.
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  //
+  footer {
+    ///
+    div.social_icons {
+      // Space out social media icons on smallest screens.
+      justify-content: space-around;
+    }
+  }
+}
