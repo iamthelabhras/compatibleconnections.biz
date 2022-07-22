@@ -1,0 +1,146 @@
+---
+
+/// NOTE:  The template used to created this article can be found in:
+///   cc-astro/dev_templates/page_template_article.stro
+
+
+//    CSS/STYLE IMPORTS
+import "../../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../../components/HeadMinimum.astro";
+import HeadStatic from "../../components/HeadStatic.astro";
+import NavToggleWrapper from "../../components/NavToggleWrapper.astro";
+import Header from "../../components/Header.astro";
+import NavDesktop from "../../components/NavDesktop.astro";
+import NavMobile from "../../components/NavMobile.astro";
+import NavMobileLinks from "../../components/NavMobileLinks.astro";
+import Footer from "../../components/Footer.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+import Article from "../../layout/Article.astro";
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/resoures/dating-after-decades-divorced-women-have-6-advantages";
+let title = "-♡- Article: Dating For Decades, Divorced Women Have 6 Advantages -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "";
+let pageKeywords = "";
+let mainID = "dating_after_decades";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body>
+    <!-- #region Full Screen Nav Menu -- Tablet & Mobile Hamburger Click -->
+    <NavMobileLinks></NavMobileLinks>
+    <!-- #endregion -->
+    <!-- The div below wraps the entire CC webpage & hides/shows it on mobile & tablet views 
+            depending on whether the Hamburger Icon in the Nav Menu is clicked. -->
+    <NavToggleWrapper>
+      <Header />
+      <!-- #region Nav Menu -->
+      <NavDesktop />
+      <NavMobile client:load />
+      <!-- #endregion -->
+      <main class="article" id={mainID}>
+        <Article articleTitle="Dating After Decades, Divorced Women Have 6 Advantages" imgSrc="/assets/images/resources/articles/dating_after_decades.png" imgAlt="A middle-aged man & woman embracing." articleValediction="Wishing You Everything You Ever Wanted In Life & Love">
+          <blockquote slot="blockquote">
+            Many women, including myself, had their last date in high school or college and now find themselves totally lost in this new world of digital dating.
+          </blockquote>
+          <p slot="article_text">
+            No doubt the rules and culture of dating in today's modern dating scene have changed.  Dating after a divorce is truly challenging and there's no getting around it. 
+          </p>
+          <p slot="article_text">
+            Many women, including myself, had their last date in high school or college and now find themselves totally lost in this new world of digital dating! 
+          </p>
+         <p slot="article_text">
+            Not only do we need a “refresher,” we need to learn a whole new set of skills and language! 
+          </p> 
+          <p slot="article_text">
+            Despite that, we do have some advantages in our favor!
+          </p> 
+          <p slot="article_text">
+            Here are six inspirational advantages I'd like you to standby when you're ready to start dating.   
+          </p>
+          <h2 slot="article_text">
+            #1: Relationship Experience
+          </h2>
+          <p slot="article_text">
+                For starters, we've been around the block, and come to the table with wisdom from relationship experiences that place us ahead of our competition.
+              </p>
+          <h2 slot="article_text">
+            #2: Confidence
+          </h2>
+          <p slot="article_text">
+            Divorced women set their own timetable and begin dating after they have established their new normal of “happiness.” Their newfound freedom is spent with friends, new hobbies, and activities that make them smile. They understand becoming a successful single before dating is key to showing up confident while owning their worth. Men are naturally attracted to confident women.
+          </p>
+          <h2 slot="article_text">
+            #3: We Know What We Want 
+          </h2>
+          <p slot="article_text">
+            They date differently beginning with the end in mind. In one sentence they can describe their ideal companion and how they want to feel in their romantic relationship. It's difficult to find what you're looking for if you can't describe it.
+          </p>
+          <h2 slot="article_text">
+            #4: We Know Dating Isn't A Numbers Game
+          </h2>
+          <p slot="article_text">
+            These successful singles “get” dating isn't a numbers game. There are no rules to follow, a list of things to do to land a man in 30 days, or blame yourself if he's “just not that into you.” They acknowledge dating is both an art of self-discovery they can master and a science they can learn to find real soulmate love.
+          </p>
+          <h2 slot="article_text">
+            #5: We Date For Compatibility
+          </h2>
+          <p slot="article_text">
+          They consciously date deliberately for compatibility. They will attest to screening quality men who share interests, lifestyles, relationship goals, and core values. They date character traits and believe nice guys should finish first! 
+          </p>
+          <h2 slot="article_text">
+            #6: We Know Our Value
+          </h2>
+          <p slot="article_text">
+            These women know the value of investing in themselves. They'll collaborate with professionals who can advance their needs, wants, and desires. Their new motto is “I deserve TRUE romantic love with a partner who adores me for who I am!
+          </p>
+          <p slot="article_text">
+            Most women dating after divorce aren't afraid to date. They just don't want to make the same mistake twice. They already know the cost of picking the wrong partner and will do whatever it takes to make sure they get this right. They empower themselves with a new mindset, and dating skills, believing the best is yet to come.
+          </p>
+          <p class="utility_classes__center" slot="article_text">
+            I'm here to cheer you on!
+          </p>
+          "There hasn't been a time in the last six, seven years that I haven't urinated in a bucket.  But I don't film it.  And put it on Internets."
+       </Article>
+      </main>
+      <span class="line"></span>
+      <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
+    </NavToggleWrapper>
+<Footer client:load />
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: FILE_NAME.ASTRO -->
+    <a href="404.html"></a>
+  </body>
+</html>
