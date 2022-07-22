@@ -192,3 +192,24 @@ main.article {
     }
   }
 }
+
+main#dating_after_decades {
+  // CSS overrides & article-specific styles for "Dating After Decades, Divorced Women Have 6 Advantages" article.
+  //
+  h1 {
+    ///
+    @media screen and (max-width: 807px) {
+      // Reduce h1 font-size when "Dating After Decades..." title begins wrapping onto 3 consecutive lines.
+      font-size: calc(var(--typography__font_size_h1) * 0.75);
+    }
+  }
+  //
+  section#article__container_article {
+    ///
+    > img {
+      // Bumps up height for dating_after_decades.png.
+      // Bumping up width leads to overflow on mobile?
+      max-height: 450px;
+    }
+  }
+}
