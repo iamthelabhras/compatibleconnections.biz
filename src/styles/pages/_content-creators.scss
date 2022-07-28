@@ -1,6 +1,6 @@
-main#content_creators {
+main#content-creators {
   //
-  .content_creators__collab {
+  .content-creators__collab {
     // Styles Content Collab Astro component.
     ///
     p:first-of-type {
@@ -31,7 +31,7 @@ main#content_creators {
     }
   }
   //
-  #content_creators__explainer_1 {
+  #content-creators__explainer_1 {
     // Styles ContentCollabExplainer Astro component.
     ///
     img:first-of-type {
@@ -48,7 +48,7 @@ main#content_creators {
     }
   }
   //
-  #content_creators__explainer_2 {
+  #content-creators__explainer_2 {
     // Styles ContentCollabExplainer Astro component.
     ///
     p:last-of-type {
@@ -60,7 +60,7 @@ main#content_creators {
     }
   }
   //
-  #content_creators__explainer_3 {
+  #content-creators__explainer_3 {
     // Styles ContentCollabExplainer Astro component.
     button {
       margin: 0.78125rem 0;
@@ -68,20 +68,20 @@ main#content_creators {
     }
   }
   //
-  section#content_creators__presentations_and_workshops {
+  section#content-creators__presentations_and_workshops {
     ///
     //  Styles CotentCollabPresentations Astro component.
     // Custom variables.
     // Image Modal Container Astro component custom variable.
-    --content_creators__MAGIC_NUMBER__image_modal_container_width: 100px;
+    --content-creators__MAGIC_NUMBER__image_modal_container_width: 100px;
     ///
     .image_modal__container {
       // Styles Image Modal Container Astro component.
       // Override component's default width.
-      width: var(--content_creators__MAGIC_NUMBER__image_modal_container_width);
+      width: var(--content-creators__MAGIC_NUMBER__image_modal_container_width);
     }
     ///
-    img.content_creators__book_discussion_flyer {
+    img.content-creators__book_discussion_flyer {
       width: clamp(100px, 25%, 200px);
       border: 1px solid var(--colors__black);
       box-shadow: 1px 1px 1px 1px var(--colors__black);

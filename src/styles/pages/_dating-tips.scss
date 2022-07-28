@@ -1,4 +1,4 @@
-main#dating_tips {
+main#dating-tips {
   //
   section:not(#lets_connect__container) {
     display: flex;
@@ -15,7 +15,7 @@ main#dating_tips {
     }
   }
   //
-  section#dating_tips__explainer {
+  section#dating-tips__explainer {
     ///
     p {
       max-width: 55ch;
@@ -31,7 +31,7 @@ main#dating_tips {
     }
   }
   //
-  section#dating_tips__gallery_modal {
+  section#dating-tips__gallery_modal {
     // Styles DatingTipsGalleryModal Astro component.
     margin: 5rem 0 1rem 0;
     ///
@@ -40,7 +40,7 @@ main#dating_tips {
       background-image: none;
     }
     ///
-    span.dating_tips__gallery_line {
+    span.dating-tips__gallery_line {
       display: inline-block;
       width: 100%;
       height: 5px;
@@ -55,7 +55,7 @@ main#dating_tips {
       }
     }
     ///
-    div#dating_tips__tips_container {
+    div#dating-tips__tips_container {
       display: grid;
       gap: 3vw;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -140,7 +140,7 @@ main#dating_tips {
               width: 90%;
             }
             ///////
-            a.dating_tips__thumbnail_link {
+            a.dating-tips__thumbnail_link {
               position: relative;
               margin-bottom: 2rem;
               ////////
@@ -167,7 +167,7 @@ main#dating_tips {
               border: 2px solid var(--colors__black);
             }
             ///////
-            div.dating_tips__full_screen {
+            div.dating-tips__full_screen {
               // Styles HTML associated with <div class="${tips[tip].tipFullScreenClass}" loading="lazy" /> injected into DOM using dating_tips.js.
               display: flex;
               flex-direction: column;
@@ -210,7 +210,7 @@ main#dating_tips {
     }
   }
   //
-  section#dating_tips__suggestions {
+  section#dating-tips__suggestions {
     ///
     // Styles and overrides ImageAndTextBlock Astro component.
     div.block_image_and_text {

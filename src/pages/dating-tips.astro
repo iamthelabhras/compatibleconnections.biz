@@ -23,7 +23,7 @@ import HeroGray from "../layout/HeroGray.astro";
 import ImageAndTextBlock from "../layout/ImageAndTextBlock.astro";
 
 //    ASTRO PAGE-SPECIFIC IMPORTS 
-import IGGalleryModal from "../components/IGGalleryModal.astro";
+import DatingTipsGalleryModal from "../components/DatingTipsGalleryModal.astro";
 
 //    FRAMEWORK-SPECIFIC IMPORTS 
 
@@ -36,14 +36,14 @@ import IGGalleryModal from "../components/IGGalleryModal.astro";
 
 /// Changing <header> Variables 
 /// **Note**: Static header variables are stored in StaticHead.astro.
-let pageURL = "https://compatibleconnections.biz/resources/inspirational_graphics.html";
-let title = "-♡- Inspirational Graphics -♡-";
+let pageURL = "https://compatibleconnections.biz/resources/dating-tips.html";
+let title = "-♡- Dating Tips -♡-";
 
 /// **Note**: pageDescription is limited to 150 characters!
 /// Character counter can be found here: https://wordcounter.net/character-count
-let pageDescription = "Coach Bernadette M. Smith's inspirational graphics for divorced daters.";
-let pageKeywords = "Compatible Connections, Bernadette Smith, Bernadette M. Smith, dating after divorce, online dating, dating inspiration, inspirational graphics";
-let mainID = "inspirational_graphics";
+let pageDescription = "Coach Bernadette M. Smith MCC's weekly dating tips";
+let pageKeywords = "Compatible Connections, Bernadette Smith, Bernadette M. Smith, dating after divorce, online dating, dating tips, dating advice, first date, first date mistakes, how to avoid bad dates";
+let mainID = "dating-tips";
 
 /// FULL ASTRO COMPONENT SYNTAX:
 /// https://docs.astro.build/core-concepts/astro-components/
@@ -76,31 +76,22 @@ let mainID = "inspirational_graphics";
       <NavMobile client:load />
       <!-- #endregion -->
       <main id={mainID}>
-        <h1>Inspirational Graphics</h1>
-        <HeroGray id="inspirational_graphics__explainer">
-          <p>
-            Every Monday, we share an Inspirational Graphic with our followers on <a href="https://www.instagram.com/onlinedatingmatchmaker" target="_blank">Instagram</a> and <a href="https://www.linkedin.com/in/bernadettemsmith/" target="_blank">LinkedIn</a>. 
-          </p>     
-          <p>
-            It's a fun and uplifting way to kick off the week!
-          </p>   
-          <p>
-            Social media posts have a way of "disappearing" from people's feeds after a day or two, though, so we decided to create an online gallery to showcase all of our Inspirational Graphics. 
-          </p>
-          <p>
-            Scroll down to explore the gallery. Hover & click on an Inspirational Graphic to view it in full-screen mode.
-          </p>
+        <h1>Dating Tips</h1>
+        <HeroGray id="dating-tips__explainer">
+          <p>Every Friday, we share a Dating Tip with our followers on <a href="https://www.instagram.com/onlinedatingmatchmaker" target="_blank">Instagram</a> and <a href="https://www.linkedin.com/in/bernadettemsmith/" target="_blank">LinkedIn</a>.</p>
+          <p>Each Tip addresses a specific challenge, problem, or blind spot divorced daters might face as they head out for their Friday & Saturday night dates.</p>
+          <p>Social media posts have a way of "disappearing" from people's feeds after a day or two, though, so we decided to create an online gallery to showcase all of our Dating Tips.</p>
+          <p>Scroll down to explore our past Dating Tips. Hover & click on a Tip card to see its full text. Click on the "X" when you're done reading and you'll be automatically returned to the last card you clicked.</p>
         </HeroGray>
-        <IGGalleryModal client:load />
-        <section id="inspirational_graphics__suggestions">
+        <DatingTipsGalleryModal client:load/>
+        <section id="dating-tips__suggestions">
           <ImageAndTextBlock>
-            <img src="/assets/images/inspirational_graphics_suggestions-1-cropped.png" alt="A dove carrying three polaroids." slot="image"/>
+            <img src="/assets/images/inspirational-graphics_suggestions-3--cropped.png" slot="image"/>
             <p slot="text">
-              Have a favorite quote about love, dating, romance, divorce, or personal growth that inspires <em>you</em>?
+              If there's a topic you'd like us to address in a future Tip, we'd love to hear from you!
             </p>
-            <p slot="text">Let us know!</p>
             <p slot="text">
-              <a href="mailto:bernadette@compatibleconnections.biz?subject=Inspirational%20Graphic%20Suggestion">Click here</a> to send us an e-mail with  <a href="mailto:bernadette@compatibleconnections.biz?subject=Inspirational%20Graphic%20Suggestion">your suggestion(s)</a>.  We'll add it to the (ever growing) list of quotes we use to create our Inspirational Graphics!
+              <a href="mailto:bernadette@compatibleconnections.biz?subject=Dating%20Tip%20Suggestion">Click here</a> to send us an e-mail with  <a href="mailto:bernadette@compatibleconnections.biz?subject=Dating%20Tip%20Suggestion">your suggestion(s)</a>.
             </p>
           </ImageAndTextBlock>
         </section>

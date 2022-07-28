@@ -1,18 +1,18 @@
-main#discovery_session {
+main#discovery-session {
   //
-  section#discovery_session__explainer {
+  section#discovery-session__explainer {
     // Styles DiscoverySessionExplainer Astro component.
     ///
     div.flexbox__basic_row:first-of-type {
       justify-content: space-evenly;
       align-items: center;
       ////
-      img#discovery_session__upwards {
+      img#discovery-session__upwards {
         max-width: 25rem;
         max-height: 15.625rem;
       }
       ////
-      img#discovery_session__upwards + p {
+      img#discovery-session__upwards + p {
         text-align: center;
         max-width: 35ch;
         padding: 1.25rem;
@@ -55,12 +55,12 @@ main#discovery_session {
     }
   }
   //
-  section#discovery_session__schedule {
+  section#discovery-session__schedule {
     justify-content: center;
     align-items: center;
     position: relative;
     ///
-    p#discovery_session__override_p_first_child {
+    p#discovery-session__override_p_first_child {
       // Lower max-width to prevent unsightly wrapping of "Discovery Session" text.
       // TO DO: Figure out a better name for this class: way too verbose!
       max-width: 35ch;
@@ -102,9 +102,9 @@ main#discovery_session {
     }
   }
   //
-  div#discovery_session__lets_connect_info {
+  div#discovery-session__lets_connect_info {
     // Styles DiscoverySessionLetsConnectionInfo Astro component.
-    // Note CSS deviates from section#discovery_session__name here because we're using a HeroGray with an id of lets_connect__container to style a "one-off" LetsConnect Astro component for this specific page: DiscoverySessionLetsConnect.
+    // Note CSS deviates from section#discovery-session__name here because we're using a HeroGray with an id of lets_connect__container to style a "one-off" LetsConnect Astro component for this specific page: DiscoverySessionLetsConnect.
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
