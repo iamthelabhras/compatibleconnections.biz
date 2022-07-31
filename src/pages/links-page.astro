@@ -1,0 +1,90 @@
+---
+
+//    CSS/STYLE IMPORTS
+import "../styles/all.scss"
+
+//    ASTRO COMPONENT IMPORTS
+import HeadMinimum from "../components/HeadMinimum.astro";
+import HeadStatic from "../components/HeadStatic.astro";
+import SocialIcons from "../components/SocialIcons.astro";
+import ButtonLinkPage from "../components/ButtonLinkPage.astro";
+
+//    ASTRO LAYOUT IMPORTS 
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const linksName = "Bernadette Smith, MCC";
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// Changing <header> Variables 
+/// **Note**: Static header variables are stored in StaticHead.astro.
+let pageURL = "https://compatibleconnections.biz/links-page";
+let title = "-♡- Compatible Clicks -♡-";
+
+/// **Note**: pageDescription is limited to 150 characters!
+/// Character counter can be found here: https://wordcounter.net/character-count
+let pageDescription = "Coach Bernadette, MCC's customized links page.";
+let pageKeywords = "";
+let mainID = "links-page";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+<html lang="en">
+  <head>
+    <HeadMinimum></HeadMinimum>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content="{pageKeywords}" />
+    <!-- Facebook Open Graph: Page-Specific Meta Tags -->
+    <meta property="og:url" content="{pageURL}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{pageDescription}" />
+    <HeadStatic></HeadStatic>
+  </head>
+  <body id="links-page__body">
+      <main id={mainID}>
+      <section class="links-page__container_static_links">
+        <img 
+          width="200px" height="280px" 
+          src="/assets/images/coach_bernadette-1.jpg"
+          alt={linksName}/>
+        <h1>
+          {linksName}  
+        </h1>
+        <SocialIcons />
+      </section>
+       <section class="links-page__container_changing_links">
+        <!-- Discovery Session is linked using standard href, not <ButtonLinkPage> component, so text can be styled using utility classes. -->
+          <a 
+            href="https://compatibleconnections.biz/discovery-session" class="button links-page__button">
+              Schedule A Free 
+              <span class="utility_classes__clean_break_on_wrap">
+                Discovery Session
+              </span>
+          </a>
+          <ButtonLinkPage 
+            buttonLink="https://compatibleconnections.biz/dating-tips"
+            buttonText="My Latest Dating Tip"
+          />
+          <ButtonLinkPage
+            buttonLink="https://compatibleconnections.biz/bio"
+            buttonText="Read My Bio"
+      </section>
+    </main>
+    <a href="404.html"></a>
+    <!-- ASTRO COMPONENT IMPORTS SCRIPTS: LINKS-PAGE.ASTRO -->
+    <!-- Imports mailgo JS library into links page. -->
+    <script hoist src="https://cdn.jsdelivr.net/npm/mailgo@0.9.15/dist/mailgo.min.js" type="text/javascript"></script>
+  </body>
+</html>

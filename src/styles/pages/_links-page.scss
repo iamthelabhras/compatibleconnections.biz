@@ -1,0 +1,73 @@
+body#links-page__body {
+  // Remove cc.biz site-wide default styling for body element.
+  background: var(--colors__white);
+  background-image: none;
+}
+
+main#links-page {
+  // Remove cc.biz site-wide default styling for main element.
+  border: none;
+  min-height: 100vh;
+  margin: 0 auto;
+  //
+  h1 {
+    margin: 0.5rem;
+    font-size: 2.5rem;
+    font-family: var(--typography__font_family_1);
+    ///
+    @media screen and (max-width: 533px) {
+      font-size: 2rem;
+    }
+  }
+  //
+  section.links-page__container_static_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem;
+    ///
+    > img {
+      // Styles Coach Bernadette photo.
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
+    ///
+    a {
+      // Remove animated underline from <SocialIcons /> images.
+      text-decoration: initial;
+      background-image: initial;
+      background-size: initial;
+      background-position: initial;
+      background-repeat: initial;
+    }
+  }
+  //
+  section.links-page__container_changing_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.75rem auto 0 auto;
+    width: 100%;
+    padding: 1rem 2rem;
+    ///
+    span {
+      color: var(--colors__black);
+      font-weight: inherit;
+    }
+    ///
+    .links-page__button {
+      max-width: 675px;
+      margin-bottom: 1rem;
+      border: 4px solid var(--colors__black);
+      border-radius: 2rem;
+      padding: 1rem 0.75rem;
+      font-size: 1.25rem;
+      font-weight: var(--typography__semi_bold);
+      color: var(--colors__black);
+      text-transform: uppercase;
+    }
+  }
+}
