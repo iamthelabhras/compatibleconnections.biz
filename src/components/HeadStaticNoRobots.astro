@@ -1,0 +1,102 @@
+---
+
+//    CSS & STYLE IMPORTS
+
+//    ASTRO COMPONENT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS 
+
+//    FRAMEWORK-SPECIFIC IMPORTS 
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+//    COMPONENT-SPECIFIC VARIABLES
+
+//  Static <head> Variables
+//  NOTE: Changing header variables are stored in /pages/file_name.astro.
+
+let pageICBM = "39.9526, 75.1652";
+let pageGeoPosition = "39.9526;75.1652";
+let pageGeoRegion = "US-PA";
+let pageGeoPlaceName = "Philadelphia";
+let pageImageLink = "https://compatibleconnections.biz/static_ref/cc_logo.png";
+let pageImageAlt = "A dark pink circle with two text bubbles wearing high heels.";
+let pageSiteName = "compatibleconnections.biz";
+let pageOGLocale = "en_US";
+let pageAuthor = "Bernadette M. Smith, MCC";
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+
+--- 
+
+<!-- GENERAL META TAGS -->
+
+<!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="noindex" />
+<meta name="googlebot" content="noindex" />
+<!-- Tells Google not to show the sitelinks search box -->
+<meta name="google" content="nositelinkssearchbox" />
+<!-- Identify the software used to build the document. -->
+<meta name="generator" content="Astro" />
+<!-- Allows control over how referrer information is passed.  See https://moz.com/blog/meta-referrer-tag for more information on why we opted to use content="origin" here. -->
+<meta name="referrer" content="origin" />
+<!-- Disable automatic detection and formatting of possible phone numbers. -->
+<meta name="format-detection" content="telephone=no" />
+<!-- Completely opt out of DNS prefetching by setting to "off" -->
+<meta http-equiv="x-dns-prefetch-control" content="off" />
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="/humans.txt" />
+<!-- Geo tags -->
+<meta name="ICBM" content={pageICBM} />
+<meta name="geo.position" content={pageGeoPosition} />
+<meta name="geo.region" content={pageGeoRegion} />
+<meta name="geo.placename" content={pageGeoPlaceName} />
+
+<!-- LINKS -->
+
+<!-- Styling & Fonts -->
+
+<!-- Favicon & Icon Settings -->
+<!-- Site's Favicon was generated using: https://realfavicongenerator.net -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<link
+  rel="apple-touch-icon"
+  sizes="60x60"
+  href="/apple-touch-icon.png/"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/favicon-16x16.png"
+/>
+<link rel="manifest" href="/site.webmanifest" />
+<link
+  rel="mask-icon"
+  href="/safari-pinned-tab.svg"
+  color="#5bbad5"
+/>
+
+<!-- Meta Tags That Are Grouped with Favicons & Icons  -->
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Facebook Open Graph: Static Meta Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:image" content={pageImageLink} />
+<meta property="og:image:alt" content={pageImageAlt} />
+<meta property="og:site_name" content={pageSiteName} />
+<meta property="og:locale" content={pageOGLocale} />
+<meta property="article:author" content={pageAuthor} />
