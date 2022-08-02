@@ -5,7 +5,7 @@ import "../styles/all.scss"
 
 //    ASTRO COMPONENT IMPORTS
 import HeadMinimum from "../components/HeadMinimum.astro";
-import HeadStatic from "../components/HeadStatic.astro";
+import HeadStatic from "../components/HeadStaticNoRobots.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import ButtonLinkPage from "../components/ButtonLinkPage.astro";
 
@@ -50,6 +50,7 @@ let mainID = "links-page";
     <meta property="og:url" content="{pageURL}" />
     <meta property="og:title" content="{title}" />
     <meta property="og:description" content="{pageDescription}" />
+    <!-- Note: No robots! -->
     <HeadStatic></HeadStatic>
   </head>
   <body id="links-page__body">
