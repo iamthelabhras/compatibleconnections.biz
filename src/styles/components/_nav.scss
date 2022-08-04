@@ -8,8 +8,6 @@ nav {
   --nav__transition_time_dropdown_links_fast: 0.5s;
   --nav__transition_time_dropdown_links_slow: 1s;
   --nav__transition_time_icons: 0.25s;
-  --nav__about_us_dropdown_center: -38px;
-  --nav__resources_for_divorced_daters_dropdown_center: 8px;
   //
   &.nav__sticky {
     position: sticky;
@@ -92,7 +90,8 @@ nav {
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    top: 20px;
+    // Create space between uls revealed on hover & nav list items.
+    top: 30px;
     // height: auto cannot be transitioned.
     // Use max-height to create "roll out" animation instead.
     max-height: 0vh;
@@ -120,11 +119,21 @@ nav {
   }
 }
 
+#nav__nav_desktop > ul > li#nav__explore_our_services {
+  //
+  ul {
+    //  Center "Our Services" dropdown links container below container's header.
+    left: -25px;
+    // Enlarge dropdown links container for greater legibility.
+    width: 150px;
+  }
+}
+
 #nav__nav_desktop > ul > li#nav__about_us {
   //
   ul {
     //  Center "About Us" dropdown links container below container's header.
-    left: var(--nav__about_us_dropdown_center);
+    left: -38px;
   }
 }
 
@@ -132,17 +141,17 @@ nav {
   //
   ul {
     // Center "Resources for Divorced Daters" dropdown links container below container's header.
-    left: var(--nav__resources_for_divorced_daters_dropdown_center);
+    left: 8px;
   }
 }
 
 #nav__nav_desktop > ul > li#nav__work_with_us {
   //
   ul {
-    // Tweak width to prevent "A" in "Schedule A Discovery Session" from wrapping.
-    width: 140px;
     // Center "Work With Us" dropdown links container below container's header.
     left: -10px;
+    // Tweak width to prevent "A" in "Schedule A Discovery Session" from wrapping.
+    width: 140px;
   }
 }
 
@@ -188,6 +197,7 @@ nav {
     > li#nav__resources_for_divorced_daters {
       ////
       > ul {
+        // Nav list item specific positioning.
         top: 45px;
         left: -15px;
       }
@@ -196,31 +206,11 @@ nav {
     > li#nav__the_meet_cute {
       ////
       > ul {
+        // Nav list item specific positioning.
         left: -5px;
       }
     }
     ///
-    > li#nav__explore_our_services {
-      ////
-      > ul {
-        top: 45px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1090px) {
-  //
-  #nav__nav_desktop > ul {
-    ///
-    > li#nav__about_us,
-    > li#nav__the_meet_cute,
-    > li#nav__work_with_us {
-      ////
-      > ul {
-        top: 45px;
-      }
-    }
   }
 }
 
