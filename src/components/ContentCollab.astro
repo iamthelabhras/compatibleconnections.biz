@@ -1,16 +1,15 @@
 ---
-
 //    CSS & STYLE IMPORTS
 
 //    ASTRO COMPONENT IMPORTS
-import ButtonSchedule from "./ButtonSchedule.astro";
-import CardTextFancy from "./CardTextFancy.astro"
+import ButtonSchedule from "./ButtonScheduleTempFixCC.astro";
+import CardTextFancy from "./CardTextFancy.astro";
 import FlexColumn from "../layout/FlexColumn.astro";
 import FlexRow from "../layout/FlexRow.astro";
 
-//    ASTRO PAGE-SPECIFIC IMPORTS 
+//    ASTRO PAGE-SPECIFIC IMPORTS
 
-//    FRAMEWORK-SPECIFIC IMPORTS 
+//    FRAMEWORK-SPECIFIC IMPORTS
 
 //    COMPONENT SCRIPTS:
 
@@ -23,21 +22,24 @@ import FlexRow from "../layout/FlexRow.astro";
 /// FULL ASTRO COMPONENT SYNTAX:
 /// https://docs.astro.build/core-concepts/astro-components/
 
-const {media} = Astro.props;
+const { media } = Astro.props;
 const { linkId } = Astro.props;
 ---
 
 <section class="section_gray content-creators__collab" id={linkId}>
-  <FlexColumn >
-    <h2>{media}</h2> 
+  <FlexColumn>
+    <h2>{media}</h2>
     <slot name="after_h2" />
     <slot name="paragraphs" />
     <FlexRow>
       <CardTextFancy>
-      <slot name="topics" />
+        <slot name="topics" />
       </CardTextFancy>
       <slot name="previous_collabs" />
     </FlexRow>
-    <ButtonSchedule calendlySlug="Calendly.showPopupWidget('https://calendly.com/ccbiz/content-collaboration-call');return false;" schedule="A Content Collaboration Call" /> 
+    <ButtonSchedule
+      calendlySlug="Calendly.showPopupWidget('https://calendly.com/ccbiz/content-collaboration-call');return false;"
+      schedule="A Content Collaboration Call"
+    />
   </FlexColumn>
 </section>
