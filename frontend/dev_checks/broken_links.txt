@@ -1,0 +1,412 @@
+Getting links from: https://compatibleconnections.biz/
+├───OK─── https://compatibleconnections.biz/coaching
+├───OK─── https://compatibleconnections.biz/pwyf
+├───OK─── https://compatibleconnections.biz/sss
+├───OK─── https://compatibleconnections.biz/letter
+├───OK─── https://compatibleconnections.biz/bio
+├───OK─── https://compatibleconnections.biz/certifications
+├───OK─── https://compatibleconnections.biz/raves
+├───OK─── https://compatibleconnections.biz/resources
+├───OK─── https://compatibleconnections.biz/dating-tips
+├───OK─── https://compatibleconnections.biz/inspirational-graphics
+├───OK─── https://compatibleconnections.biz/meetcute
+├───OK─── https://compatibleconnections.biz/meetcute/issue-4
+├───OK─── https://compatibleconnections.biz/discovery-session
+├───OK─── https://compatibleconnections.biz/content-creators
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/icons/linkedin-50.png
+├───OK─── https://www.instagram.com/onlinedatingmatchmaker
+├───OK─── https://compatibleconnections.biz/assets/icons/instagram-64.png
+├───OK─── https://compatibleconnections.biz/assets/icons/email-50.png
+├───OK─── https://compatibleconnections.biz/assets/icons/phone-50.png
+├───OK─── https://compatibleconnections.biz/assets/icons/home-64.png
+├───OK─── https://compatibleconnections.biz/assets/icons/enter-48.png
+├───OK─── https://compatibleconnections.biz/assets/icons/hamburger-48.png
+├───OK─── https://compatibleconnections.biz/assets/images/coach_bernadette_hello_redux-1-alpha.png
+├───OK─── https://compatibleconnections.biz/assets/images/explore_our_services-3.png
+├───OK─── https://compatibleconnections.biz/assets/images/cc_logo.png
+├───OK─── https://compatibleconnections.biz/assets/images/resources_for_divorced_daters-15-bg.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute-7.png
+├───OK─── https://compatibleconnections.biz/assets/images/work_with_us-2-bg.png
+├───OK─── https://compatibleconnections.biz/assets/images/crystal_ball-cleaned_up-colored_hearts-brand_bg_white_hands_purple_base.png
+├───OK─── https://compatibleconnections.biz/resources/random-dating-vs-dating-deliberately
+├───OK─── https://compatibleconnections.biz/assets/images/compatibility_like_glue-1-brand_color_bg-1-black_hair.png
+├───OK─── https://compatibleconnections.biz/assets/images/reacquaint-7-cropped-bg.png
+├───OK─── https://compatibleconnections.biz/assets/icons/heart-50.png
+├───OK─── https://compatibleconnections.biz/assets/images/footer-cc_logo.png
+├───OK─── https://developer.mozilla.org/en-US/docs/Web/HTML
+├───OK─── https://sass-lang.com/
+├───OK─── https://developer.mozilla.org/en-US/docs/Web/JavaScript
+├───OK─── https://mailgo.dev/
+├───OK─── https://astro.build/
+├───OK─── https://larrymg.me/
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└───OK─── https://compatibleconnections.biz/404.html
+Finished! 122 links found. 79 excluded. 2 broken.
+
+Getting links from: https://compatibleconnections.biz/coaching
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-title_card-side.png
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-2-sound_like_you.png
+├───OK─── https://compatibleconnections.biz/assets/icons/see_less-16.png
+├───OK─── https://compatibleconnections.biz/assets/icons/checkbox-24.png
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-3-what_can_coaching_do_for_you.png
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-4-what_is_coaching.png
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-5-what_happens_during_a_one_one_one_coaching_session.png
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-6-is_there_a_prof_designation_for_coaches.png
+├───OK─── https://coachfederation.org/icf-credential/mcc-path
+├─BROKEN─ https://coachfederation.org/ (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-7-how_much_does_coaching_cost.png
+├───OK─── https://coachfederation.org/research/global-coaching-study
+├─BROKEN─ https://coachfederation.org/ (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/images/coaching-8-im_interest_what_are_my_next_steps.png
+├─BROKEN─ https://compatibleconnections.biz/work/discovery-session (HTTP_404)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/coaching/404.html (HTTP_404)
+Finished! 184 links found. 166 excluded. 6 broken.
+
+Getting links from: https://compatibleconnections.biz/pwyf
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-headline_img.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-1-sound_like_you.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-2-is_for_you_if.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-3-by_end_of_series.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-4-can_do_for_you.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-5-is_delivered-2.png
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-6-how_much_does_it_cost.png
+├─BROKEN─ https://coachfederation.org/ (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/images/pwyf-7-next_steps.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/pwyf/404.html (HTTP_404)
+Finished! 184 links found. 172 excluded. 4 broken.
+
+Getting links from: https://compatibleconnections.biz/sss
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/sss-headline_img.png
+├───OK─── https://compatibleconnections.biz/assets/images/sss-1-sound_like_you.png
+├───OK─── https://compatibleconnections.biz/assets/images/sss-2-is_for_you_if.png
+├───OK─── https://compatibleconnections.biz/assets/images/sss-3-by_end_of_series.png
+├───OK─── https://compatibleconnections.biz/assets/images/sss-4-can_do_for_you.png
+├───OK─── https://compatibleconnections.biz/assets/images/sss-5-is_delivered-2.png
+├─BROKEN─ https://coachfederation.org/ (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/images/sss-7-next_steps.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/sss/404.html (HTTP_404)
+Finished! 195 links found. 184 excluded. 4 broken.
+
+Getting links from: https://compatibleconnections.biz/letter
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/svg_paths/coach_bernadette_signature.svg
+├───OK─── https://compatibleconnections.biz/assets/images/coach_bernadette-1.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-icf.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-coach_u.jpg
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/letter/404.html (HTTP_404)
+Finished! 103 links found. 96 excluded. 3 broken.
+
+Getting links from: https://compatibleconnections.biz/bio
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/icons/swipe_left-64.png
+├───OK─── https://compatibleconnections.biz/assets/icons/swipe_right-64.png
+├───OK─── https://compatibleconnections.biz/assets/video/bio-television.mp4
+├───OK─── https://www.apecparenting.com/
+├───OK─── https://www.alfredadler.org/alfred-adler
+├───OK─── https://www.icassi.net/rudolf-dreikurs/
+├───OK─── https://compatibleconnections.biz/assets/images/bio-adler.png
+├───OK─── https://compatibleconnections.biz/assets/images/bio-rcb_book_cover.jpg
+├───OK─── https://www.apecparenting.com/become-an-instructor
+├───OK─── https://coachcampus.com/articles/what-is-a-master-coach/
+├───OK─── https://www.coachu.com/Home/
+├───OK─── https://compatibleconnections.biz/assets/images/bio-coach_bernadette_young_mother.jpeg
+├───OK─── https://compatibleconnections.biz/assets/images/bio-parenting_recipes.jpeg
+├───OK─── https://compatibleconnections.biz/assets/images/bio-dating_app.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/bio-dice.png
+├───OK─── https://compatibleconnections.biz/assets/images/svg_paths/bio-vhs_heart.svg
+├───OK─── https://compatibleconnections.biz/assets/images/bio-newton.png
+├───OK─── https://compatibleconnections.biz/assets/images/bio-cc_log.png
+├───OK─── https://compatibleconnections.biz/assets/images/bio-true_love_stories.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/bio/404.html (HTTP_404)
+Finished! 116 links found. 94 excluded. 3 broken.
+
+Getting links from: https://compatibleconnections.biz/certifications
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-tree.gif
+├───OK─── https://hbr.org/2019/11/the-leader-as-coach
+├───OK─── https://sloanreview.mit.edu/article/the-benefits-of-a-coaching-culture/
+├───OK─── https://www.businessinsider.com/dating-coaches-help-successful-women-find-love-2018-9
+├─BROKEN─ https://inc.com/gene-hammett/everything-you-know-about-personal-development-is-probably-wrong-heres-how-to-fix-it.html (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-graduate.png
+├─BROKEN─ https://coachingfederation.org/ (HTTP_403)
+├───OK─── https://www.coachu.com/home/
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-icf.png
+├─BROKEN─ https://learnmore.rutgers.edu/leadership-certification/ (HTTP_404)
+├───OK─── https://coachingfederation.org/credentials-and-standards
+├───OK─── https://coachingfederation.org/credentials-and-standards/mcc-path
+├───OK─── https://compatibleconnections.biz/assets/images/certifications-coach_u-2.png
+├─BROKEN─ https://inc.com/gene-hammett/everything-you-know-about-personal-development-is-probably-wrong-heres-how-to-fix-it.html (HTTP_403)
+├─BROKEN─ https://coachingfederation.org/ (HTTP_403)
+├─BROKEN─ https://learnmore.rutgers.edu/leadership-certification/ (HTTP_404)
+├─BROKEN─ https://www.inc.com/andrew-thomas/7-ways-to-know-if-a-business-or-life-coach-is-legit-or-an-imposter.html (HTTP_403)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/certifications/404.html (HTTP_404)
+Finished! 118 links found. 98 excluded. 10 broken.
+
+Getting links from: https://compatibleconnections.biz/raves
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/reacquaint-6--cropped.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/raves/404.html (HTTP_404)
+Finished! 110 links found. 106 excluded. 3 broken.
+
+Getting links from: https://compatibleconnections.biz/resources
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/dating_after_decades.png
+├───OK─── https://compatibleconnections.biz/resources/dating-after-decades-divorced-women-have-6-advantages
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/4-empowering-ways-to-reclaim-your-life-after-divorce.png
+├───OK─── https://compatibleconnections.biz/resources/4-empowering-ways-to-reclaim-your-life-after-divorce
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/the-slow-fade-what-it-means-and-how-to-avoid-it.png
+├───OK─── https://compatibleconnections.biz/resources/the-slow-fade-what-it-means-and-how-to-avoid-it
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/2-things-smart-daters-do-after-divorce.png
+├───OK─── https://compatibleconnections.biz/resources/2-things-smart-daters-do-after-divorce
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/the-one-secret-to-attracting-ideal-men.png
+├───OK─── https://compatibleconnections.biz/resources/the-one-secret-to-attracting-ideal-men
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/5-simple-things-you-need-to-start-doing.png
+├───OK─── https://compatibleconnections.biz/resources/5-simple-things-you-need-to-start-doing
+├───OK─── https://compatibleconnections.biz/assets/images/resources/articles/random-dating-vs-dating-deliberately.png
+├───OK─── https://compatibleconnections.biz/assets/images/resources/book_recommendations/think_like_a_lady.png
+├───OK─── https://www.amazon.com/Like-Lady-Think-Expanded-Relationships/dp/0062351567/
+├───OK─── https://compatibleconnections.biz/assets/images/resources/book_recommendations/men_are_from_mars.jpg
+├───OK─── https://www.amazon.com/Men-are-Mars-women-Venus/dp/0060195061/
+├───OK─── https://compatibleconnections.biz/assets/images/resources/book_recommendations/attached.jpg
+├───OK─── https://www.amazon.com/Attached-Anxious-Avoidant-science-attachment/dp/1529032172/
+├───OK─── https://compatibleconnections.biz/assets/images/resources/book_recommendations/in_the_meantime.jpg
+├───OK─── https://www.amazon.com/Meantime-Finding-Yourself-Love-Want/dp/0684848066/
+├───OK─── https://compatibleconnections.biz/assets/images/resources/book_recommendations/spiritual_divorce.png
+├───OK─── https://www.amazon.com/Spiritual-Divorce-Catalyst-Extraordinary-Life/dp/0061227129/
+├─BROKEN─ https://vimeo.com/search?q=dating (HTTP_403)
+├───OK─── https://www.youtube.com/results?search_query=dating
+├───OK─── https://embed.ted.com/talks/brene_brown_the_power_of_vulnerability
+├───OK─── https://www.youtube.com/embed/n2XYo9f_CWI
+├───OK─── https://embed.ted.com/talks/lori_gottlieb_how_changing_your_story_can_change_your_life
+├───OK─── https://www.youtube.com/embed/iy1PgjsM4Qs
+├───OK─── https://www.youtube.com/embed/m9_70poLEvU
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/404.html (HTTP_404)
+Finished! 130 links found. 97 excluded. 4 broken.
+
+Getting links from: https://compatibleconnections.biz/dating-tips
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/inspirational-graphics_suggestions-3--cropped.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/dating-tips/404.html (HTTP_404)
+Finished! 99 links found. 94 excluded. 4 broken.
+
+Getting links from: https://compatibleconnections.biz/inspirational-graphics
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/inspirational-graphics_suggestions-1-cropped.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/inspirational-graphics/404.html (HTTP_404)
+Finished! 99 links found. 94 excluded. 4 broken.
+
+Getting links from: https://compatibleconnections.biz/meetcute
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/woman_reading_paper.png
+├───OK─── https://compatibleconnections.biz/meetcute/issue-3
+├───OK─── https://compatibleconnections.biz/meetcute/issue-2
+├───OK─── https://compatibleconnections.biz/meetcute/issue-1
+├───OK─── https://compatibleconnections.biz/assets/icons/pencil-100.png
+├───OK─── https://compatibleconnections.biz/assets/icons/calendar-100.png
+├───OK─── https://compatibleconnections.biz/assets/icons/smartphone_with_hand-100.png
+├───OK─── https://compatibleconnections.biz/assets/icons/dictionary-66.png
+├───OK─── https://compatibleconnections.biz/assets/icons/money-96.png
+├───OK─── https://compatibleconnections.biz/assets/images/mc-new_subscribers_receive-8_things-catfish.png
+├───OK─── https://compatibleconnections.biz/assets/images/mc-new_subscribers_receive-personal_inventory-selfie.jpg
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/meetcute/404.html (HTTP_404)
+Finished! 111 links found. 97 excluded. 3 broken.
+
+Getting links from: https://compatibleconnections.biz/meetcute/issue-4
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/meet_cute_couple-alpha.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/craft_breweries.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/summer_festivals.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/girls_getaway.jpg
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/golf_clinics.jpg
+├───OK─── https://compatible.click/1n
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/flexting.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/microcheating.png
+├─BROKEN─ https://compatible.click/ccq (HTTP_500)
+├───OK─── https://compatibleconnections.biz/assets/icons/notes.svg
+├───OK─── https://compatible.click/fhn
+├───OK─── https://compatible.click/woh
+├─BROKEN─ https://compatible.click/ccq (HTTP_500)
+├───OK─── https://compatible.click/5e8
+├───OK─── https://compatibleconnections.biz/assets/icons/newspaper.svg
+├───OK─── https://compatible.click/rsb
+├───OK─── https://compatible.click/5bu
+├───OK─── https://compatible.click/3ny
+├─BROKEN─ https://compatible.click/1t2 (HTTP_410)
+├─BROKEN─ https://compatible.click/1t2 (HTTP_410)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/image_to_inspire.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-4/issue-4-thanks_for_reading.gif
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/meetcute/issue-4/404.html (HTTP_404)
+Finished! 137 links found. 112 excluded. 7 broken.
+
+Getting links from: https://compatibleconnections.biz/discovery-session
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/discovery-session_upwards_alpha.png
+├───OK─── https://calendly.com/ccbiz/discoverysession.html
+├───OK─── https://compatibleconnections.biz/assets/icons/contact_book-34.png
+├───OK─── https://compatibleconnections.biz/assets/icons/question-34.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/discovery-session/404.html (HTTP_404)
+Finished! 95 links found. 88 excluded. 3 broken.
+
+Getting links from: https://compatibleconnections.biz/content-creators
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/interview_and_speaking_requests-1.png
+├───OK─── https://calendly.com/ccbiz/content-collaboration-call
+├───OK─── https://compatibleconnections.biz/assets/images/ContentCollabWhatMakesYouAttractive.png
+├───OK─── https://compatibleconnections.biz/assets/images/ContentCollabEasingTheStress.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+Finished! 118 links found. 112 excluded. 2 broken.
+
+Getting links from: https://compatibleconnections.biz/content-creators/
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+Finished! 118 links found. 116 excluded. 2 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/random-dating-vs-dating-deliberately
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/coach_bernadette-full_body-polka_dot_dress.jpg
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/mc-masthead-no_issue_number.png
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/random-dating-vs-dating-deliberately/404.html (HTTP_404)
+Finished! 115 links found. 108 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/404.html
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://www.youtube.com/embed/8mxIHL6d-RM?start=48
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+Finished! 96 links found. 93 excluded. 2 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/dating-after-decades-divorced-women-have-6-advantages
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/dating-after-decades-divorced-women-have-6-advantages/404.html (HTTP_404)
+Finished! 103 links found. 98 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/4-empowering-ways-to-reclaim-your-life-after-divorce
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://www.amazon.com/Magic-Secret-Rhonda-Byrne/dp/1451673442/
+├───OK─── http://www.bluemaxinn.com/
+├───OK─── https://chesapeakecity.com/
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/4-empowering-ways-to-reclaim-your-life-after-divorce/404.html (HTTP_404)
+Finished! 120 links found. 112 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/the-slow-fade-what-it-means-and-how-to-avoid-it
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/the-slow-fade-what-it-means-and-how-to-avoid-it/404.html (HTTP_404)
+Finished! 115 links found. 110 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/2-things-smart-daters-do-after-divorce
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/2-things-smart-daters-do-after-divorce/404.html (HTTP_404)
+Finished! 118 links found. 113 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/the-one-secret-to-attracting-ideal-men
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/the-one-secret-to-attracting-ideal-men/404.html (HTTP_404)
+Finished! 116 links found. 111 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/resources/5-simple-things-you-need-to-start-doing
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettesmith/ (HTTP_999)
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/resources/5-simple-things-you-need-to-start-doing/404.html (HTTP_404)
+Finished! 115 links found. 110 excluded. 5 broken.
+
+Getting links from: https://compatibleconnections.biz/meetcute/issue-3
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-3/issue-3-dating-tips.gif
+├───OK─── https://compatible.click/l5
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-3/issue-3-book_rec-me_for_you.jpg
+├───OK─── https://compatible.click/w0
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-3/issue-3-book_rec-daring_greatly.jpg
+├─BROKEN─ https://compatible.click/ri (HTTP_403)
+├───OK─── https://compatibleconnections.biz/assets/icons/video.svg
+├───OK─── https://compatible.click/sg
+├─BROKEN─ https://compatible.click/ri (HTTP_403)
+├─BROKEN─ https://compatible.click/ri (HTTP_403)
+├───OK─── https://compatible.click/13
+├───OK─── https://compatible.click/j8
+├───OK─── https://compatibleconnections.biz/assets/icons/podcast.svg
+├───OK─── https://compatible.click/bo
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-3/image_to_inspire.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-3/issue-3-thanks_for_reading.gif
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/meetcute/issue-3/404.html (HTTP_404)
+Finished! 129 links found. 110 excluded. 6 broken.
+
+Getting links from: https://compatibleconnections.biz/meetcute/issue-2
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-dating-tips.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-cuffing_season.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-meetcute.png
+├───OK─── https://www.youtube.com/embed/nqEknI2kIag
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-dating_app_spotlight-smartphone.svg
+├───OK─── https://www.youtube.com/embed/UGte3fMnw8o
+├─BROKEN─ https://compatible.click/facebook-e6395 (HTTP_308)
+├─BROKEN─ https://compatible.click/facebook-e6395 (HTTP_308)
+├───OK─── https://compatible.click/making-online-1e390
+├─BROKEN─ https://compatible.click/ai-dating (HTTP_308)
+├─BROKEN─ https://compatible.click/ai-dating (HTTP_308)
+├───OK─── https://compatible.click/dna-dating-b9741
+├───OK─── https://compatible.click/matchmakers-save-242a5
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-image_to_inspire.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-2/issue-2-thanks_for_reading.gif
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/meetcute/issue-2/404.html (HTTP_404)
+Finished! 131 links found. 113 excluded. 7 broken.
+
+Getting links from: https://compatibleconnections.biz/meetcute/issue-1
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-ghosting.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-breadcrumbing.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-orbiting.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-dating_app_spotlight-burner.jpg
+├─BROKEN─ https://apple.co/2Hf5fL3 (HTTP_429)
+├───OK─── https://play.google.com/store/apps/details?id=com.adhoclabs.burner&hl=en_US&gl=US
+├───OK─── https://bit.ly/2QPUIWp
+├───OK─── https://bit.ly/2AZq4ov
+├───OK─── https://bit.ly/2DfwfGx
+├───OK─── https://bit.ly/2sy4X7K
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-image_to_inspire.png
+├───OK─── https://compatibleconnections.biz/assets/images/meet_cute/issue-1/issue-1-thanks_for_reading.gif
+├─BROKEN─ https://www.linkedin.com/in/bernadettemsmith/ (HTTP_999)
+└─BROKEN─ https://compatibleconnections.biz/meetcute/issue-1/404.html (HTTP_404)
+Finished! 125 links found. 110 excluded. 4 broken.
+
+Finished! 3322 links found. 2993 excluded. 118 broken.
+Elapsed time: 49 seconds
