@@ -19,9 +19,9 @@ pnpm-debug.log*
 .DS_Store
 
 # Dev-related Directories 
-/dev_checks
-/dev_notes
-/dev_templates
+dev_checks/
+dev_notes/
+dev_templates/
 
 # Calendly Widget Fixes
 src/components/ButtonScheduleNew1.astro
