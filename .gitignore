@@ -18,6 +18,9 @@ pnpm-debug.log*
 # MacOS-specific Files
 .DS_Store
 
+# Sanity-specific Directories
+/backend/.sanity
+
 # Dev-related Directories 
 dev_checks/
 dev_notes/
