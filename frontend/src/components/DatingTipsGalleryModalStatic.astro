@@ -1,0 +1,80 @@
+---
+//    CSS & STYLE IMPORTS
+
+//    SANITY IMPORTS
+
+import { getAllTips } from "../sanity/api.js";
+import { urlForImage } from "../sanity/urlForImage.js";
+
+//    ASTRO COMPONENT IMPORTS
+
+import PortableText from "./PortableText.astro";
+
+//    ASTRO LAYOUT IMPORTS
+
+//    ASTRO PAGE-SPECIFIC IMPORTS
+
+//    FRAMEWORK-SPECIFIC IMPORTS
+
+//    COMPONENT SCRIPTS:
+
+/// You can write any JavaScript/TypeScript that you'd like here.
+/// It will run during the build, but never in the browser.
+/// All variables are available to use in the HTML template below.
+
+const tips = await getAllTips();
+
+//    PAGE-SPECIFIC VARIABLES
+
+/// FULL ASTRO COMPONENT SYNTAX:
+/// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<!-- <section id="dating-tips__gallery_modal">
+  <span class="dating-tips__gallery_line"></span>
+  <div id="dating-tips__tips_container"></div>
+  <span class="dating-tips__gallery_line"></span>
+</section> -->
+
+<section id="dating-tips__gallery_modal">
+  <span class="dating-tips__gallery_line"></span>
+  <div id="dating-tips__tips_container">
+    {
+      tips.map((tip) => (
+      <div class="image_modal__container">
+  <a
+    class="utility_classes__reset image_modal__open"
+    href=`#${tip.tipSlug.current}-fullscreen`
+  >
+    <div class="image_modal__thumbnail" id={tip.tipSlug.current}>
+      <h2>{tip.tipTitle}</h2>
+      <img
+        class="dating-tips__thumbnail"
+        src={urlForImage(tip.tipImage).url()}
+        alt={tip.tipImageAlt}
+      />
+    </div>
+  </a>
+  <div class="image_modal__full_screen_bg" id=`${tip.tipSlug.current}-fullscreen`>
+    <div
+      class="image_modal__full_screen"
+    >
+      <a
+        href=`#${tip.tipSlug.current}`
+        class="utility_classes__reset image_modal__close dating-tips__thumbnail_link"
+      ></a>
+      <div class="dating-tips__full_screen" loading="lazy">
+        <h2>{tip.tipTitle}</h2>
+        <PortableText portableText={tip.tipText} />
+      </div>
+      <a href=`#${tip.tipSlug.current}` class="utility_classes__reset button"
+        >Close This Tip</a
+      >
+    </div>
+  </div>
+</div>
+      ))
+    }
+  </div>
+  <span class="dating-tips__gallery_line"></span>
+</section>
