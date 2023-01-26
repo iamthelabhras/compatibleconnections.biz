@@ -8,21 +8,49 @@ export default {
     title: 'Dating Tip',
     // An array of objects that describes the editable/populatable fields in this document
     fields: [
-        {
-            name: 'tip_title',
-            type: 'string',
-            title: 'Dating Tip Title',
+        { 
+            name: 'tipSlug',
+            type: 'slug',
+            title: 'Slug',
+            validation: Rule => Rule.required().error('Please generate a slug before publishing.'),
+            options: {
+                source: 'tipTitle', 
+                maxLength: 40, 
+              },
         },
         {
-            name: 'tip_text',
+            name: 'tipDate',
+            title: 'Tip Date',
+            type: 'datetime',
+
+        },
+        {
+            name: 'tipTitle',
+            type: 'string',
+            title: 'Dating Tip Title',
+            validation: Rule => Rule.required().error('Please give this tip a title before publishing.'),
+        },
+        {
+            name: 'tipText',
             type: 'array',
             of: [{type: 'block'}],
             title: 'Dating Tip Text',
+            validation: Rule => Rule.required().error('Please give this tip some text before publishing.'),
         },
         {
-            name: 'tip_image',
+            name: 'tipImage',
             type: 'image',
             title: 'Dating Tip Image',
+            validation: Rule => Rule.required().error('Please upload an image for this tip before publishing.'),
         },
-    ]
+        {
+            name:'tipImageAlt',
+            type:'string',
+            title:'Image Alt Text',
+            description: 'A short description of the image associated with this Dating Tip.'
+        }
+    ],
+    initialValue: () => ({
+        tipDate: (new Date()).toISOString()
+      }) 
 }
